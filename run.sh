@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#SBATCH -o ./dg-integrate.txt
+#SBATCH -D .
+
+#SBATCH -J LIKWID-DG-INT-K
+#SBATCH --get-user-env
+#SBATCH --clusters=mpp2
+#SBATCH --export=NONE
+#SBATCH --time=00:30:00
+
+# LOAD MODULE
+module load mpi.intel
+module load likwid/4.3
+AMOUNT_THREADS=28
+export OMP_NUM_THREADS=$AMOUNT_THREADS
+
+POLYNOMIAL_DEGREE=4
+PROBLEM_SIZE=10000000
+N_ITERATIONS=200
+MODE=1
+
+RESULTS=results
+mkdir $RESULTS
+likwid-perfctr -g CACHES -execpid -C 0-27 -O -m build/test_dg_integrate_likwid 4 10000000 200 1 > $RESULTS/dg-integrate-caches.out
+likwid-perfctr -g FLOPS -execpid -C 0-27 -O -m build/test_dg_integrate_likwid 4 10000000 200 1 > $RESULTS/dg-integrate-flops.out
