@@ -7,7 +7,7 @@
 #SBATCH --get-user-env
 #SBATCH --clusters=mpp2
 #SBATCH --export=NONE
-#SBATCH --time=00:30:00
+#SBATCH --time=00:00:30
 
 # LOAD MODULE
 module load mpi.intel
@@ -22,5 +22,5 @@ MODE=1
 
 RESULTS=results
 mkdir $RESULTS
-likwid-perfctr -g CACHES -execpid -C 0-27 -O -m build/test_dg_integrate_likwid 4 10000000 200 1 > $RESULTS/dg-integrate-caches.out
-likwid-perfctr -g FLOPS -execpid -C 0-27 -O -m build/test_dg_integrate_likwid 4 10000000 200 1 > $RESULTS/dg-integrate-flops.out
+likwid-perfctr -g CACHES -execpid -C 0-27 -O -m build/test_dg_integrate 4 10000000 200 1 > $RESULTS/dg-integrate-caches.out
+likwid-perfctr -g FLOPS -execpid -C 0-27 -O -m build/test_dg_integrate 4 10000000 200 1 > $RESULTS/dg-integrate-flops.out
