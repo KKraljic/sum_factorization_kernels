@@ -12,8 +12,6 @@
 #ifndef evaluation_dgele_advect_h
 #define evaluation_dgele_advect_h
 
-#include <mpi.h>
-
 #include "gauss_formula.h"
 #include "lagrange_polynomials.h"
 #include "vectorization.h"

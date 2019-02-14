@@ -1,8 +1,5 @@
-
 #include <iostream>
 #include <iomanip>
-
-#include <mpi.h>
 #include <sys/time.h>
 #include <sys/resource.h>
 
@@ -27,8 +24,8 @@ void run_program(const unsigned int vector_size_guess,
 {
   int rank = -1;
   int n_procs = 0;
-  MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-  MPI_Comm_size(MPI_COMM_WORLD, &n_procs);
+  //MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+  //MPI_Comm_size(MPI_COMM_WORLD, &n_procs);
 
   PrecomputedDGLaplacian<dim,degree,Number> evaluator;
   const unsigned int n_cells_tot = std::max(vector_size_guess / Utilities::pow(degree+1,dim),
@@ -62,7 +59,7 @@ void run_program(const unsigned int vector_size_guess,
 
   std::size_t local_size = evaluator.n_elements()*evaluator.dofs_per_cell;
   std::size_t global_size = -1;
-  MPI_Allreduce(&local_size, &global_size, 1, MPI_UNSIGNED_LONG_LONG, MPI_SUM, MPI_COMM_WORLD);
+  //MPI_Allreduce(&local_size, &global_size, 1, MPI_UNSIGNED_LONG_LONG, MPI_SUM, MPI_COMM_WORLD);
   if (false && rank == 0)
     {
       std::cout << std::endl;
@@ -86,7 +83,7 @@ void run_program(const unsigned int vector_size_guess,
 
   for (unsigned int i=0; i<3; ++i)
     {
-      MPI_Barrier(MPI_COMM_WORLD);
+      //MPI_Barrier(MPI_COMM_WORLD);
 
       struct timeval wall_timer;
       gettimeofday(&wall_timer, NULL);
@@ -99,9 +96,9 @@ void run_program(const unsigned int vector_size_guess,
       double compute_time = (wall_timer.tv_sec + 1.e-6 * wall_timer.tv_usec - start);
 
       double min_time = -1, max_time = -1, avg_time = -1;
-      MPI_Allreduce(&compute_time, &min_time, 1, MPI_DOUBLE, MPI_MIN, MPI_COMM_WORLD);
-      MPI_Allreduce(&compute_time, &max_time, 1, MPI_DOUBLE, MPI_MAX, MPI_COMM_WORLD);
-      MPI_Allreduce(&compute_time, &avg_time, 1, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
+      //MPI_Allreduce(&compute_time, &min_time, 1, MPI_DOUBLE, MPI_MIN, MPI_COMM_WORLD);
+      //MPI_Allreduce(&compute_time, &max_time, 1, MPI_DOUBLE, MPI_MAX, MPI_COMM_WORLD);
+      //MPI_Allreduce(&compute_time, &avg_time, 1, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
 
       best_avg = std::min(best_avg, avg_time/n_procs);
       if (false && rank == 0)
@@ -166,7 +163,7 @@ int main(int argc, char** argv)
   }
 #endif
 
-  MPI_Init(&argc, &argv);
+  //MPI_Init(&argc, &argv);
 
 #ifdef _OPENMP
   const unsigned int nthreads = omp_get_max_threads();
@@ -187,7 +184,7 @@ int main(int argc, char** argv)
   //run_program<dimension,3,value_type>(vector_size_guess, n_tests);
   //run_program<dimension,6,value_type>(vector_size_guess, n_tests);
 
-  MPI_Finalize();
+  //MPI_Finalize();
 
 #ifdef LIKWID_PERFMON
   LIKWID_MARKER_CLOSE;

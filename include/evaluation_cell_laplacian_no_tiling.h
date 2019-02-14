@@ -5,8 +5,6 @@
 #ifndef evaluation_cell_laplacian_h
 #define evaluation_cell_laplacian_h
 
-#include <mpi.h>
-
 #include "gauss_formula.h"
 #include "lagrange_polynomials.h"
 #include "vectorization.h"
@@ -173,9 +171,9 @@ public:
           }
 
         double global_result = -1;
-        MPI_Allreduce(&max_error, &global_result, 1, MPI_DOUBLE, MPI_MAX, MPI_COMM_WORLD);
+       // MPI_Allreduce(&max_error, &global_result, 1, MPI_DOUBLE, MPI_MAX, MPI_COMM_WORLD);
         int my_rank;
-        MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
+       // MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
         if (my_rank == 0)
           std::cout << "Error of integral in direction " << test << ": "
                     << global_result << std::endl;

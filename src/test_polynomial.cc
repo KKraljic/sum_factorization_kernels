@@ -1,4 +1,3 @@
-
 #include "gauss_formula.h"
 #include "lagrange_polynomials.h"
 
