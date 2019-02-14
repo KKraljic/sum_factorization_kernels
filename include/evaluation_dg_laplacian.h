@@ -517,7 +517,7 @@ public:
 #pragma omp parallel
         {
 #ifdef LIKWID_PERFMON
-            LIKWID_MARKER_START(("dg_laplacian_" + std::to_string(dim) +
+            LIKWID_MARKER_START(("real_dg_laplacian_" + std::to_string(dim) +
                                  "d_deg_" + std::to_string(degree) +
                                  (evaluate_chebyshev ? "ch" : "mv")).c_str());
 #endif
@@ -534,7 +534,7 @@ public:
                                          coefficient_np, coefficient_tm);
 
 #ifdef LIKWID_PERFMON
-            LIKWID_MARKER_STOP(("dg_laplacian_" + std::to_string(dim) +
+            LIKWID_MARKER_STOP(("real_dg_laplacian_" + std::to_string(dim) +
                                 "d_deg_" + std::to_string(degree) +
                                  (evaluate_chebyshev ? "ch" : "mv")).c_str());
 #endif
@@ -553,29 +553,36 @@ public:
 #pragma omp parallel
         {
 #ifdef LIKWID_PERFMON
-            LIKWID_MARKER_START(("dg_laplacian_" + std::to_string(dim) +
+            LIKWID_MARKER_START(("emu_dg_laplacian_" + std::to_string(dim) +
                                  "d_deg_" + std::to_string(degree) + "vu").c_str());
 #endif
 
-#pragma omp for schedule (static) collapse(2)
+
+            std::size_t start_value;
+            std::size_t min_value;
+            std::size_t end_value;
+#pragma omp for schedule (static) collapse(2) private(start_value, min_value, end_value)
             for (unsigned int ib = 0; ib < n_blocks[2]; ++ib)
                 for (unsigned int jb = 0; jb < n_blocks[1]; ++jb)
                     for (unsigned int kb = 0; kb < n_blocks[0]; ++kb)
                         for (unsigned int i = ib * blz; i < std::min(n_cells[2], (ib + 1) * blz); ++i)
                             for (unsigned int j = jb * bly; j < std::min(n_cells[1], (jb + 1) * bly); ++j) {
                                 const unsigned int ii = (i * n_cells[1] + j) * n_cells[0];
+
+                                start_value = dofs_per_cell * VectorizedArray<Number>::n_array_elements * (kb * blx + ii);
+                                min_value = (std::min(n_cells[0], (kb + 1) * blx) + ii);
+                                end_value = min_value * dofs_per_cell * VectorizedArray<Number>::n_array_elements;
 #pragma omp simd
-                                for (std::size_t ix =
-                                        dofs_per_cell * VectorizedArray<Number>::n_array_elements * (kb * blx + ii);
-                                     ix < (std::min(n_cells[0], (kb + 1) * blx) + ii) * dofs_per_cell *
-                                          VectorizedArray<Number>::n_array_elements; ++ix) {
+                                for (std::size_t ix = start_value; ix < end_value; ++ix) {
+
                                     ptr_tmp[ix] = coeff1 * ptr_tmp[ix] + coeff2 * ptr_diag[ix] *
                                                                          (ptr_new[ix] - ptr_rhs[ix]);
                                     ptr_new[ix] = ptr_old[ix] - ptr_tmp[ix];
+
                                 }
                             }
 #ifdef LIKWID_PERFMON
-            LIKWID_MARKER_STOP(("dg_laplacian_" + std::to_string(dim) +
+            LIKWID_MARKER_STOP(("emu_dg_laplacian_" + std::to_string(dim) +
                                 "d_deg_" + std::to_string(degree) + "vu").c_str());
 #endif
         }
