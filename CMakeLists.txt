@@ -18,36 +18,7 @@ else()
   set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
 endif()
 
-find_package(MPI REQUIRED)
-set(CMAKE_CXX_COMPILE_FLAGS ${CMAKE_CXX_COMPILE_FLAGS} ${MPI_COMPILE_FLAGS})
-set(CMAKE_CXX_LINK_FLAGS ${CMAKE_CXX_LINK_FLAGS} ${MPI_LINK_FLAGS})
-include_directories(${MPI_INCLUDE_PATH})
 include_directories(include)
-message("${MPI_INCLUDE_PATH}")
-message("${MPI_LIBRARIES}")
-
-add_executable(test_program src/test_program.cc)
-target_link_libraries(test_program ${MPI_LIBRARIES})
-
-add_executable(benchmark_loops src/benchmark_loops.cc)
-target_link_libraries(benchmark_loops ${MPI_LIBRARIES})
-
-add_executable(test_dg_precomputed src/test_dg_precomputed.cc)
-target_link_libraries(test_dg_precomputed ${MPI_LIBRARIES})
-
-add_executable(test_dg_integrate src/test_dg_integrate.cc)
-target_link_libraries(test_dg_integrate ${MPI_LIBRARIES})
-
-add_executable(test_dg_advect src/test_dg_advect.cc)
-target_link_libraries(test_dg_advect ${MPI_LIBRARIES})
-
-add_executable(test_program_vect src/test_program_vect.cc)
-target_link_libraries(test_program_vect ${MPI_LIBRARIES})
-
-add_executable(test_gauss src/test_gauss.cc)
-add_executable(test_polynomial src/test_polynomial.cc)
-add_executable(test_multiplication src/test_multiplication.cc)
-
 find_package(Likwid)
 
 if (LIKWID_FOUND)
@@ -55,33 +26,27 @@ if (LIKWID_FOUND)
   include_directories(${LIKWID_INCLUDE_PATH})
 
   add_executable(test_program_likwid src/test_program.cc)
-  target_link_libraries(test_program_likwid ${MPI_LIBRARIES})
   target_link_libraries(test_program_likwid ${LIKWID_LIBRARIES})
   target_compile_definitions(test_program_likwid PRIVATE LIKWID_PERFMON)
 
 
   add_executable(benchmark_loops_likwid src/benchmark_loops.cc)
-  target_link_libraries(benchmark_loops_likwid ${MPI_LIBRARIES})
   target_link_libraries(benchmark_loops_likwid ${LIKWID_LIBRARIES})
   target_compile_definitions(benchmark_loops_likwid PRIVATE LIKWID_PERFMON)
 
   add_executable(test_dg_precomputed_likwid src/test_dg_precomputed.cc)
-  target_link_libraries(test_dg_precomputed_likwid ${MPI_LIBRARIES})
   target_link_libraries(test_dg_precomputed_likwid ${LIKWID_LIBRARIES})
   target_compile_definitions(test_dg_precomputed_likwid PRIVATE LIKWID_PERFMON)
 
   add_executable(test_dg_integrate_likwid src/test_dg_integrate.cc)
-  target_link_libraries(test_dg_integrate_likwid ${MPI_LIBRARIES})
   target_link_libraries(test_dg_integrate_likwid ${LIKWID_LIBRARIES})
   target_compile_definitions(test_dg_integrate_likwid PRIVATE LIKWID_PERFMON)
 
   add_executable(test_dg_advect_likwid src/test_dg_advect.cc)
-  target_link_libraries(test_dg_advect_likwid ${MPI_LIBRARIES})
   target_link_libraries(test_dg_advect_likwid ${LIKWID_LIBRARIES})
   target_compile_definitions(test_dg_advect_likwid PRIVATE LIKWID_PERFMON)
 
   add_executable(test_program_vect_likwid src/test_program_vect.cc)
-  target_link_libraries(test_program_vect_likwid ${MPI_LIBRARIES})
   target_link_libraries(test_program_vect_likwid ${LIKWID_LIBRARIES})
   target_compile_definitions(test_program_vect_likwid PRIVATE LIKWID_PERFMON)
 endif()
