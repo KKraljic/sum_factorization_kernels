@@ -1,0 +1,5 @@
+/home/hpc/t7341/ga27rus2/clion-2018.3.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/hpc/t7341/ga27rus2/idp/verification_sum_factorization_kernels
+Using gcc/clang compiler flags
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/hpc/t7341/ga27rus2/idp/verification_sum_factorization_kernels/cmake-build-debug
