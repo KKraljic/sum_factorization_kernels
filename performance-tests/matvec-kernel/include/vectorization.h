@@ -36,6 +36,13 @@ unsigned long long int subtraction_assign_ctr = 0;
 unsigned long long int multiplication_assign_ctr = 0;
 unsigned long long int division_assign_ctr = 0;
 
+unsigned long long int addition_ctr = 0;
+unsigned long long int subtraction_ctr = 0;
+unsigned long long int multiplication_ctr = 0;
+unsigned long long int division_ctr = 0;
+
+unsigned long long int assign_ctr = 0;
+
 template <typename Number>
 class VectorizedArray
 {
@@ -52,6 +59,7 @@ public:
   VectorizedArray &
   operator = (const Number scalar)
   {
+      ++assign_ctr;
     data = scalar;
     return *this;
   }
@@ -218,6 +226,7 @@ public:
   VectorizedArray &
   operator = (const double x)
   {
+      ++assign_ctr;
     data = _mm512_set1_pd(x);
     return *this;
   }
@@ -474,6 +483,7 @@ public:
   VectorizedArray &
   operator = (const float x)
   {
+      ++assign_ctr;
     data = _mm512_set1_ps(x);
     return *this;
   }
@@ -751,6 +761,7 @@ public:
   VectorizedArray &
   operator = (const double x)
   {
+      ++assign_ctr;
     data = _mm256_set1_pd(x);
     return *this;
   }
@@ -999,6 +1010,7 @@ public:
   VectorizedArray &
   operator = (const float x)
   {
+      ++assign_ctr;
     data = _mm256_set1_ps(x);
     return *this;
   }
@@ -1272,6 +1284,7 @@ public:
   VectorizedArray &
   operator = (const double x)
   {
+      ++assign_ctr;
     data = _mm_set1_pd(x);
     return *this;
   }
@@ -1414,6 +1427,7 @@ public:
   VectorizedArray &
   operator = (const float x)
   {
+      ++assign_ctr;
     data = _mm_set1_ps(x);
     return *this;
   }
@@ -1545,6 +1559,7 @@ VectorizedArray<Number>
 operator + (const VectorizedArray<Number> &u,
             const VectorizedArray<Number> &v)
 {
+    ++addition_ctr;
   VectorizedArray<Number> tmp = u;
   return tmp+=v;
 }
@@ -1554,6 +1569,7 @@ VectorizedArray<Number>
 operator - (const VectorizedArray<Number> &u,
             const VectorizedArray<Number> &v)
 {
+    ++subtraction_ctr;
   VectorizedArray<Number> tmp = u;
   return tmp-=v;
 }
@@ -1563,6 +1579,7 @@ VectorizedArray<Number>
 operator * (const VectorizedArray<Number> &u,
             const VectorizedArray<Number> &v)
 {
+    ++multiplication_ctr;
   VectorizedArray<Number> tmp = u;
   return tmp*=v;
 }
@@ -1572,6 +1589,7 @@ VectorizedArray<Number>
 operator / (const VectorizedArray<Number> &u,
             const VectorizedArray<Number> &v)
 {
+    ++division_ctr;
   VectorizedArray<Number> tmp = u;
   return tmp/=v;
 }
@@ -1581,6 +1599,7 @@ VectorizedArray<Number>
 operator + (const Number                  &u,
             const VectorizedArray<Number> &v)
 {
+    ++addition_ctr;
   VectorizedArray<Number> tmp;
   tmp = u;
   return tmp+=v;
@@ -1590,6 +1609,7 @@ VectorizedArray<float>
 operator + (const double                 &u,
             const VectorizedArray<float> &v)
 {
+    ++addition_ctr;
   VectorizedArray<float> tmp;
   tmp = u;
   return tmp+=v;
@@ -1607,6 +1627,7 @@ VectorizedArray<float>
 operator + (const VectorizedArray<float> &v,
             const double                 &u)
 {
+    ++addition_ctr;
   return u + v;
 }
 
@@ -1615,6 +1636,7 @@ VectorizedArray<Number>
 operator - (const Number                  &u,
             const VectorizedArray<Number> &v)
 {
+    ++subtraction_ctr;
   VectorizedArray<Number> tmp;
   tmp = u;
   return tmp-=v;
@@ -1624,6 +1646,7 @@ VectorizedArray<float>
 operator - (const double                 &u,
             const VectorizedArray<float> &v)
 {
+    ++subtraction_ctr;
   VectorizedArray<float> tmp;
   tmp = float(u);
   return tmp-=v;
@@ -1634,6 +1657,7 @@ VectorizedArray<Number>
 operator - (const VectorizedArray<Number> &v,
             const Number                  &u)
 {
+    ++subtraction_ctr;
   VectorizedArray<Number> tmp;
   tmp = u;
   return v-tmp;
@@ -1643,6 +1667,7 @@ VectorizedArray<float>
 operator - (const VectorizedArray<float> &v,
             const double                 &u)
 {
+    ++subtraction_ctr;
   VectorizedArray<float> tmp;
   tmp = float(u);
   return v-tmp;
@@ -1653,6 +1678,7 @@ VectorizedArray<Number>
 operator * (const Number                  &u,
             const VectorizedArray<Number> &v)
 {
+    ++multiplication_ctr;
   VectorizedArray<Number> tmp;
   tmp = u;
   return tmp*=v;
@@ -1662,6 +1688,7 @@ VectorizedArray<float>
 operator * (const double                 &u,
             const VectorizedArray<float> &v)
 {
+    ++multiplication_ctr;
   VectorizedArray<float> tmp;
   tmp = float(u);
   return tmp*=v;
@@ -1672,6 +1699,7 @@ VectorizedArray<Number>
 operator * (const VectorizedArray<Number> &v,
             const Number                  &u)
 {
+    ++multiplication_ctr;
   return u * v;
 }
 
@@ -1679,6 +1707,7 @@ VectorizedArray<float>
 operator * (const VectorizedArray<float> &v,
             const double                 &u)
 {
+    ++multiplication_ctr;
   return u * v;
 }
 
@@ -1687,6 +1716,7 @@ VectorizedArray<Number>
 operator / (const Number                  &u,
             const VectorizedArray<Number> &v)
 {
+    ++division_ctr;
   VectorizedArray<Number> tmp;
   tmp = u;
   return tmp/=v;
@@ -1696,6 +1726,7 @@ VectorizedArray<float>
 operator / (const double                 &u,
             const VectorizedArray<float> &v)
 {
+    ++multiplication_ctr;
   VectorizedArray<float> tmp;
   tmp = float(u);
   return tmp/=v;
@@ -1706,6 +1737,7 @@ VectorizedArray<Number>
 operator / (const VectorizedArray<Number> &v,
             const Number                  &u)
 {
+    ++multiplication_ctr;
   VectorizedArray<Number> tmp;
   tmp = u;
   return v/tmp;
@@ -1715,6 +1747,7 @@ VectorizedArray<float>
 operator / (const VectorizedArray<float> &v,
             const double                 &u)
 {
+    ++multiplication_ctr;
   VectorizedArray<float> tmp;
   tmp = float(u);
   return v/tmp;
@@ -1724,6 +1757,7 @@ template <typename Number>
 VectorizedArray<Number>
 operator + (const VectorizedArray<Number> &u)
 {
+    ++addition_ctr;
   return u;
 }
 
@@ -1733,6 +1767,7 @@ operator - (const VectorizedArray<Number> &u)
 {
   // to get a negative sign, subtract the input from zero (could also
   // multiply by -1, but this one is slightly simpler)
+  ++subtraction_ctr;
   return VectorizedArray<Number>()-u;
 }
 
