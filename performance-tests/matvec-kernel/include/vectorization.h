@@ -31,6 +31,11 @@
 #define USE_VECTOR_ARITHMETICS 1
 #endif
 
+unsigned long long int addition_assign_ctr = 0;
+unsigned long long int subtraction_assign_ctr = 0;
+unsigned long long int multiplication_assign_ctr = 0;
+unsigned long long int division_assign_ctr = 0;
+
 template <typename Number>
 class VectorizedArray
 {
@@ -39,10 +44,7 @@ public:
    * This gives the number of vectors collected in this class.
    */
   static const unsigned int n_array_elements = 1;
-  unsigned long long int plus_ctr = 0;
-  unsigned long long int minus_ctr = 0;
-  unsigned long long int times_ctr = 0;
-  unsigned long long int divided_ctr = 0;
+
 
     /**
      * This function assigns a scalar to this class.
@@ -79,7 +81,7 @@ public:
   operator += (const VectorizedArray<Number> &vec)
   {
     data+=vec.data;
-    ++plus_ctr;
+    ++addition_assign_ctr;
     return *this;
   }
 
@@ -90,7 +92,7 @@ public:
   operator -= (const VectorizedArray<Number> &vec)
   {
     data-=vec.data;
-    ++minus_ctr;
+    ++subtraction_assign_ctr;
     return *this;
   }
 
@@ -101,7 +103,7 @@ public:
   operator *= (const VectorizedArray<Number> &vec)
   {
     data*=vec.data;
-    ++times_ctr;
+    ++multiplication_assign_ctr;
     return *this;
   }
 
@@ -112,7 +114,7 @@ public:
   operator /= (const VectorizedArray<Number> &vec)
   {
     data/=vec.data;
-    ++divided_ctr;
+    ++division_assign_ctr;
     return *this;
   }
 
@@ -209,10 +211,6 @@ public:
    * This gives the number of vectors collected in this class.
    */
   static const unsigned int n_array_elements = 8;
-  unsigned long long int plus_ctr = 0;
-  unsigned long long int minus_ctr = 0;
-  unsigned long long int times_ctr = 0;
-  unsigned long long int divided_ctr = 0;
 
   /**
    * This function can be used to set all data fields to a given scalar.
@@ -248,7 +246,7 @@ public:
   VectorizedArray &
   operator += (const VectorizedArray &vec)
   {
-      ++plus_ctr;
+      ++addition_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data += vec.data;
 #else
@@ -263,7 +261,7 @@ public:
   VectorizedArray &
   operator -= (const VectorizedArray &vec)
   {
-      ++minus_ctr;
+      ++subtraction_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data -= vec.data;
 #else
@@ -278,7 +276,7 @@ public:
   VectorizedArray &
   operator *= (const VectorizedArray &vec)
   {
-      ++times_ctr;
+      ++multiplication_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data *= vec.data;
 #else
@@ -293,7 +291,7 @@ public:
   VectorizedArray &
   operator /= (const VectorizedArray &vec)
   {
-      ++divided_ctr;
+      ++division_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data /= vec.data;
 #else
@@ -469,10 +467,6 @@ public:
    * This gives the number of vectors collected in this class.
    */
   static const unsigned int n_array_elements = 16;
-  unsigned long long int plus_ctr = 0;
-  unsigned long long int minus_ctr = 0;
-  unsigned long long int times_ctr = 0;
-  unsigned long long int divided_ctr = 0;
 
   /**
    * This function can be used to set all data fields to a given scalar.
@@ -508,7 +502,7 @@ public:
   VectorizedArray &
   operator += (const VectorizedArray &vec)
   {
-      ++plus_ctr;
+      ++addition_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data += vec.data;
 #else
@@ -523,7 +517,7 @@ public:
   VectorizedArray &
   operator -= (const VectorizedArray &vec)
   {
-      ++minus_ctr;
+      ++subtraction_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data -= vec.data;
 #else
@@ -538,7 +532,7 @@ public:
   VectorizedArray &
   operator *= (const VectorizedArray &vec)
   {
-      ++times_ctr;
+      ++multiplication_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data *= vec.data;
 #else
@@ -553,7 +547,7 @@ public:
   VectorizedArray &
   operator /= (const VectorizedArray &vec)
   {
-      ++divided_ctr;
+      ++division_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data /= vec.data;
 #else
@@ -750,10 +744,6 @@ public:
    * This gives the number of vectors collected in this class.
    */
   static const unsigned int n_array_elements = 4;
-  unsigned long long int plus_ctr = 0;
-  unsigned long long int minus_ctr = 0;
-  unsigned long long int times_ctr = 0;
-  unsigned long long int divided_ctr = 0;
 
   /**
    * This function can be used to set all data fields to a given scalar.
@@ -789,7 +779,7 @@ public:
   VectorizedArray &
   operator += (const VectorizedArray &vec)
   {
-      ++plus_ctr;
+      ++addition_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data += vec.data;
 #else
@@ -804,7 +794,7 @@ public:
   VectorizedArray &
   operator -= (const VectorizedArray &vec)
   {
-      ++minus_ctr;
+      ++subtraction_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data -= vec.data;
 #else
@@ -819,7 +809,7 @@ public:
   VectorizedArray &
   operator *= (const VectorizedArray &vec)
   {
-      +times_ctr;
+      +multiplication_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data *= vec.data;
 #else
@@ -834,7 +824,7 @@ public:
   VectorizedArray &
   operator /= (const VectorizedArray &vec)
   {
-      ++divided_ctr;
+      ++division_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data /= vec.data;
 #else
@@ -1002,10 +992,6 @@ public:
    * This gives the number of vectors collected in this class.
    */
   static const unsigned int n_array_elements = 8;
-  unsigned long long int plus_ctr = 0;
-  unsigned long long int minus_ctr = 0;
-  unsigned long long int times_ctr = 0;
-  unsigned long long int divided_ctr = 0;
 
   /**
    * This function can be used to set all data fields to a given scalar.
@@ -1041,7 +1027,7 @@ public:
   VectorizedArray &
   operator += (const VectorizedArray &vec)
   {
-      ++plus_ctr;
+      ++addition_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data += vec.data;
 #else
@@ -1056,7 +1042,7 @@ public:
   VectorizedArray &
   operator -= (const VectorizedArray &vec)
   {
-      ++minus_ctr;
+      ++subtraction_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data -= vec.data;
 #else
@@ -1068,7 +1054,7 @@ public:
   VectorizedArray &
   operator *= (const VectorizedArray &vec)
   {
-      ++times_ctr;
+      ++multiplication_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data *= vec.data;
 #else
@@ -1083,7 +1069,7 @@ public:
   VectorizedArray &
   operator /= (const VectorizedArray &vec)
   {
-      ++divided_ctr;
+      ++division_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data /= vec.data;
 #else
@@ -1279,10 +1265,6 @@ public:
    * This gives the number of vectors collected in this class.
    */
   static const unsigned int n_array_elements = 2;
-  unsigned long long int plus_ctr = 0;
-  unsigned long long int minus_ctr = 0;
-  unsigned long long int times_ctr = 0;
-  unsigned long long int divided_ctr = 0;
 
   /**
    * This function can be used to set all data fields to a given scalar.
@@ -1318,7 +1300,7 @@ public:
   VectorizedArray &
   operator += (const VectorizedArray &vec)
   {
-      ++plus_ctr;
+      ++addition_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data += vec.data;
 #else
@@ -1333,7 +1315,7 @@ public:
   VectorizedArray &
   operator -= (const VectorizedArray &vec)
   {
-      ++minus_ctr;
+      ++subtraction_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data -= vec.data;
 #else
@@ -1348,7 +1330,7 @@ public:
   VectorizedArray &
   operator *= (const VectorizedArray &vec)
   {
-      ++times_ctr;
+      ++multiplication_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data *= vec.data;
 #else
@@ -1363,7 +1345,7 @@ public:
   VectorizedArray &
   operator /= (const VectorizedArray &vec)
   {
-      ++divided_ctr;
+      ++division_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data /= vec.data;
 #else
@@ -1425,10 +1407,6 @@ public:
    * This gives the number of vectors collected in this class.
    */
   static const unsigned int n_array_elements = 4;
-  unsigned long long int plus_ctr = 0;
-  unsigned long long int minus_ctr = 0;
-  unsigned long long int times_ctr = 0;
-  unsigned long long int divided_ctr = 0;
 
   /**
    * This function can be used to set all data fields to a given scalar.
@@ -1464,7 +1442,7 @@ public:
   VectorizedArray &
   operator += (const VectorizedArray &vec)
   {
-      ++plus_ctr;
+      ++addition_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data += vec.data;
 #else
@@ -1479,7 +1457,7 @@ public:
   VectorizedArray &
   operator -= (const VectorizedArray &vec)
   {
-      ++minus_ctr;
+      ++subtraction_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data -= vec.data;
 #else
@@ -1494,7 +1472,7 @@ public:
   VectorizedArray &
   operator *= (const VectorizedArray &vec)
   {
-      ++times_ctr;
+      ++multiplication_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data *= vec.data;
 #else
@@ -1509,7 +1487,7 @@ public:
   VectorizedArray &
   operator /= (const VectorizedArray &vec)
   {
-    ++divided_ctr;
+    ++division_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data /= vec.data;
 #else
