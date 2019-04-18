@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-project(matvec-measurement CXX)
+project(evaluator CXX)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules")
 set(CMAKE_BUILD_TYPE "Release")
@@ -25,8 +25,8 @@ if (LIKWID_FOUND)
   message("${LIKWID_INCLUDE_PATH}")
   include_directories(${LIKWID_INCLUDE_PATH})
 
-  add_executable(matvec-measurement src/main.cc)
-  target_link_libraries(matvec-measurement ${LIKWID_LIBRARIES})
-  target_compile_definitions(matvec-measurement PRIVATE LIKWID_PERFMON)
+  add_executable(verifier src/main.cc include/evaluation_dg_laplacian.h)
+  target_link_libraries(verifier ${LIKWID_LIBRARIES})
+  target_compile_definitions(verifier PRIVATE LIKWID_PERFMON)
 
 endif()

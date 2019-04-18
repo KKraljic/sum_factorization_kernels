@@ -153,7 +153,6 @@ apply_1d_matvec_kernel(const Number2 *__restrict coefficients_eo,
                 r0.streaming_store(&out[col * stride][0]);
                 r1.streaming_store(&out[(nn - 1 - col) * stride][0]);
             }
-
         }
         if (nn % 2 == 1) {
             Number r0 = (add_into ?
@@ -176,15 +175,13 @@ apply_1d_matvec_kernel(const Number2 *__restrict coefficients_eo,
                 r0 += dg_coefficients[mid] * array_face[0];
             if (do_dg > 1)
                 r0 += dg_coefficients[nn + mid] * array_face[3];
+
             if (nontemporal_store == false)
                 out[mid * stride] = r0;
             else
                 r0.streaming_store(&out[mid * stride][0]);
         }
-
     }
-
-
 }
 
 
