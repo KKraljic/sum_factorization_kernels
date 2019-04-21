@@ -26,7 +26,7 @@ void run_matvec(){
      *
      * */
     //in_vector.resize_fast(number_columns*2-1);
-    in_vector.resize_fast(number_columns*number_columns);
+    in_vector.resize_fast(number_columns);
 
     /*
    * =====================================================
@@ -34,8 +34,8 @@ void run_matvec(){
    * =====================================================
    *
    * */
-    out_vector.resize_fast(1);
-    in_matrix.resize_fast(number_columns);
+    out_vector.resize_fast(number_columns);
+    in_matrix.resize_fast(number_columns*number_columns/2);
 
     //Initialize vectors and matrix with some initial values
     for(size_t i = 0; i < in_vector.size(); ++i) in_vector[i] = 1.0;
@@ -52,7 +52,7 @@ void run_matvec(){
 
     //sprintf(region_tag, "1D-MATVEC_Kernel-Degree-%i", degree, degree+2);
     // LIKWID_MARKER_START(region_tag);
-    apply_1d_matvec_kernel<entries_in_row, 0, 0, true, false, VectorizedArray<Number>, VectorizedArray<Number>, false, 0>
+    apply_1d_matvec_kernel<entries_in_row, 1, 0, true, false, VectorizedArray<Number>, VectorizedArray<Number>, false, 0>
                 (in_vector_ptr, in_matrix_ptr, out_vector_ptr);
 
     //LIKWID_MARKER_STOP(region_tag);
@@ -67,7 +67,7 @@ void run_matvec(){
 int main(int argc, char **argv) {
      //LIKWID_MARKER_INIT;
 
-    run_matvec<56000, double>();
+    run_matvec<10, double>();
 
     //run_matvec<59100, double>();
 
