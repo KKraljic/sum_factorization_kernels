@@ -10,11 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89dab2aa-5b85-4330-af94-5e77e522065b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../performance-tests/matvec-kernel/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../performance-tests/matvec-kernel/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../performance-tests/matvec-kernel/include/matrix_vector_kernel.h" beforeDir="false" afterPath="$PROJECT_DIR$/../performance-tests/matvec-kernel/include/matrix_vector_kernel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../performance-tests/matvec-kernel/src/verification_test_dg_integrate.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/evaluation_dg_laplacian.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/evaluation_dg_laplacian.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/evaluation_dg_laplacian.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="115" column="5" selection-start-line="113" selection-start-column="3" selection-end-line="115" selection-end-column="5" />
+            <state relative-caret-position="269">
+              <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
               <folding>
                 <element signature="e#4473#4505#0" expanded="true" />
                 <element signature="e#28874#28906#0" expanded="true" />
@@ -38,10 +35,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/vectorization.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test_dg_integrate.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2235">
-              <caret line="149" column="23" selection-start-line="149" selection-start-column="23" selection-end-line="149" selection-end-column="23" />
+            <state relative-caret-position="105">
+              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
               <folding>
                 <element signature="e#168#187#0" expanded="true" />
                 <element signature="e#211#227#0" expanded="true" />
@@ -58,17 +64,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test_dg_advect.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+            <state relative-caret-position="269">
+              <caret line="67" column="39" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="45" selection-end-line="87" />
+            <state relative-caret-position="209">
+              <caret line="37" column="59" lean-forward="true" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -82,18 +88,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>likwid_markerThreadInit</find>
-      <find>MPI</find>
-      <find>todo</find>
-      <find>mpi</find>
-      <find>real</find>
-      <find>rank</find>
-      <find>do_matvec</find>
-      <find>run_program</find>
-      <find>do_cheby_iter</find>
-      <find>TODO</find>
-      <find>add_into</find>
-      <find>xmid</find>
       <find>array_face</find>
       <find>xm</find>
       <find>mid</find>
@@ -110,6 +104,20 @@
       <find>inner_loop</find>
       <find>Matv</find>
       <find>emulate_cheby_vector_updates</find>
+      <find>omp</find>
+      <find>std::cout</find>
+      <find>vector_size</find>
+      <find>vector_sizel</find>
+      <find>do_inner_loop</find>
+      <find>initial</find>
+      <find>Degree:</find>
+      <find>degree:</find>
+      <find>n_blocks</find>
+      <find>n_cells_total</find>
+      <find>dim</find>
+      <find>dimension</find>
+      <find>vector_size_guess</find>
+      <find>run</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,19 +137,20 @@
         <option value="$PROJECT_DIR$/include/evaluation_cell_laplacian_no_tiling.h" />
         <option value="$PROJECT_DIR$/src/test_dg_advect.cc" />
         <option value="$PROJECT_DIR$/src/test_dg_precomputed.cc" />
-        <option value="$PROJECT_DIR$/include/evaluation_dg_laplacian.h" />
         <option value="$PROJECT_DIR$/include/matrix_vector_kernel.h" />
         <option value="$PROJECT_DIR$/include/verification/verification_test_dg_integrate.cc" />
+        <option value="$PROJECT_DIR$/include/evaluation_dg_laplacian.h" />
         <option value="$PROJECT_DIR$/src/test_dg_integrate.cc" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="79" />
+    <option name="x" value="78" />
     <option name="y" value="31" />
     <option name="width" value="1841" />
-    <option name="height" value="1017" />
+    <option name="height" value="1008" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -149,7 +158,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,6 +179,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -223,16 +232,18 @@
       <workItem from="1554796484632" duration="4668000" />
       <workItem from="1555411876286" duration="1929000" />
       <workItem from="1555585140312" duration="599000" />
+      <workItem from="1556098203880" duration="9664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35862000" />
+    <option name="totallyTimeSpent" value="45526000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="79" y="31" width="1841" height="1017" extended-state="0" />
+    <frame x="78" y="31" width="1841" height="1008" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.121313296" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.122426264" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -258,16 +269,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/test_dg_integrate.cc</url>
-          <line>212</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/test_dg_integrate.cc</url>
-          <line>97</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/include/matrix_vector_kernel.h</url>
           <line>157</line>
@@ -342,11 +343,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/include/utilities.h">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/vectorization.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-450" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/evaluation_dg_advect.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -469,10 +465,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test_dg_advect.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="67" column="39" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/vectorization.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/include/evaluation_dg_laplacian.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="115" column="5" selection-start-line="113" selection-start-column="3" selection-end-line="115" selection-end-column="5" />
+        <state relative-caret-position="269">
+          <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
           <folding>
             <element signature="e#4473#4505#0" expanded="true" />
             <element signature="e#28874#28906#0" expanded="true" />
@@ -482,8 +495,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test_dg_integrate.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2235">
-          <caret line="149" column="23" selection-start-line="149" selection-start-column="23" selection-end-line="149" selection-end-column="23" />
+        <state relative-caret-position="105">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding>
             <element signature="e#168#187#0" expanded="true" />
             <element signature="e#211#227#0" expanded="true" />
@@ -496,22 +509,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test_dg_advect.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="45" selection-end-line="87" />
+        <state relative-caret-position="209">
+          <caret line="37" column="59" lean-forward="true" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.sh">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

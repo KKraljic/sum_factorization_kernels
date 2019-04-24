@@ -22,5 +22,5 @@ MODE=1
 
 RESULTS=results
 mkdir $RESULTS
-likwid-perfctr -g CACHES -execpid -C 0-27 -O -m build/test_dg_integrate 4 10000000 200 1 > $RESULTS/dg-integrate-caches.out
-likwid-perfctr -g FLOPS -execpid -C 0-27 -O -m build/test_dg_integrate 4 10000000 200 1 > $RESULTS/dg-integrate-flops.out
+likwid-perfctr -g CACHES -execpid -C 0-27 -O -m build/test_dg_integrate $POLYNOMIAL_DEGREE $PROBLEM_SIZE $N_ITERATIONS $MODE > $RESULTS/dg-integrate-caches.out
+likwid-perfctr -g FLOPS -execpid -C 0-27 -O -m build/test_dg_integrate $POLYNOMIAL_DEGREE $PROBLEM_SIZE $N_ITERATIONS $MODE > $RESULTS/dg-integrate-flops.out
