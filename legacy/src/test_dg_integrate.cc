@@ -5,6 +5,7 @@
 #include <mpi.h>
 #include <sys/time.h>
 #include <sys/resource.h>
+#include <climits>
 
 #include "evaluation_dg_laplacian.h"
 
@@ -40,6 +41,13 @@ void run_program(const unsigned int vector_size_guess,
     EvaluationDGLaplacian<dim, degree, Number> evaluator;
     const unsigned int n_cells_tot = std::max(vector_size_guess / Utilities::pow(degree + 1, dim),
                                               1U);
+    std::cout << "Intermediate Result: " << vector_size_guess / Utilities::pow(degree + 1, dim) << std::endl;
+
+    std::cout << "degree: " << degree << std::endl;
+    std::cout << "dim: " << dim << std::endl;
+    std::cout << "Utilities::pow(degree + 1, dim): " << Utilities::pow(degree + 1, dim) << std::endl;
+    std::cout << "vector_size_guess: " << vector_size_guess << std::endl;
+    std::cout << "n_cells_tot: " << n_cells_tot << std::endl;
     unsigned int n_cells[3];
     n_cells[0] = std::max(static_cast<unsigned int>(1.00001 * std::pow((double) n_cells_tot, 1. / dim))
                           / VectorizedArray<Number>::n_array_elements,
@@ -290,6 +298,9 @@ int main(int argc, char **argv) {
         n_tests = std::atoi(argv[3]);
     if (argc > 4)
         variants = std::atoi(argv[4]);
+
+   std::cout << SIZE_MAX << std::endl;
+    std::cout << UINT_MAX << std::endl;
 
     RunTime<dimension, min_degree, max_degree, value_type>::run(degree, vector_size_guess,
                                                                 n_tests, variants);

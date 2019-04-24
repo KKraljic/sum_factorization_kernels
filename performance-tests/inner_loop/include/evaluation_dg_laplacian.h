@@ -65,7 +65,7 @@ public:
 
 #pragma omp parallel
         {
-            #pragma omp for schedule (static) collapse(2)
+#pragma omp for schedule (static) collapse(2)
             for (unsigned int ib = 0; ib < n_blocks[2]; ++ib)
                 for (unsigned int jb = 0; jb < n_blocks[1]; ++jb)
                     for (unsigned int kb = 0; kb < n_blocks[0]; ++kb)
@@ -107,18 +107,17 @@ public:
         return n_element;
     }
 
-    void do_verification() {
-        std::cout << "Verification currently not implemented!" << std::endl;
+
+    //TODO: "Inline"
+    void do_chebyshev() {
+        do_cheby_iter<true>(sol_rhs, sol_old, mat_diagonal, sol_new, sol_tmp, 0.5, 0.5);
     }
 
     void do_matvec() {
         do_cheby_iter<false>(sol_new, sol_new, sol_new, sol_tmp, sol_tmp, 0., 0.);
     }
 
-    void do_chebyshev() {
-        do_cheby_iter<true>(sol_rhs, sol_old, mat_diagonal, sol_new, sol_tmp, 0.5, 0.5);
-    }
-
+    //TODO: Mock subsequent calls
     template<bool evaluate_chebyshev = true>
     void do_inner_loop(const unsigned int start_x,
                        const unsigned int end_x,
