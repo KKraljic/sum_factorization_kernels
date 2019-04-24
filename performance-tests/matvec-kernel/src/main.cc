@@ -49,7 +49,7 @@ void run_matvec(){
 }
 
 
-int main(int argc, char **argv) {
+int main() {
     LIKWID_MARKER_INIT;
     run_matvec<2, double>();
     run_matvec<3, double>();

@@ -28,5 +28,6 @@ if (LIKWID_FOUND)
   add_executable(matvec-measurement src/main.cc)
   target_link_libraries(matvec-measurement ${LIKWID_LIBRARIES})
   target_compile_definitions(matvec-measurement PRIVATE LIKWID_PERFMON)
+  target_compile_options(matvec-measurement PRIVATE -Werror -Wall -Wextra)
 
 endif()

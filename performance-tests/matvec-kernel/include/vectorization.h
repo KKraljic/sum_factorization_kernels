@@ -820,7 +820,7 @@ public:
   VectorizedArray &
   operator *= (const VectorizedArray &vec)
   {
-      +multiplication_assign_ctr;
+      ++multiplication_assign_ctr;
 #if USE_VECTOR_ARITHMETICS
     data *= vec.data;
 #else
