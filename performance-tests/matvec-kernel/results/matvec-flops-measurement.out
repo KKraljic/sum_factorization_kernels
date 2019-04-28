@@ -1,0 +1,380 @@
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz
+CPU type:	Intel Xeon Haswell EN/EP/EX processor
+CPU clock:	2.60 GHz
+--------------------------------------------------------------------------------
+Finished calculations for vector size: 2
+Finished calculations for vector size: 3
+Finished calculations for vector size: 4
+Finished calculations for vector size: 5
+Finished calculations for vector size: 6
+Finished calculations for vector size: 7
+Finished calculations for vector size: 8
+Finished calculations for vector size: 9
+Finished calculations for vector size: 10
+Finished calculations for vector size: 11
+Finished calculations for vector size: 12
+Finished calculations for vector size: 13
+Finished calculations for vector size: 14
+Finished calculations for vector size: 15
+Finished calculations for vector size: 16
+Finished calculations for vector size: 17
+Finished calculations for vector size: 18
+--------------------------------------------------------------------------------
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-2,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000002,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,6523
+CPU_CLK_UNHALTED_CORE,FIXC1,25959
+CPU_CLK_UNHALTED_REF,FIXC2,30706
+AVX_INSTS_CALC,PMC0,372
+TABLE,Region 1D-MATVEC_Kernel-Degree-2,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],2.016943e-06,
+Runtime unhalted [s],9.984297e-06,
+Clock [MHz],2198.0380,
+CPI,3.9796,
+Packed SP MFLOP/s,1475.5003,
+Packed DP MFLOP/s,737.7501,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-3,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000005,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,6090
+CPU_CLK_UNHALTED_CORE,FIXC1,25536
+CPU_CLK_UNHALTED_REF,FIXC2,30186
+AVX_INSTS_CALC,PMC0,434
+TABLE,Region 1D-MATVEC_Kernel-Degree-3,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],4.630815e-06,
+Runtime unhalted [s],9.821603e-06,
+Clock [MHz],2199.4687,
+CPI,4.1931,
+Packed SP MFLOP/s,749.7600,
+Packed DP MFLOP/s,374.8800,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-4,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000001,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,6588
+CPU_CLK_UNHALTED_CORE,FIXC1,17547
+CPU_CLK_UNHALTED_REF,FIXC2,20696
+AVX_INSTS_CALC,PMC0,620
+TABLE,Region 1D-MATVEC_Kernel-Degree-4,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],7.246226e-07,
+Runtime unhalted [s],6.748891e-06,
+Clock [MHz],2204.3824,
+CPI,2.6635,
+Packed SP MFLOP/s,6844.9425,
+Packed DP MFLOP/s,3422.4712,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-5,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000009,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,7169
+CPU_CLK_UNHALTED_CORE,FIXC1,36118
+CPU_CLK_UNHALTED_REF,FIXC2,42718
+AVX_INSTS_CALC,PMC0,620
+TABLE,Region 1D-MATVEC_Kernel-Degree-5,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],9.300093e-06,
+Runtime unhalted [s],1.389163e-05,
+Clock [MHz],2198.2813,
+CPI,5.0381,
+Packed SP MFLOP/s,533.3280,
+Packed DP MFLOP/s,266.6640,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-6,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000014,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,11553
+CPU_CLK_UNHALTED_CORE,FIXC1,48455
+CPU_CLK_UNHALTED_REF,FIXC2,57174
+AVX_INSTS_CALC,PMC0,930
+TABLE,Region 1D-MATVEC_Kernel-Degree-6,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],1.424476e-05,
+Runtime unhalted [s],1.863666e-05,
+Clock [MHz],2203.4870,
+CPI,4.1941,
+Packed SP MFLOP/s,522.2973,
+Packed DP MFLOP/s,261.1487,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-7,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000035,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,12854
+CPU_CLK_UNHALTED_CORE,FIXC1,92350
+CPU_CLK_UNHALTED_REF,FIXC2,109096
+AVX_INSTS_CALC,PMC0,1240
+TABLE,Region 1D-MATVEC_Kernel-Degree-7,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],3.496958e-05,
+Runtime unhalted [s],3.551947e-05,
+Clock [MHz],2200.8911,
+CPI,7.1845,
+Packed SP MFLOP/s,283.6751,
+Packed DP MFLOP/s,141.8376,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-8,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000024,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,14470
+CPU_CLK_UNHALTED_CORE,FIXC1,68530
+CPU_CLK_UNHALTED_REF,FIXC2,80964
+AVX_INSTS_CALC,PMC0,1302
+TABLE,Region 1D-MATVEC_Kernel-Degree-8,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],2.409870e-05,
+Runtime unhalted [s],2.635787e-05,
+Clock [MHz],2200.6919,
+CPI,4.7360,
+Packed SP MFLOP/s,432.2225,
+Packed DP MFLOP/s,216.1112,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-9,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000053,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,16203
+CPU_CLK_UNHALTED_CORE,FIXC1,131929
+CPU_CLK_UNHALTED_REF,FIXC2,155766
+AVX_INSTS_CALC,PMC0,1736
+TABLE,Region 1D-MATVEC_Kernel-Degree-9,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0001,
+Runtime unhalted [s],0.0001,
+Clock [MHz],2202.1053,
+CPI,8.1423,
+Packed SP MFLOP/s,261.6706,
+Packed DP MFLOP/s,130.8353,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-10,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000061,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,18440
+CPU_CLK_UNHALTED_CORE,FIXC1,149451
+CPU_CLK_UNHALTED_REF,FIXC2,176592
+AVX_INSTS_CALC,PMC0,2108
+TABLE,Region 1D-MATVEC_Kernel-Degree-10,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0001,
+Runtime unhalted [s],0.0001,
+Clock [MHz],2200.3830,
+CPI,8.1047,
+Packed SP MFLOP/s,276.2751,
+Packed DP MFLOP/s,138.1375,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-11,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000081,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,20425
+CPU_CLK_UNHALTED_CORE,FIXC1,193843
+CPU_CLK_UNHALTED_REF,FIXC2,229060
+AVX_INSTS_CALC,PMC0,2418
+TABLE,Region 1D-MATVEC_Kernel-Degree-11,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0001,
+Runtime unhalted [s],0.0001,
+Clock [MHz],2200.2465,
+CPI,9.4905,
+Packed SP MFLOP/s,238.7263,
+Packed DP MFLOP/s,119.3631,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-12,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000079,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,22718
+CPU_CLK_UNHALTED_CORE,FIXC1,187480
+CPU_CLK_UNHALTED_REF,FIXC2,221624
+AVX_INSTS_CALC,PMC0,2604
+TABLE,Region 1D-MATVEC_Kernel-Degree-12,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0001,
+Runtime unhalted [s],0.0001,
+Clock [MHz],2199.4223,
+CPI,8.2525,
+Packed SP MFLOP/s,265.3472,
+Packed DP MFLOP/s,132.6736,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-13,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000034,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,25088
+CPU_CLK_UNHALTED_CORE,FIXC1,90346
+CPU_CLK_UNHALTED_REF,FIXC2,106808
+AVX_INSTS_CALC,PMC0,2294
+TABLE,Region 1D-MATVEC_Kernel-Degree-13,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],3.406803e-05,
+Runtime unhalted [s],3.474869e-05,
+Clock [MHz],2199.2552,
+CPI,3.6012,
+Packed SP MFLOP/s,538.6869,
+Packed DP MFLOP/s,269.3434,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-14,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000031,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,27567
+CPU_CLK_UNHALTED_CORE,FIXC1,85154
+CPU_CLK_UNHALTED_REF,FIXC2,100698
+AVX_INSTS_CALC,PMC0,2108
+TABLE,Region 1D-MATVEC_Kernel-Degree-14,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],3.147877e-05,
+Runtime unhalted [s],3.275175e-05,
+Clock [MHz],2198.6428,
+CPI,3.0890,
+Packed SP MFLOP/s,535.7261,
+Packed DP MFLOP/s,267.8631,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-15,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000039,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,30048
+CPU_CLK_UNHALTED_CORE,FIXC1,101504
+CPU_CLK_UNHALTED_REF,FIXC2,119990
+AVX_INSTS_CALC,PMC0,2666
+TABLE,Region 1D-MATVEC_Kernel-Degree-15,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],3.925731e-05,
+Runtime unhalted [s],3.904026e-05,
+Clock [MHz],2199.4221,
+CPI,3.3781,
+Packed SP MFLOP/s,543.2874,
+Packed DP MFLOP/s,271.6437,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-16,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000040,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,31911
+CPU_CLK_UNHALTED_CORE,FIXC1,105092
+CPU_CLK_UNHALTED_REF,FIXC2,124150
+AVX_INSTS_CALC,PMC0,2480
+TABLE,Region 1D-MATVEC_Kernel-Degree-16,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],4.034348e-05,
+Runtime unhalted [s],4.042027e-05,
+Clock [MHz],2200.8650,
+CPI,3.2933,
+Packed SP MFLOP/s,491.7771,
+Packed DP MFLOP/s,245.8886,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-17,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000042,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,34641
+CPU_CLK_UNHALTED_CORE,FIXC1,109912
+CPU_CLK_UNHALTED_REF,FIXC2,129532
+AVX_INSTS_CALC,PMC0,2976
+TABLE,Region 1D-MATVEC_Kernel-Degree-17,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],4.193734e-05,
+Runtime unhalted [s],4.227413e-05,
+Clock [MHz],2206.1677,
+CPI,3.1729,
+Packed SP MFLOP/s,567.7041,
+Packed DP MFLOP/s,283.8521,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599982811 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-18,Group 1 Raw,FLOPS_AVX,4
+Region Info,Core 1,
+RDTSC Runtime [s],0.000045,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,119964
+CPU_CLK_UNHALTED_CORE,FIXC1,124670
+CPU_CLK_UNHALTED_REF,FIXC2,135044
+AVX_INSTS_CALC,PMC0,12276
+TABLE,Region 1D-MATVEC_Kernel-Degree-18,Group 1 Metric,FLOPS_AVX,6
+Metric,Core 1,
+Runtime (RDTSC) [s],4.513968e-05,
+Runtime unhalted [s],4.795032e-05,
+Clock [MHz],2400.2537,
+CPI,1.0392,
+Packed SP MFLOP/s,2175.6468,
+Packed DP MFLOP/s,1087.8234,
