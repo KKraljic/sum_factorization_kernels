@@ -293,14 +293,18 @@ int main(int argc, char **argv) {
     if (argc > 1)
         degree = std::atoi(argv[1]);
     if (argc > 2)
-        vector_size_guess = std::atoi(argv[2]);
+        vector_size_guess = std::atol(argv[2]);
     if (argc > 3)
         n_tests = std::atoi(argv[3]);
     if (argc > 4)
         variants = std::atoi(argv[4]);
 
-   std::cout << SIZE_MAX << std::endl;
+   std::cout << vector_size_guess << std::endl;
     std::cout << UINT_MAX << std::endl;
+    if(vector_size_guess / UINT_MAX >= 1) {
+        std::cout << "Attention: Vector size is lager than allowed. Falling back to: " << std::endl;
+        std::cout << "\tvector_array_size: " << vector_size_guess % UINT_MAX << std::endl;
+    }
 
     RunTime<dimension, min_degree, max_degree, value_type>::run(degree, vector_size_guess,
                                                                 n_tests, variants);
