@@ -51,12 +51,12 @@ public:
         n_blocks[1] = (n_cells[1] + bly - 1) / bly;
         n_blocks[0] = (n_cells[0] + blx - 1) / blx;
 
-        std::cout << "n_blocks[2]: " << n_blocks[2] << std::endl;
+        /*std::cout << "n_blocks[2]: " << n_blocks[2] << std::endl;
         std::cout << "n_cells[2]: " << n_cells[2] << std::endl;
         std::cout << "n_blocks[1]: " << n_blocks[1] << std::endl;
         std::cout << "n_cells[1]: " << n_cells[1] << std::endl;
         std::cout << "n_blocks[0]: " << n_blocks[0] << std::endl;
-        std::cout << "n_cells[0]: " << n_cells[0] << std::endl;
+        std::cout << "n_cells[0]: " << n_cells[0] << std::endl;*/
 
         sol_old.resize(0);
         sol_new.resize(0);
@@ -528,11 +528,11 @@ public:
                                  (evaluate_chebyshev ? "ch" : "mv")).c_str());
 #endif
 
-            std::cout << "n_blocks[2]= max ib: " << n_blocks[2] << std::endl;
+            /*std::cout << "n_blocks[2]= max ib: " << n_blocks[2] << std::endl;
             std::cout << "n_blocks[1] = max jb: " << n_blocks[1] << std::endl;
             std::cout << "n_blocks[0] = max kb: " << n_blocks[0] << std::endl;
             std::cout << "max i: " << std::min(n_cells[2], n_blocks[2]) << std::endl;
-            std::cout << "max j: " << std::min(n_cells[1], n_blocks[1]) << std::endl;
+            std::cout << "max j: " << std::min(n_cells[1], n_blocks[1]) << std::endl;*/
 
 #pragma omp for schedule (static) collapse(2)
             for (unsigned int ib = 0; ib < n_blocks[2]; ++ib)

@@ -41,13 +41,14 @@ void run_program(const unsigned int vector_size_guess,
     EvaluationDGLaplacian<dim, degree, Number> evaluator;
     const unsigned int n_cells_tot = std::max(vector_size_guess / Utilities::pow(degree + 1, dim),
                                               1U);
-    std::cout << "Intermediate Result: " << vector_size_guess / Utilities::pow(degree + 1, dim) << std::endl;
+    /*std::cout << "Intermediate Result: " << vector_size_guess / Utilities::pow(degree + 1, dim) << std::endl;
 
     std::cout << "degree: " << degree << std::endl;
     std::cout << "dim: " << dim << std::endl;
     std::cout << "Utilities::pow(degree + 1, dim): " << Utilities::pow(degree + 1, dim) << std::endl;
     std::cout << "vector_size_guess: " << vector_size_guess << std::endl;
     std::cout << "n_cells_tot: " << n_cells_tot << std::endl;
+    std::cout << "n_array_elements" << VectorizedArray<Number>::n_array_elements << std::endl;*/
     unsigned int n_cells[3];
     n_cells[0] = std::max(static_cast<unsigned int>(1.00001 * std::pow((double) n_cells_tot, 1. / dim))
                           / VectorizedArray<Number>::n_array_elements,
