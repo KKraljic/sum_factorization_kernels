@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 project(evaluator CXX)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules")
-set(CMAKE_BUILD_TYPE "Release")
+set(CMAKE_BUILD_TYPE "Debug")
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "Intel")
   message("Using Intel compiler flags")
