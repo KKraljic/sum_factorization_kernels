@@ -10,11 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89dab2aa-5b85-4330-af94-5e77e522065b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sum_factorization_kernels.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sum_factorization_kernels.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../performance-tests/inner_loop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../performance-tests/inner_loop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../performance-tests/matvec-kernel/run_matvec_kernel_test.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../performance-tests/matvec-kernel/run_matvec_kernel_test.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../performance-tests/matvec-kernel/src/main.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../performance-tests/matvec-kernel/src/main.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../performance-tests/inner_loop_mocked/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../performance-tests/inner_loop_mocked/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../performance-tests/inner_loop_mocked/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../performance-tests/inner_loop_mocked/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../performance-tests/inner_loop_mocked/src/main.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../performance-tests/inner_loop_mocked/src/main.cc" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +30,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/evaluation_dg_laplacian.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-106">
-              <caret line="523" column="9" selection-start-line="523" selection-start-column="9" selection-end-line="523" selection-end-column="9" />
+            <state relative-caret-position="230">
+              <caret line="540" column="77" selection-start-line="540" selection-start-column="77" selection-end-line="540" selection-end-column="77" />
               <folding>
-                <element signature="e#24049#24153#0" expanded="true" />
-                <element signature="e#25053#25163#0" expanded="true" />
+                <element signature="e#24053#24157#0" expanded="true" />
+                <element signature="e#25057#25167#0" expanded="true" />
+                <element signature="e#26060#26175#0" expanded="true" />
+                <element signature="e#29777#29990#0" expanded="true" />
+                <element signature="e#31222#31433#0" expanded="true" />
+                <element signature="e#31876#32025#0" expanded="true" />
+                <element signature="e#33544#33691#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/vectorization.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="1645" column="44" selection-start-line="1645" selection-start-column="44" selection-end-line="1645" selection-end-column="44" />
+            <state relative-caret-position="340">
+              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -52,8 +57,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test_dg_integrate.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="49" column="29" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="29" />
+            <state relative-caret-position="-3454">
+              <caret line="31" column="47" lean-forward="true" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+              <folding>
+                <element signature="e#3344#3552#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/lagrange_polynomials.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -61,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test_dg_advect.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
+            <state relative-caret-position="295">
               <caret line="70" column="50" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
             </state>
           </provider>
@@ -70,8 +87,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="95" column="25" selection-start-line="95" selection-start-column="2" selection-end-line="95" selection-end-column="25" />
+            <state relative-caret-position="60">
+              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cmake/modules/FindLikwid.cmake">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test_polynomial.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -140,8 +175,8 @@
         <option value="$PROJECT_DIR$/include/matrix_vector_kernel.h" />
         <option value="$PROJECT_DIR$/include/verification/verification_test_dg_integrate.cc" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/test_dg_integrate.cc" />
         <option value="$PROJECT_DIR$/include/evaluation_dg_laplacian.h" />
+        <option value="$PROJECT_DIR$/src/test_dg_integrate.cc" />
       </list>
     </option>
   </component>
@@ -156,6 +191,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -166,7 +202,13 @@
             <path>
               <item name="legacy" type="b2602c69:ProjectViewProjectNode" />
               <item name="legacy" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="legacy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="legacy" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="legacy" type="b2602c69:ProjectViewProjectNode" />
@@ -177,13 +219,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../performance-tests/inner_loop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../performance-tests/matvec-kernel" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -245,13 +286,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53037000" />
+    <option name="totallyTimeSpent" value="54504000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1017" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1920" height="1017" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.123667374" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12899786" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -357,7 +397,11 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/include/lagrange_polynomials.h">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/utilities.h">
       <provider selected="true" editor-type-id="text-editor" />
@@ -395,8 +439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test_polynomial.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -485,15 +529,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test_dg_advect.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
+        <state relative-caret-position="295">
           <caret line="70" column="50" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="95" column="25" selection-start-line="95" selection-start-column="2" selection-end-line="95" selection-end-column="25" />
+        <state relative-caret-position="60">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -502,26 +546,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/include/evaluation_dg_laplacian.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106">
-          <caret line="523" column="9" selection-start-line="523" selection-start-column="9" selection-end-line="523" selection-end-column="9" />
+        <state relative-caret-position="230">
+          <caret line="540" column="77" selection-start-line="540" selection-start-column="77" selection-end-line="540" selection-end-column="77" />
           <folding>
-            <element signature="e#24049#24153#0" expanded="true" />
-            <element signature="e#25053#25163#0" expanded="true" />
+            <element signature="e#24053#24157#0" expanded="true" />
+            <element signature="e#25057#25167#0" expanded="true" />
+            <element signature="e#26060#26175#0" expanded="true" />
+            <element signature="e#29777#29990#0" expanded="true" />
+            <element signature="e#31222#31433#0" expanded="true" />
+            <element signature="e#31876#32025#0" expanded="true" />
+            <element signature="e#33544#33691#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/vectorization.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="1645" column="44" selection-start-line="1645" selection-start-column="44" selection-end-line="1645" selection-end-column="44" />
+        <state relative-caret-position="340">
+          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test_dg_integrate.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="29" />
+        <state relative-caret-position="-3454">
+          <caret line="31" column="47" lean-forward="true" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+          <folding>
+            <element signature="e#3344#3552#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
