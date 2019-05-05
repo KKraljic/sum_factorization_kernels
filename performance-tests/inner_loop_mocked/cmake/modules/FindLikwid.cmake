@@ -1,5 +1,5 @@
-set(LIKWID_INSTALL_ROOT "" CACHE STRING "Location of LIKWID installation")
-
+set(LIKWID_INSTALL_ROOT /lrz/sys/tools/likwid/likwid-4.3)
+message("Likwid install root: ${LIKWID_INSTALL_ROOT}")
 FIND_PATH(LIKWID_INCLUDE_PATH likwid.h HINTS ${LIKWID_INSTALL_ROOT}/include)
 FIND_LIBRARY(LIKWID_LIBRARIES likwid HINTS ${LIKWID_INSTALL_ROOT}/lib)
 
