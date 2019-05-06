@@ -11,8 +11,6 @@
 #ifndef evaluation_dg_laplacian_h
 #define evaluation_dg_laplacian_h
 
-#include <mpi.h>
-
 #include "gauss_formula.h"
 #include "lagrange_polynomials.h"
 #include "vectorization.h"
@@ -40,6 +38,37 @@ public:
     unsigned int bly;
     unsigned int blz;
 
+    /**
+     * ATTENTION: Initially Private variables!!!!
+     */
+
+    unsigned int n_cells[3];
+    unsigned int n_blocks[3];
+    AlignedVector<VectorizedArray<Number> > shape_values_eo;
+    AlignedVector<VectorizedArray<Number> > shape_gradients_eo;
+    AlignedVector<VectorizedArray<Number> > shape_values_on_face_eo;
+
+    AlignedVector<Number> quadrature_weights;
+    AlignedVector<Number> face_quadrature_weight;
+
+    VectorizedArray<Number> hermite_derivative_on_face;
+
+    AlignedVector<Number> sol_old;
+    AlignedVector<Number> sol_new;
+    AlignedVector<Number> sol_rhs;
+    AlignedVector<Number> sol_tmp;
+    AlignedVector<Number> mat_diagonal;
+
+    AlignedVector<VectorizedArray<Number> > jxw_data;
+    AlignedVector<VectorizedArray<Number> > jacobian_data;
+
+    /**
+     * ATTENTION: End of Initially Private variables!!!!
+     */
+
+
+
+
     void initialize(const unsigned int *n_cells_in) {
         n_cells[0] = n_cells_in[0] / VectorizedArray<Number>::n_array_elements;
         for (unsigned int d = 1; d < dim; ++d)
@@ -65,7 +94,7 @@ public:
 
 #pragma omp parallel
         {
-#pragma omp for schedule (static) collapse(2)
+            #pragma omp for schedule (static) collapse(2)
             for (unsigned int ib = 0; ib < n_blocks[2]; ++ib)
                 for (unsigned int jb = 0; jb < n_blocks[1]; ++jb)
                     for (unsigned int kb = 0; kb < n_blocks[0]; ++kb)
@@ -108,16 +137,6 @@ public:
     }
 
 
-    //TODO: "Inline"
-    void do_chebyshev() {
-        do_cheby_iter<true>(sol_rhs, sol_old, mat_diagonal, sol_new, sol_tmp, 0.5, 0.5);
-    }
-
-    void do_matvec() {
-        do_cheby_iter<false>(sol_new, sol_new, sol_new, sol_tmp, sol_tmp, 0., 0.);
-    }
-
-    //TODO: Mock subsequent calls
     template<bool evaluate_chebyshev = true>
     void do_inner_loop(const unsigned int start_x,
                        const unsigned int end_x,
@@ -540,52 +559,6 @@ public:
         }
     }
 
-    void emulate_cheby_vector_updates() {
-        const Number *ptr_old = sol_old.begin();
-        Number *ptr_new = sol_new.begin();
-        const Number *ptr_diag = mat_diagonal.begin();
-        Number *ptr_tmp = sol_tmp.begin();
-        const Number *ptr_rhs = sol_rhs.begin();
-        const Number coeff1 = 0.6;
-        const Number coeff2 = 0.45;
-
-#pragma omp parallel
-        {
-#ifdef LIKWID_PERFMON
-            LIKWID_MARKER_START(("emu_dg_laplacian_" + std::to_string(dim) +
-                                 "d_deg_" + std::to_string(degree) + "vu").c_str());
-#endif
-
-
-            std::size_t start_value;
-            std::size_t min_value;
-            std::size_t end_value;
-#pragma omp for schedule (static) collapse(2) private(start_value, min_value, end_value)
-            for (unsigned int ib = 0; ib < n_blocks[2]; ++ib)
-                for (unsigned int jb = 0; jb < n_blocks[1]; ++jb)
-                    for (unsigned int kb = 0; kb < n_blocks[0]; ++kb)
-                        for (unsigned int i = ib * blz; i < std::min(n_cells[2], (ib + 1) * blz); ++i)
-                            for (unsigned int j = jb * bly; j < std::min(n_cells[1], (jb + 1) * bly); ++j) {
-                                const unsigned int ii = (i * n_cells[1] + j) * n_cells[0];
-
-                                start_value = dofs_per_cell * VectorizedArray<Number>::n_array_elements * (kb * blx + ii);
-                                min_value = (std::min(n_cells[0], (kb + 1) * blx) + ii);
-                                end_value = min_value * dofs_per_cell * VectorizedArray<Number>::n_array_elements;
-#pragma omp simd
-                                for (std::size_t ix = start_value; ix < end_value; ++ix) {
-
-                                    ptr_tmp[ix] = coeff1 * ptr_tmp[ix] + coeff2 * ptr_diag[ix] *
-                                                                         (ptr_new[ix] - ptr_rhs[ix]);
-                                    ptr_new[ix] = ptr_old[ix] - ptr_tmp[ix];
-
-                                }
-                            }
-#ifdef LIKWID_PERFMON
-            LIKWID_MARKER_STOP(("emu_dg_laplacian_" + std::to_string(dim) +
-                                "d_deg_" + std::to_string(degree) + "vu").c_str());
-#endif
-        }
-    }
 
 private:
 
@@ -680,26 +653,6 @@ private:
         else
             face_quadrature_weight[0] = 1.;
     }
-
-    unsigned int n_cells[3];
-    unsigned int n_blocks[3];
-    AlignedVector<VectorizedArray<Number> > shape_values_eo;
-    AlignedVector<VectorizedArray<Number> > shape_gradients_eo;
-    AlignedVector<VectorizedArray<Number> > shape_values_on_face_eo;
-
-    AlignedVector<Number> quadrature_weights;
-    AlignedVector<Number> face_quadrature_weight;
-
-    VectorizedArray<Number> hermite_derivative_on_face;
-
-    AlignedVector<Number> sol_old;
-    AlignedVector<Number> sol_new;
-    AlignedVector<Number> sol_rhs;
-    AlignedVector<Number> sol_tmp;
-    AlignedVector<Number> mat_diagonal;
-
-    AlignedVector<VectorizedArray<Number> > jxw_data;
-    AlignedVector<VectorizedArray<Number> > jacobian_data;
 };
 
 

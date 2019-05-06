@@ -3,7 +3,7 @@ module load likwid/4.3
 rm -rf build/
 mkdir build
 cd build
-cmake ../
-make
+cmake -DCMAKE_CXX_COMPILER=icpc  ../
+make -j 32
 cd ..
 

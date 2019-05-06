@@ -1,0 +1,11 @@
+mkdir: cannot create directory 'results': File exists
+terminate called without an active exception
+Marker API result file does not exist. This may happen if the application has not called LIKWID_MARKER_CLOSE.
+terminate called without an active exception
+Marker API result file does not exist. This may happen if the application has not called LIKWID_MARKER_CLOSE.
+terminate called without an active exception
+Marker API result file does not exist. This may happen if the application has not called LIKWID_MARKER_CLOSE.
+terminate called without an active exception
+Marker API result file does not exist. This may happen if the application has not called LIKWID_MARKER_CLOSE.
+terminate called without an active exception
+Marker API result file does not exist. This may happen if the application has not called LIKWID_MARKER_CLOSE.

@@ -38,7 +38,6 @@ void run_matvec(){
 
     //Do the maths
     sprintf(region_tag, "1D-MATVEC_Kernel-Degree-%i", number_columns);
-    //std::cout << region_tag << std::endl;
     LIKWID_MARKER_START(region_tag);
     for(size_t i = 1; i < amount_iterations; i*=2) {
         apply_1d_matvec_kernel<entries_in_row, 1, 0, true, false, VectorizedArray<Number>, VectorizedArray<Number>, false, 0>
@@ -46,6 +45,13 @@ void run_matvec(){
     }
 
     LIKWID_MARKER_STOP(region_tag);
+    //Elements per second
+
+    //FLOPs
+
+    //Total number of loaded Doubles
+
+    //
 
     //Print results
     /*std::cout << "Resulting vector (out_vector): " << std::endl;

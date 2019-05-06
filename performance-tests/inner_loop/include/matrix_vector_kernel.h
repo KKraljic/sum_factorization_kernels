@@ -37,6 +37,7 @@ apply_1d_matvec_kernel(const Number2 *__restrict coefficients_eo,
                        const Number *array_for_add = nullptr,
                        const Number2 *__restrict dg_coefficients = nullptr,
                        Number *array_face = nullptr) {
+#ifdef NOT_MOCKED
     const unsigned int mid = nn / 2;
     const unsigned int offset = (nn + 1) / 2;
     Number xp[mid > 0 ? mid : 1], xm[mid > 0 ? mid : 1];
@@ -182,6 +183,8 @@ apply_1d_matvec_kernel(const Number2 *__restrict coefficients_eo,
                 r0.streaming_store(&out[mid * stride][0]);
         }
     }
+#else
+#endif
 }
 
 
