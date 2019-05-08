@@ -15,6 +15,7 @@ void run_matvec(){
     //out_vector dimension: 1xN
     AlignedVector<VectorizedArray<Number>> in_vector, in_matrix, out_vector;
     constexpr unsigned int entries_in_row = number_columns;
+    double start_point, end_point, duration;
 
     // max_amount_iteration == 2^62
     // in order to make sure it does not
@@ -36,15 +37,22 @@ void run_matvec(){
     const VectorizedArray<Number> *in_matrix_ptr = in_matrix.begin();
     VectorizedArray<Number> *out_vector_ptr = out_vector.begin();
 
+    reset_flop_ctr();
+    
     //Do the maths
     sprintf(region_tag, "1D-MATVEC_Kernel-Degree-%i", number_columns);
+    start_point = omp_get_wtime();
     LIKWID_MARKER_START(region_tag);
     for(size_t i = 1; i < amount_iterations; i*=2) {
         apply_1d_matvec_kernel<entries_in_row, 1, 0, true, false, VectorizedArray<Number>, VectorizedArray<Number>, false, 0>
                 (in_vector_ptr, in_matrix_ptr, out_vector_ptr);
     }
-
     LIKWID_MARKER_STOP(region_tag);
+    end_point = omp_get_wtime();
+
+
+    print_flop_details();
+    print_flop_summary();
     //Elements per second
 
     //FLOPs

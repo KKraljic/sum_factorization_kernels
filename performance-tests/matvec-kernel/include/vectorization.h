@@ -26,6 +26,7 @@
 
 #include <x86intrin.h>
 #include <cstdlib>
+#include <iostream>
 
 #ifndef USE_VECTOR_ARITHMETICS
 #define USE_VECTOR_ARITHMETICS 1
@@ -43,6 +44,38 @@ unsigned long long int division_ctr = 0;
 
 unsigned long long int assign_ctr = 0;
 
+void reset_flop_ctr(){
+   addition_assign_ctr = 0;
+   subtraction_assign_ctr = 0;
+   multiplication_assign_ctr = 0;
+   division_assign_ctr = 0;
+   addition_ctr = 0;
+   subtraction_ctr = 0;
+   multiplication_ctr = 0;
+   division_ctr = 0;
+   assign_ctr = 0;
+}
+
+void print_flop_details(){
+    std::cout << "addition_assign_ctr: " << addition_assign_ctr << std::endl;
+    std::cout << "subtraction_assign_ctr: " << subtraction_assign_ctr << std::endl;
+    std::cout << "multiplication_assign_ctr: " << multiplication_assign_ctr << std::endl;
+    std::cout << "division_assign_ctr: " << division_assign_ctr << std::endl;
+    std::cout << "addition_ctr: " << addition_ctr << std::endl;
+    std::cout << "subtraction_ctr: " << subtraction_ctr << std::endl;
+    std::cout << "multiplication_ctr: " << multiplication_ctr << std::endl;
+    std::cout << "division_ctr: " << division_ctr << std::endl;
+    std::cout << "assign_ctr: " << assign_ctr << std::endl;
+}
+
+void print_flop_summary(){
+    unsigned long long int flops = addition_assign_ctr + subtraction_assign_ctr + multiplication_assign_ctr + division_assign_ctr + addition_ctr + subtraction_ctr + multiplication_ctr + division_ctr;
+    unsigned long long int stores = addition_assign_ctr + subtraction_assign_ctr + multiplication_assign_ctr + division_assign_ctr + assign_ctr;
+    std::cout << "Total number of floating point operations: " << flops << std::endl;
+    std::cout << "Total number of floating point stores: " << stores << std::endl;
+}
+
+
 template <typename Number>
 class VectorizedArray
 {
@@ -51,6 +84,7 @@ public:
    * This gives the number of vectors collected in this class.
    */
   static const unsigned int n_array_elements = 1;
+
 
 
     /**
