@@ -57,24 +57,30 @@ void reset_flop_ctr(){
 }
 
 void print_flop_details(){
-    std::cout << "addition_assign_ctr: " << addition_assign_ctr << std::endl;
-    std::cout << "subtraction_assign_ctr: " << subtraction_assign_ctr << std::endl;
-    std::cout << "multiplication_assign_ctr: " << multiplication_assign_ctr << std::endl;
-    std::cout << "division_assign_ctr: " << division_assign_ctr << std::endl;
-    std::cout << "addition_ctr: " << addition_ctr << std::endl;
-    std::cout << "subtraction_ctr: " << subtraction_ctr << std::endl;
-    std::cout << "multiplication_ctr: " << multiplication_ctr << std::endl;
-    std::cout << "division_ctr: " << division_ctr << std::endl;
-    std::cout << "assign_ctr: " << assign_ctr << std::endl;
+    std::cout << "addition_assign_ctr," << addition_assign_ctr << std::endl;
+    std::cout << "subtraction_assign_ctr," << subtraction_assign_ctr << std::endl;
+    std::cout << "multiplication_assign_ctr," << multiplication_assign_ctr << std::endl;
+    std::cout << "division_assign_ctr," << division_assign_ctr << std::endl;
+    std::cout << "addition_ctr," << addition_ctr << std::endl;
+    std::cout << "subtraction_ctr," << subtraction_ctr << std::endl;
+    std::cout << "multiplication_ctr," << multiplication_ctr << std::endl;
+    std::cout << "division_ctr," << division_ctr << std::endl;
+    std::cout << "assign_ctr," << assign_ctr << std::endl;
 }
 
 void print_flop_summary(){
     unsigned long long int flops = addition_assign_ctr + subtraction_assign_ctr + multiplication_assign_ctr + division_assign_ctr + addition_ctr + subtraction_ctr + multiplication_ctr + division_ctr;
     unsigned long long int stores = addition_assign_ctr + subtraction_assign_ctr + multiplication_assign_ctr + division_assign_ctr + assign_ctr;
-    std::cout << "Total number of floating point operations: " << flops << std::endl;
-    std::cout << "Total number of floating point stores: " << stores << std::endl;
+    std::cout << flops << ",";
+    std::cout << stores << ",";
 }
 
+void print_gflop_per_second(double duration){
+    unsigned long long int flops = addition_assign_ctr + subtraction_assign_ctr + multiplication_assign_ctr + division_assign_ctr + addition_ctr + subtraction_ctr + multiplication_ctr + division_ctr;
+    unsigned long long int stores = addition_assign_ctr + subtraction_assign_ctr + multiplication_assign_ctr + division_assign_ctr + assign_ctr;
+    std::cout << flops/duration / 1000000000 << ",";
+    std::cout << stores/duration / 1000000000 << ",";
+}
 
 template <typename Number>
 class VectorizedArray
