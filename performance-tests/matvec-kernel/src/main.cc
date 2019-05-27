@@ -91,6 +91,15 @@ int main() {
     LIKWID_MARKER_INIT;
 
         setup_result_table();
+        /*AlignedVector<VectorizedArray<double>> in_vector;
+        AlignedVector<VectorizedArray<double>> out_vector;
+        in_vector.resize_fast(1);
+        out_vector.resize_fast(1);
+        in_vector[0] = 0.0;
+        out_vector[0] = 1.0;
+        reset_flop_ctr();
+        out_vector[0] /= in_vector[0] / out_vector[0];
+        print_flop_summary();*/
         run_matvec<2, double>(); run_matvec<2, double>(STRIDE_FACTOR);
         run_matvec<3, double>(); run_matvec<3, double>(STRIDE_FACTOR);
         run_matvec<4, double>(); run_matvec<4, double>(STRIDE_FACTOR);
