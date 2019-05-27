@@ -2,29 +2,39 @@
 #include "../include/aligned_vector.h"
 #include "../include/utilities.h"
 #include "../include/matrix_vector_kernel.h"
-
-
+#include <omp.h>
 #include <likwid.h>
+
+#define STRIDE_FACTOR 1000
+#define AMOUNT_ITERATIONS 10000000
 char region_tag[80];//80 is an arbitratry number; large enough to keep the tags...
 
 
+void setup_result_table(){
+    std::cout << "vector_size,striding_factor,amount_flops,amount_stores,GFLOP/s,GSTORE/s,duration_[s],throughput_[e/s],throughput_[GB/s]" << std::endl;
+}
+
+
+
 template<int number_columns,typename Number>
-void run_matvec(){
+void run_matvec(int stride_factor = 0){
     //Matrix dimensions: NxN/2; N = entries per row, due do symmetry of matrix divided by 2
     //in_vector dimension: Nx1
     //out_vector dimension: 1xN
     AlignedVector<VectorizedArray<Number>> in_vector, in_matrix, out_vector;
     constexpr unsigned int entries_in_row = number_columns;
-
-    // max_amount_iteration == 2^62
-    // in order to make sure it does not
-    // overflow size_t
-    size_t amount_iterations = 4611686018427387904;
+    double start_point, end_point, duration;
 
     //Set sizes of vectors and matrix
-    in_vector.resize_fast(number_columns);
-    out_vector.resize_fast(number_columns);
-    in_matrix.resize_fast(number_columns*number_columns/2);
+    if(stride_factor == 0){
+        in_vector.resize_fast(number_columns);
+        out_vector.resize_fast(number_columns);
+        in_matrix.resize_fast(number_columns*number_columns/2);
+    } else {
+        in_vector.resize_fast(number_columns*stride_factor);
+        out_vector.resize_fast(number_columns*stride_factor);
+        in_matrix.resize_fast(number_columns*number_columns*stride_factor*stride_factor/2);
+    }
 
     //Initialize vectors and matrix with some initial values
     for(size_t i = 0; i < in_vector.size(); ++i) in_vector[i] = 1.0;
@@ -36,53 +46,94 @@ void run_matvec(){
     const VectorizedArray<Number> *in_matrix_ptr = in_matrix.begin();
     VectorizedArray<Number> *out_vector_ptr = out_vector.begin();
 
+    reset_flop_ctr();
     //Do the maths
-    sprintf(region_tag, "1D-MATVEC_Kernel-Degree-%i", number_columns);
-    LIKWID_MARKER_START(region_tag);
-    for(size_t i = 1; i < amount_iterations; i*=2) {
-        apply_1d_matvec_kernel<entries_in_row, 1, 0, true, false, VectorizedArray<Number>, VectorizedArray<Number>, false, 0>
-                (in_vector_ptr, in_matrix_ptr, out_vector_ptr);
-    }
+    sprintf(region_tag, "1D-MATVEC_Kernel-Degree-%i-stride-%i", number_columns, stride_factor);
 
+    //Start performance measurements
+    start_point = omp_get_wtime();
+    LIKWID_MARKER_START(region_tag);
+        if(stride_factor == 0) {
+            for (size_t i = 1; i < AMOUNT_ITERATIONS; ++i) {
+                apply_1d_matvec_kernel<entries_in_row, 1, 0, true, false, VectorizedArray<Number>, VectorizedArray<Number>, false, 0>
+                        (in_vector_ptr, in_matrix_ptr, out_vector_ptr);
+            }
+        } else {
+            for (size_t i = 1; i < AMOUNT_ITERATIONS/stride_factor; ++i) {
+                for(size_t j = 0; j < stride_factor - 1; j++) {
+                    apply_1d_matvec_kernel<entries_in_row, 1, 0, true, false, VectorizedArray<Number>, VectorizedArray<Number>, false, 0>
+                            (in_vector_ptr + j*entries_in_row, in_matrix_ptr + j*entries_in_row, out_vector_ptr + j*entries_in_row);
+                }
+            }
+
+        }
     LIKWID_MARKER_STOP(region_tag);
+    end_point = omp_get_wtime();
+    duration = end_point - start_point;
+
+    //End of performance measurements
+    // FLOPs
+    std::cout << number_columns << ",";
+    std::cout << stride_factor << ",";
+    print_flop_summary();
+    print_gflop_per_second(duration);
+    std::cout << duration << std::endl;
+
     //Elements per second
 
-    //FLOPs
 
     //Total number of loaded Doubles
 
-    //
-
-    //Print results
-    /*std::cout << "Resulting vector (out_vector): " << std::endl;
-    std::cout << out_vector[0][0];
-    std::cout << std::endl;
-    std::cout << "Finished method" << std::endl;*/
-
-    std::cout << "Finished calculations for vector size: " << number_columns << std::endl;
 }
 
 
 int main() {
     LIKWID_MARKER_INIT;
 
-        run_matvec<2, double>();
-        run_matvec<3, double>();
-        run_matvec<4, double>();
-        run_matvec<5, double>();
-        run_matvec<6, double>();
-        run_matvec<7, double>();
-        run_matvec<8, double>();
-        run_matvec<9, double>();
-        run_matvec<10, double>();
-        run_matvec<11, double>();
-        run_matvec<12, double>();
-        run_matvec<13, double>();
-        run_matvec<14, double>();
-        run_matvec<15, double>();
-        run_matvec<16, double>();
-        run_matvec<17, double>();
-        run_matvec<18, double>();
+        setup_result_table();
+        /*AlignedVector<VectorizedArray<double>> in_vector;
+        AlignedVector<VectorizedArray<double>> out_vector;
+        in_vector.resize_fast(1);
+        out_vector.resize_fast(1);
+        in_vector[0] = 0.0;
+        out_vector[0] = 1.0;
+        reset_flop_ctr();
+        out_vector[0] /= in_vector[0] / out_vector[0];
+        print_flop_summary();*/
+        run_matvec<2, double>(); run_matvec<2, double>(STRIDE_FACTOR);
+        run_matvec<3, double>(); run_matvec<3, double>(STRIDE_FACTOR);
+        run_matvec<4, double>(); run_matvec<4, double>(STRIDE_FACTOR);
+        run_matvec<5, double>(); run_matvec<5, double>(STRIDE_FACTOR);
+        run_matvec<6, double>(); run_matvec<6, double>(STRIDE_FACTOR);
+        run_matvec<7, double>(); run_matvec<7, double>(STRIDE_FACTOR);
+        run_matvec<8, double>(); run_matvec<8, double>(STRIDE_FACTOR);
+        run_matvec<9, double>(); run_matvec<9, double>(STRIDE_FACTOR);
+        run_matvec<10, double>(); run_matvec<10, double>(STRIDE_FACTOR);
+        run_matvec<11, double>(); run_matvec<11, double>(STRIDE_FACTOR);
+        run_matvec<12, double>(); run_matvec<12, double>(STRIDE_FACTOR);
+        run_matvec<13, double>(); run_matvec<13, double>(STRIDE_FACTOR);
+        run_matvec<14, double>(); run_matvec<14, double>(STRIDE_FACTOR);
+        run_matvec<15, double>(); run_matvec<15, double>(STRIDE_FACTOR);
+        run_matvec<16, double>(); run_matvec<16, double>(STRIDE_FACTOR);
+        run_matvec<17, double>(); run_matvec<17, double>(STRIDE_FACTOR);
+        run_matvec<18, double>(); run_matvec<18, double>(STRIDE_FACTOR);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /*run_matvec<19, double>();
         run_matvec<20, double>();
         run_matvec<21, double>();

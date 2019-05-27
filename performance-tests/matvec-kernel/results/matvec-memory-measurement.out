@@ -3,701 +3,1399 @@ CPU name:	Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz
 CPU type:	Intel Xeon Haswell EN/EP/EX processor
 CPU clock:	2.60 GHz
 --------------------------------------------------------------------------------
-Finished calculations for vector size: 2
-Finished calculations for vector size: 3
-Finished calculations for vector size: 4
-Finished calculations for vector size: 5
-Finished calculations for vector size: 6
-Finished calculations for vector size: 7
-Finished calculations for vector size: 8
-Finished calculations for vector size: 9
-Finished calculations for vector size: 10
-Finished calculations for vector size: 11
-Finished calculations for vector size: 12
-Finished calculations for vector size: 13
-Finished calculations for vector size: 14
-Finished calculations for vector size: 15
-Finished calculations for vector size: 16
-Finished calculations for vector size: 17
-Finished calculations for vector size: 18
+vector_size,striding_factor,amount_flops,amount_stores,GFLOP/s,GSTORE/s,duration_[s],throughput_[e/s],throughput_[GB/s]
+2,0,119999988,59999994,4.46941,2.23471,0.0268492
+2,1000,119868012,59934006,1.75636,0.878179,0.068248
+3,0,199999980,109999989,0.414484,0.227966,0.482527
+3,1000,199780020,109879011,2.10967,1.16032,0.0946974
+4,0,359999964,199999980,8.03297,4.46276,0.0448153
+4,1000,359604036,199780020,2.69321,1.49623,0.133523
+5,0,499999950,289999971,0.270338,0.156796,1.84953
+5,1000,499450050,289681029,2.62397,1.5219,0.190342
+6,0,719999928,419999958,0.481163,0.280678,1.49637
+6,1000,719208072,419538042,2.83194,1.65196,0.253963
+7,0,919999908,549999945,0.245386,0.146698,3.74919
+7,1000,918988092,549395055,2.89377,1.72997,0.317574
+8,0,1199999880,719999928,0.351379,0.210827,3.41512
+8,1000,1198680120,719208072,3.67388,2.20433,0.326271
+9,0,1459999854,889999911,0.236528,0.144185,6.17263
+9,1000,1458394146,889021089,3.43371,2.09315,0.424729
+10,0,1799999820,1099999890,0.285448,0.174441,6.30587
+10,1000,1798020180,1098790110,4.29408,2.62416,0.418721
+11,0,2119999788,1309999869,0.968417,0.598409,2.18914
+11,1000,2117668212,1308559131,4.11312,2.5416,0.514856
+12,0,2519999748,1559999844,1.8594,1.15106,1.35528
+12,1000,2517228252,1558284156,5.11852,3.16861,0.491788
+13,0,2899999710,1809999819,1.23444,0.770461,2.34924
+13,1000,2896810290,1808009181,4.706,2.9372,0.615556
+14,0,3359999664,2099999790,1.38692,0.866822,2.42264
+14,1000,3356304336,2097690210,5.47821,3.42388,0.612665
+15,0,3799999620,2389999761,1.94428,1.22285,1.95445
+15,1000,3795820380,2387371239,5.21616,3.28069,0.727704
+16,0,4319999568,2719999728,2.09185,1.31709,2.06515
+16,1000,4315248432,2717008272,5.95789,3.75126,0.724292
+17,0,4819999518,3049999695,1.51198,0.956754,3.18786
+17,1000,4814698482,3046645305,5.57187,3.52577,0.864109
+18,0,5399999460,3419999658,2.11205,1.33763,2.55676
+18,1000,5394060540,3416238342,3.09406,1.95957,1.74336
 --------------------------------------------------------------------------------
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-2,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-2-stride-0,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000001,
+RDTSC Runtime [s],0.026103,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,7796
-CPU_CLK_UNHALTED_CORE,FIXC1,21883
-CPU_CLK_UNHALTED_REF,FIXC2,25948
-CAS_COUNT_RD,MBOX0C0,37
-CAS_COUNT_WR,MBOX0C1,22
-CAS_COUNT_RD,MBOX1C0,36
-CAS_COUNT_WR,MBOX1C1,35
+INSTR_RETIRED_ANY,FIXC0,260006000
+CPU_CLK_UNHALTED_CORE,FIXC1,85344210
+CPU_CLK_UNHALTED_REF,FIXC2,67428530
+CAS_COUNT_RD,MBOX0C0,1132
+CAS_COUNT_WR,MBOX0C1,960
+CAS_COUNT_RD,MBOX1C0,444
+CAS_COUNT_WR,MBOX1C1,255
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,1
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,15
-CAS_COUNT_WR,MBOX5C1,14
+CAS_COUNT_RD,MBOX4C0,918
+CAS_COUNT_WR,MBOX4C1,781
+CAS_COUNT_RD,MBOX5C0,270
+CAS_COUNT_WR,MBOX5C1,114
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-2,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-2-stride-0,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],1.281545e-06,
-Runtime unhalted [s],8.416598e-06,
-Clock [MHz],2192.6698,
-CPI,2.8070,
-Memory read bandwidth [MBytes/s],4444.6352,
-Memory read data volume [GBytes],5.696000e-06,
-Memory write bandwidth [MBytes/s],3545.7202,
-Memory write data volume [GBytes],4.544000e-06,
-Memory bandwidth [MBytes/s],7990.3554,
-Memory data volume [GBytes],1.024000e-05,
+Runtime (RDTSC) [s],0.0261,
+Runtime unhalted [s],0.0328,
+Clock [MHz],3290.6167,
+CPI,0.3282,
+Memory read bandwidth [MBytes/s],6.7768,
+Memory read data volume [GBytes],0.0002,
+Memory write bandwidth [MBytes/s],5.1733,
+Memory write data volume [GBytes],0.0001,
+Memory bandwidth [MBytes/s],11.9501,
+Memory data volume [GBytes],0.0003,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-3,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-2-stride-1000,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000005,
+RDTSC Runtime [s],0.067474,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,7363
-CPU_CLK_UNHALTED_CORE,FIXC1,29591
-CPU_CLK_UNHALTED_REF,FIXC2,34944
-CAS_COUNT_RD,MBOX0C0,3
-CAS_COUNT_WR,MBOX0C1,2
-CAS_COUNT_RD,MBOX1C0,19
-CAS_COUNT_WR,MBOX1C1,18
+INSTR_RETIRED_ANY,FIXC0,270085400
+CPU_CLK_UNHALTED_CORE,FIXC1,221291400
+CPU_CLK_UNHALTED_REF,FIXC2,174512300
+CAS_COUNT_RD,MBOX0C0,9169
+CAS_COUNT_WR,MBOX0C1,11889
+CAS_COUNT_RD,MBOX1C0,7362
+CAS_COUNT_WR,MBOX1C1,10148
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,1
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,14
-CAS_COUNT_WR,MBOX5C1,13
+CAS_COUNT_RD,MBOX4C0,2360
+CAS_COUNT_WR,MBOX4C1,1855
+CAS_COUNT_RD,MBOX5C0,631
+CAS_COUNT_WR,MBOX5C1,112
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-3,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-2-stride-1000,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],5.050795e-06,
-Runtime unhalted [s],1.138123e-05,
-Clock [MHz],2201.6957,
-CPI,4.0189,
-Memory read bandwidth [MBytes/s],468.8371,
-Memory read data volume [GBytes],2.368000e-06,
-Memory write bandwidth [MBytes/s],418.1520,
-Memory write data volume [GBytes],2.112000e-06,
-Memory bandwidth [MBytes/s],886.9891,
-Memory data volume [GBytes],4.480000e-06,
+Runtime (RDTSC) [s],0.0675,
+Runtime unhalted [s],0.0851,
+Clock [MHz],3296.7455,
+CPI,0.8193,
+Memory read bandwidth [MBytes/s],18.5169,
+Memory read data volume [GBytes],0.0012,
+Memory write bandwidth [MBytes/s],22.7681,
+Memory write data volume [GBytes],0.0015,
+Memory bandwidth [MBytes/s],41.2850,
+Memory data volume [GBytes],0.0028,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-4,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-3-stride-0,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000001,
+RDTSC Runtime [s],0.481840,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,7650
-CPU_CLK_UNHALTED_CORE,FIXC1,25133
-CPU_CLK_UNHALTED_REF,FIXC2,29744
-CAS_COUNT_RD,MBOX0C0,9
-CAS_COUNT_WR,MBOX0C1,3
-CAS_COUNT_RD,MBOX1C0,21
-CAS_COUNT_WR,MBOX1C1,20
+INSTR_RETIRED_ANY,FIXC0,320359400
+CPU_CLK_UNHALTED_CORE,FIXC1,1571096000
+CPU_CLK_UNHALTED_REF,FIXC2,1246662000
+CAS_COUNT_RD,MBOX0C0,21185
+CAS_COUNT_WR,MBOX0C1,24067
+CAS_COUNT_RD,MBOX1C0,8928
+CAS_COUNT_WR,MBOX1C1,12237
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,0
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,14
-CAS_COUNT_WR,MBOX5C1,14
+CAS_COUNT_RD,MBOX4C0,12689
+CAS_COUNT_WR,MBOX4C1,12416
+CAS_COUNT_RD,MBOX5C0,442
+CAS_COUNT_WR,MBOX5C1,155
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-4,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-3-stride-0,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],1.484623e-06,
-Runtime unhalted [s],9.666607e-06,
-Clock [MHz],2196.9249,
-CPI,3.2854,
-Memory read bandwidth [MBytes/s],1896.7778,
-Memory read data volume [GBytes],2.816000e-06,
-Memory write bandwidth [MBytes/s],1595.0177,
-Memory write data volume [GBytes],2.368000e-06,
-Memory bandwidth [MBytes/s],3491.7956,
-Memory data volume [GBytes],5.184000e-06,
+Runtime (RDTSC) [s],0.4818,
+Runtime unhalted [s],0.6043,
+Clock [MHz],3276.4302,
+CPI,4.9042,
+Memory read bandwidth [MBytes/s],5.7439,
+Memory read data volume [GBytes],0.0028,
+Memory write bandwidth [MBytes/s],6.4918,
+Memory write data volume [GBytes],0.0031,
+Memory bandwidth [MBytes/s],12.2356,
+Memory data volume [GBytes],0.0059,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-5,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-3-stride-1000,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000009,
+RDTSC Runtime [s],0.093938,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,8020
-CPU_CLK_UNHALTED_CORE,FIXC1,37635
-CPU_CLK_UNHALTED_REF,FIXC2,44486
-CAS_COUNT_RD,MBOX0C0,3
-CAS_COUNT_WR,MBOX0C1,1
-CAS_COUNT_RD,MBOX1C0,18
-CAS_COUNT_WR,MBOX1C1,15
+INSTR_RETIRED_ANY,FIXC0,330081300
+CPU_CLK_UNHALTED_CORE,FIXC1,307803800
+CPU_CLK_UNHALTED_REF,FIXC2,243133600
+CAS_COUNT_RD,MBOX0C0,14516
+CAS_COUNT_WR,MBOX0C1,16353
+CAS_COUNT_RD,MBOX1C0,12076
+CAS_COUNT_WR,MBOX1C1,13916
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,0
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,15
-CAS_COUNT_WR,MBOX5C1,14
+CAS_COUNT_RD,MBOX4C0,3156
+CAS_COUNT_WR,MBOX4C1,2586
+CAS_COUNT_RD,MBOX5C0,720
+CAS_COUNT_WR,MBOX5C1,158
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-5,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-3-stride-1000,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],9.315433e-06,
-Runtime unhalted [s],1.447510e-05,
-Clock [MHz],2199.5753,
-CPI,4.6926,
-Memory read bandwidth [MBytes/s],247.3315,
-Memory read data volume [GBytes],2.304000e-06,
-Memory write bandwidth [MBytes/s],206.1096,
-Memory write data volume [GBytes],1.920000e-06,
-Memory bandwidth [MBytes/s],453.4411,
-Memory data volume [GBytes],4.224000e-06,
+Runtime (RDTSC) [s],0.0939,
+Runtime unhalted [s],0.1184,
+Clock [MHz],3291.3640,
+CPI,0.9325,
+Memory read bandwidth [MBytes/s],20.7579,
+Memory read data volume [GBytes],0.0019,
+Memory write bandwidth [MBytes/s],22.4918,
+Memory write data volume [GBytes],0.0021,
+Memory bandwidth [MBytes/s],43.2496,
+Memory data volume [GBytes],0.0041,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-6,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-4-stride-0,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000014,
+RDTSC Runtime [s],0.044114,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,12614
-CPU_CLK_UNHALTED_CORE,FIXC1,47449
-CPU_CLK_UNHALTED_REF,FIXC2,56108
-CAS_COUNT_RD,MBOX0C0,9
-CAS_COUNT_WR,MBOX0C1,4
-CAS_COUNT_RD,MBOX1C0,19
-CAS_COUNT_WR,MBOX1C1,20
+INSTR_RETIRED_ANY,FIXC0,400005700
+CPU_CLK_UNHALTED_CORE,FIXC1,143808900
+CPU_CLK_UNHALTED_REF,FIXC2,113927700
+CAS_COUNT_RD,MBOX0C0,1725
+CAS_COUNT_WR,MBOX0C1,1742
+CAS_COUNT_RD,MBOX1C0,614
+CAS_COUNT_WR,MBOX1C1,650
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,0
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,13
-CAS_COUNT_WR,MBOX5C1,14
+CAS_COUNT_RD,MBOX4C0,1422
+CAS_COUNT_WR,MBOX4C1,1265
+CAS_COUNT_RD,MBOX5C0,281
+CAS_COUNT_WR,MBOX5C1,99
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-6,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-4-stride-0,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],1.422161e-05,
-Runtime unhalted [s],1.824975e-05,
-Clock [MHz],2198.7332,
-CPI,3.7616,
-Memory read bandwidth [MBytes/s],184.5079,
-Memory read data volume [GBytes],2.624000e-06,
-Memory write bandwidth [MBytes/s],171.0074,
-Memory write data volume [GBytes],2.432000e-06,
-Memory bandwidth [MBytes/s],355.5153,
-Memory data volume [GBytes],5.056000e-06,
+Runtime (RDTSC) [s],0.0441,
+Runtime unhalted [s],0.0553,
+Clock [MHz],3281.7339,
+CPI,0.3595,
+Memory read bandwidth [MBytes/s],5.8640,
+Memory read data volume [GBytes],0.0003,
+Memory write bandwidth [MBytes/s],5.4491,
+Memory write data volume [GBytes],0.0002,
+Memory bandwidth [MBytes/s],11.3131,
+Memory data volume [GBytes],0.0005,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-7,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-4-stride-1000,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000059,
+RDTSC Runtime [s],0.132779,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,13916
-CPU_CLK_UNHALTED_CORE,FIXC1,108723
-CPU_CLK_UNHALTED_REF,FIXC2,128518
-CAS_COUNT_RD,MBOX0C0,11
-CAS_COUNT_WR,MBOX0C1,11
-CAS_COUNT_RD,MBOX1C0,29
-CAS_COUNT_WR,MBOX1C1,23
+INSTR_RETIRED_ANY,FIXC0,419753500
+CPU_CLK_UNHALTED_CORE,FIXC1,435140500
+CPU_CLK_UNHALTED_REF,FIXC2,343834700
+CAS_COUNT_RD,MBOX0C0,8810
+CAS_COUNT_WR,MBOX0C1,9854
+CAS_COUNT_RD,MBOX1C0,5378
+CAS_COUNT_WR,MBOX1C1,6440
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,0
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,15
-CAS_COUNT_WR,MBOX5C1,15
+CAS_COUNT_RD,MBOX4C0,3717
+CAS_COUNT_WR,MBOX4C1,3405
+CAS_COUNT_RD,MBOX5C0,356
+CAS_COUNT_WR,MBOX5C1,23
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-7,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-4-stride-1000,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],0.0001,
-Runtime unhalted [s],4.181684e-05,
-Clock [MHz],2199.5191,
-CPI,7.8128,
-Memory read bandwidth [MBytes/s],59.6950,
-Memory read data volume [GBytes],3.520000e-06,
-Memory write bandwidth [MBytes/s],53.1828,
-Memory write data volume [GBytes],3.136000e-06,
-Memory bandwidth [MBytes/s],112.8777,
-Memory data volume [GBytes],6.656000e-06,
+Runtime (RDTSC) [s],0.1328,
+Runtime unhalted [s],0.1674,
+Clock [MHz],3290.2335,
+CPI,1.0367,
+Memory read bandwidth [MBytes/s],8.8019,
+Memory read data volume [GBytes],0.0012,
+Memory write bandwidth [MBytes/s],9.5061,
+Memory write data volume [GBytes],0.0013,
+Memory bandwidth [MBytes/s],18.3080,
+Memory data volume [GBytes],0.0024,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-8,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-5-stride-0,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000037,
+RDTSC Runtime [s],1.848888,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,15743
-CPU_CLK_UNHALTED_CORE,FIXC1,78726
-CPU_CLK_UNHALTED_REF,FIXC2,93028
-CAS_COUNT_RD,MBOX0C0,5
-CAS_COUNT_WR,MBOX0C1,7
-CAS_COUNT_RD,MBOX1C0,24
-CAS_COUNT_WR,MBOX1C1,19
+INSTR_RETIRED_ANY,FIXC0,462099400
+CPU_CLK_UNHALTED_CORE,FIXC1,6065429000
+CPU_CLK_UNHALTED_REF,FIXC2,4792496000
+CAS_COUNT_RD,MBOX0C0,68534
+CAS_COUNT_WR,MBOX0C1,71139
+CAS_COUNT_RD,MBOX1C0,21483
+CAS_COUNT_WR,MBOX1C1,24425
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,0
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,15
-CAS_COUNT_WR,MBOX5C1,14
+CAS_COUNT_RD,MBOX4C0,47988
+CAS_COUNT_WR,MBOX4C1,47269
+CAS_COUNT_RD,MBOX5C0,973
+CAS_COUNT_WR,MBOX5C1,248
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-8,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-5-stride-0,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],3.652634e-05,
-Runtime unhalted [s],3.027945e-05,
-Clock [MHz],2200.2638,
-CPI,5.0007,
-Memory read bandwidth [MBytes/s],77.0950,
-Memory read data volume [GBytes],2.816000e-06,
-Memory write bandwidth [MBytes/s],70.0864,
-Memory write data volume [GBytes],2.560000e-06,
-Memory bandwidth [MBytes/s],147.1815,
-Memory data volume [GBytes],5.376000e-06,
+Runtime (RDTSC) [s],1.8489,
+Runtime unhalted [s],2.3330,
+Clock [MHz],3290.3848,
+CPI,13.1258,
+Memory read bandwidth [MBytes/s],4.8108,
+Memory read data volume [GBytes],0.0089,
+Memory write bandwidth [MBytes/s],4.9528,
+Memory write data volume [GBytes],0.0092,
+Memory bandwidth [MBytes/s],9.7636,
+Memory data volume [GBytes],0.0181,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-9,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-5-stride-1000,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000070,
+RDTSC Runtime [s],0.189633,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,17265
-CPU_CLK_UNHALTED_CORE,FIXC1,152892
-CPU_CLK_UNHALTED_REF,FIXC2,180752
-CAS_COUNT_RD,MBOX0C0,7
-CAS_COUNT_WR,MBOX0C1,7
-CAS_COUNT_RD,MBOX1C0,25
-CAS_COUNT_WR,MBOX1C1,18
+INSTR_RETIRED_ANY,FIXC0,509808900
+CPU_CLK_UNHALTED_CORE,FIXC1,622964500
+CPU_CLK_UNHALTED_REF,FIXC2,491375600
+CAS_COUNT_RD,MBOX0C0,16105
+CAS_COUNT_WR,MBOX0C1,18686
+CAS_COUNT_RD,MBOX1C0,11171
+CAS_COUNT_WR,MBOX1C1,13853
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,0
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,15
-CAS_COUNT_WR,MBOX5C1,16
+CAS_COUNT_RD,MBOX4C0,5464
+CAS_COUNT_WR,MBOX4C1,4882
+CAS_COUNT_RD,MBOX5C0,636
+CAS_COUNT_WR,MBOX5C1,44
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-9,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-5-stride-1000,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],0.0001,
-Runtime unhalted [s],0.0001,
-Clock [MHz],2199.2364,
-CPI,8.8556,
-Memory read bandwidth [MBytes/s],42.7747,
-Memory read data volume [GBytes],3.008000e-06,
-Memory write bandwidth [MBytes/s],37.3141,
-Memory write data volume [GBytes],2.624000e-06,
-Memory bandwidth [MBytes/s],80.0888,
-Memory data volume [GBytes],5.632000e-06,
+Runtime (RDTSC) [s],0.1896,
+Runtime unhalted [s],0.2396,
+Clock [MHz],3296.0716,
+CPI,1.2220,
+Memory read bandwidth [MBytes/s],11.2642,
+Memory read data volume [GBytes],0.0021,
+Memory write bandwidth [MBytes/s],12.6442,
+Memory write data volume [GBytes],0.0024,
+Memory bandwidth [MBytes/s],23.9085,
+Memory data volume [GBytes],0.0045,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-10,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-6-stride-0,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000065,
+RDTSC Runtime [s],1.495746,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,19502
-CPU_CLK_UNHALTED_CORE,FIXC1,160873
-CPU_CLK_UNHALTED_REF,FIXC2,167310
-CAS_COUNT_RD,MBOX0C0,22
-CAS_COUNT_WR,MBOX0C1,4
-CAS_COUNT_RD,MBOX1C0,30
-CAS_COUNT_WR,MBOX1C1,28
+INSTR_RETIRED_ANY,FIXC0,1191315000
+CPU_CLK_UNHALTED_CORE,FIXC1,4904402000
+CPU_CLK_UNHALTED_REF,FIXC2,3876426000
+CAS_COUNT_RD,MBOX0C0,58427
+CAS_COUNT_WR,MBOX0C1,62022
+CAS_COUNT_RD,MBOX1C0,20185
+CAS_COUNT_WR,MBOX1C1,24010
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,2
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,17
-CAS_COUNT_WR,MBOX5C1,15
+CAS_COUNT_RD,MBOX4C0,39508
+CAS_COUNT_WR,MBOX4C1,38572
+CAS_COUNT_RD,MBOX5C0,1507
+CAS_COUNT_WR,MBOX5C1,572
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-10,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-6-stride-0,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],0.0001,
-Runtime unhalted [s],0.0001,
-Clock [MHz],2499.9512,
-CPI,8.2491,
-Memory read bandwidth [MBytes/s],69.8206,
-Memory read data volume [GBytes],4.544000e-06,
-Memory write bandwidth [MBytes/s],46.2192,
-Memory write data volume [GBytes],3.008000e-06,
-Memory bandwidth [MBytes/s],116.0398,
-Memory data volume [GBytes],7.552000e-06,
+Runtime (RDTSC) [s],1.4957,
+Runtime unhalted [s],1.8864,
+Clock [MHz],3289.2849,
+CPI,4.1168,
+Memory read bandwidth [MBytes/s],5.1186,
+Memory read data volume [GBytes],0.0077,
+Memory write bandwidth [MBytes/s],5.3560,
+Memory write data volume [GBytes],0.0080,
+Memory bandwidth [MBytes/s],10.4746,
+Memory data volume [GBytes],0.0157,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-11,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-6-stride-1000,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000074,
+RDTSC Runtime [s],0.253236,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,21487
-CPU_CLK_UNHALTED_CORE,FIXC1,202916
-CPU_CLK_UNHALTED_REF,FIXC2,211042
-CAS_COUNT_RD,MBOX0C0,4
-CAS_COUNT_WR,MBOX0C1,1
-CAS_COUNT_RD,MBOX1C0,17
-CAS_COUNT_WR,MBOX1C1,16
+INSTR_RETIRED_ANY,FIXC0,1229100000
+CPU_CLK_UNHALTED_CORE,FIXC1,822451700
+CPU_CLK_UNHALTED_REF,FIXC2,652923800
+CAS_COUNT_RD,MBOX0C0,21246
+CAS_COUNT_WR,MBOX0C1,24247
+CAS_COUNT_RD,MBOX1C0,14690
+CAS_COUNT_WR,MBOX1C1,17547
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,0
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,14
-CAS_COUNT_WR,MBOX5C1,14
+CAS_COUNT_RD,MBOX4C0,7193
+CAS_COUNT_WR,MBOX4C1,6535
+CAS_COUNT_RD,MBOX5C0,736
+CAS_COUNT_WR,MBOX5C1,75
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-11,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-6-stride-1000,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],0.0001,
-Runtime unhalted [s],0.0001,
-Clock [MHz],2499.8714,
-CPI,9.4437,
-Memory read bandwidth [MBytes/s],30.0819,
-Memory read data volume [GBytes],2.240000e-06,
-Memory write bandwidth [MBytes/s],26.6439,
-Memory write data volume [GBytes],1.984000e-06,
-Memory bandwidth [MBytes/s],56.7258,
-Memory data volume [GBytes],4.224000e-06,
+Runtime (RDTSC) [s],0.2532,
+Runtime unhalted [s],0.3163,
+Clock [MHz],3274.8757,
+CPI,0.6691,
+Memory read bandwidth [MBytes/s],11.0860,
+Memory read data volume [GBytes],0.0028,
+Memory write bandwidth [MBytes/s],12.2331,
+Memory write data volume [GBytes],0.0031,
+Memory bandwidth [MBytes/s],23.3191,
+Memory data volume [GBytes],0.0059,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-12,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-7-stride-0,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000072,
+RDTSC Runtime [s],3.748640,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,23780
-CPU_CLK_UNHALTED_CORE,FIXC1,198119
-CPU_CLK_UNHALTED_REF,FIXC2,206076
-CAS_COUNT_RD,MBOX0C0,8
-CAS_COUNT_WR,MBOX0C1,2
-CAS_COUNT_RD,MBOX1C0,25
-CAS_COUNT_WR,MBOX1C1,16
+INSTR_RETIRED_ANY,FIXC0,1414037000
+CPU_CLK_UNHALTED_CORE,FIXC1,12295800000
+CPU_CLK_UNHALTED_REF,FIXC2,9713327000
+CAS_COUNT_RD,MBOX0C0,124314
+CAS_COUNT_WR,MBOX0C1,124940
+CAS_COUNT_RD,MBOX1C0,28702
+CAS_COUNT_WR,MBOX1C1,29491
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,0
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,13
-CAS_COUNT_WR,MBOX5C1,13
+CAS_COUNT_RD,MBOX4C0,97944
+CAS_COUNT_WR,MBOX4C1,96285
+CAS_COUNT_RD,MBOX5C0,2637
+CAS_COUNT_WR,MBOX5C1,956
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-12,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-7-stride-0,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],0.0001,
-Runtime unhalted [s],0.0001,
-Clock [MHz],2499.5911,
-CPI,8.3313,
-Memory read bandwidth [MBytes/s],40.6257,
-Memory read data volume [GBytes],2.944000e-06,
-Memory write bandwidth [MBytes/s],27.3782,
-Memory write data volume [GBytes],1.984000e-06,
-Memory bandwidth [MBytes/s],68.0038,
-Memory data volume [GBytes],4.928000e-06,
+Runtime (RDTSC) [s],3.7486,
+Runtime unhalted [s],4.7294,
+Clock [MHz],3291.0593,
+CPI,8.6955,
+Memory read bandwidth [MBytes/s],4.3296,
+Memory read data volume [GBytes],0.0162,
+Memory write bandwidth [MBytes/s],4.2968,
+Memory write data volume [GBytes],0.0161,
+Memory bandwidth [MBytes/s],8.6264,
+Memory data volume [GBytes],0.0323,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-13,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-7-stride-1000,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000035,
+RDTSC Runtime [s],0.316868,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,26013
-CPU_CLK_UNHALTED_CORE,FIXC1,104500
-CPU_CLK_UNHALTED_REF,FIXC2,108680
-CAS_COUNT_RD,MBOX0C0,19
-CAS_COUNT_WR,MBOX0C1,6
-CAS_COUNT_RD,MBOX1C0,23
-CAS_COUNT_WR,MBOX1C1,18
+INSTR_RETIRED_ANY,FIXC0,1498761000
+CPU_CLK_UNHALTED_CORE,FIXC1,1037438000
+CPU_CLK_UNHALTED_REF,FIXC2,819780000
+CAS_COUNT_RD,MBOX0C0,21299
+CAS_COUNT_WR,MBOX0C1,24106
+CAS_COUNT_RD,MBOX1C0,13157
+CAS_COUNT_WR,MBOX1C1,16037
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,0
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,13
-CAS_COUNT_WR,MBOX5C1,13
+CAS_COUNT_RD,MBOX4C0,8757
+CAS_COUNT_WR,MBOX4C1,8129
+CAS_COUNT_RD,MBOX5C0,684
+CAS_COUNT_WR,MBOX5C1,57
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-13,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-7-stride-1000,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],3.530326e-05,
-Runtime unhalted [s],4.019259e-05,
-Clock [MHz],2499.9822,
-CPI,4.0172,
-Memory read bandwidth [MBytes/s],99.7075,
-Memory read data volume [GBytes],3.520000e-06,
-Memory write bandwidth [MBytes/s],67.0760,
-Memory write data volume [GBytes],2.368000e-06,
-Memory bandwidth [MBytes/s],166.7835,
-Memory data volume [GBytes],5.888000e-06,
+Runtime (RDTSC) [s],0.3169,
+Runtime unhalted [s],0.3990,
+Clock [MHz],3290.1201,
+CPI,0.6922,
+Memory read bandwidth [MBytes/s],8.8662,
+Memory read data volume [GBytes],0.0028,
+Memory write bandwidth [MBytes/s],9.7613,
+Memory write data volume [GBytes],0.0031,
+Memory bandwidth [MBytes/s],18.6275,
+Memory data volume [GBytes],0.0059,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-14,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-8-stride-0,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000032,
+RDTSC Runtime [s],3.414546,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,28492
-CPU_CLK_UNHALTED_CORE,FIXC1,96429
-CPU_CLK_UNHALTED_REF,FIXC2,100334
-CAS_COUNT_RD,MBOX0C0,8
-CAS_COUNT_WR,MBOX0C1,6
-CAS_COUNT_RD,MBOX1C0,19
-CAS_COUNT_WR,MBOX1C1,14
+INSTR_RETIRED_ANY,FIXC0,1673668000
+CPU_CLK_UNHALTED_CORE,FIXC1,11210780000
+CPU_CLK_UNHALTED_REF,FIXC2,8851898000
+CAS_COUNT_RD,MBOX0C0,119824
+CAS_COUNT_WR,MBOX0C1,121701
+CAS_COUNT_RD,MBOX1C0,32809
+CAS_COUNT_WR,MBOX1C1,34967
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,0
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,13
-CAS_COUNT_WR,MBOX5C1,13
+CAS_COUNT_RD,MBOX4C0,90469
+CAS_COUNT_WR,MBOX4C1,88183
+CAS_COUNT_RD,MBOX5C0,3786
+CAS_COUNT_WR,MBOX5C1,1383
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-14,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-8-stride-0,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],3.170786e-05,
-Runtime unhalted [s],3.708834e-05,
-Clock [MHz],2498.7902,
-CPI,3.3844,
-Memory read bandwidth [MBytes/s],80.7371,
-Memory read data volume [GBytes],2.560000e-06,
-Memory write bandwidth [MBytes/s],66.6081,
-Memory write data volume [GBytes],2.112000e-06,
-Memory bandwidth [MBytes/s],147.3452,
-Memory data volume [GBytes],4.672000e-06,
+Runtime (RDTSC) [s],3.4145,
+Runtime unhalted [s],4.3121,
+Clock [MHz],3292.6559,
+CPI,6.6983,
+Memory read bandwidth [MBytes/s],4.6275,
+Memory read data volume [GBytes],0.0158,
+Memory write bandwidth [MBytes/s],4.6152,
+Memory write data volume [GBytes],0.0158,
+Memory bandwidth [MBytes/s],9.2428,
+Memory data volume [GBytes],0.0316,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-15,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-8-stride-1000,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000035,
+RDTSC Runtime [s],0.325567,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,30973
-CPU_CLK_UNHALTED_CORE,FIXC1,103524
-CPU_CLK_UNHALTED_REF,FIXC2,107666
-CAS_COUNT_RD,MBOX0C0,11
-CAS_COUNT_WR,MBOX0C1,4
-CAS_COUNT_RD,MBOX1C0,24
-CAS_COUNT_WR,MBOX1C1,15
+INSTR_RETIRED_ANY,FIXC0,1718569000
+CPU_CLK_UNHALTED_CORE,FIXC1,1071436000
+CPU_CLK_UNHALTED_REF,FIXC2,844663600
+CAS_COUNT_RD,MBOX0C0,22613
+CAS_COUNT_WR,MBOX0C1,26084
+CAS_COUNT_RD,MBOX1C0,14255
+CAS_COUNT_WR,MBOX1C1,17694
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,0
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,13
-CAS_COUNT_WR,MBOX5C1,13
+CAS_COUNT_RD,MBOX4C0,9209
+CAS_COUNT_WR,MBOX4C1,8518
+CAS_COUNT_RD,MBOX5C0,936
+CAS_COUNT_WR,MBOX5C1,205
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-15,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-8-stride-1000,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],3.474941e-05,
-Runtime unhalted [s],3.981721e-05,
-Clock [MHz],2499.9581,
-CPI,3.3424,
-Memory read bandwidth [MBytes/s],88.4044,
-Memory read data volume [GBytes],3.072000e-06,
-Memory write bandwidth [MBytes/s],58.9363,
-Memory write data volume [GBytes],2.048000e-06,
-Memory bandwidth [MBytes/s],147.3406,
-Memory data volume [GBytes],5.120000e-06,
+Runtime (RDTSC) [s],0.3256,
+Runtime unhalted [s],0.4121,
+Clock [MHz],3297.8385,
+CPI,0.6234,
+Memory read bandwidth [MBytes/s],9.2418,
+Memory read data volume [GBytes],0.0030,
+Memory write bandwidth [MBytes/s],10.3207,
+Memory write data volume [GBytes],0.0034,
+Memory bandwidth [MBytes/s],19.5625,
+Memory data volume [GBytes],0.0064,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-16,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-9-stride-0,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000036,
+RDTSC Runtime [s],6.172130,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,32836
-CPU_CLK_UNHALTED_CORE,FIXC1,105658
-CPU_CLK_UNHALTED_REF,FIXC2,109850
-CAS_COUNT_RD,MBOX0C0,8
-CAS_COUNT_WR,MBOX0C1,6
-CAS_COUNT_RD,MBOX1C0,23
-CAS_COUNT_WR,MBOX1C1,22
+INSTR_RETIRED_ANY,FIXC0,1956293000
+CPU_CLK_UNHALTED_CORE,FIXC1,20261620000
+CPU_CLK_UNHALTED_REF,FIXC2,15996930000
+CAS_COUNT_RD,MBOX0C0,197598
+CAS_COUNT_WR,MBOX0C1,198243
+CAS_COUNT_RD,MBOX1C0,40127
+CAS_COUNT_WR,MBOX1C1,41069
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,0
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,13
-CAS_COUNT_WR,MBOX5C1,13
+CAS_COUNT_RD,MBOX4C0,160999
+CAS_COUNT_WR,MBOX4C1,158387
+CAS_COUNT_RD,MBOX5C0,4160
+CAS_COUNT_WR,MBOX5C1,1453
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-16,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-9-stride-0,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],3.550942e-05,
-Runtime unhalted [s],4.063798e-05,
-Clock [MHz],2500.7633,
-CPI,3.2177,
-Memory read bandwidth [MBytes/s],79.3029,
-Memory read data volume [GBytes],2.816000e-06,
-Memory write bandwidth [MBytes/s],73.8959,
-Memory write data volume [GBytes],2.624000e-06,
-Memory bandwidth [MBytes/s],153.1988,
-Memory data volume [GBytes],5.440000e-06,
+Runtime (RDTSC) [s],6.1721,
+Runtime unhalted [s],7.7934,
+Clock [MHz],3292.9448,
+CPI,10.3571,
+Memory read bandwidth [MBytes/s],4.1776,
+Memory read data volume [GBytes],0.0258,
+Memory write bandwidth [MBytes/s],4.1389,
+Memory write data volume [GBytes],0.0255,
+Memory bandwidth [MBytes/s],8.3165,
+Memory data volume [GBytes],0.0513,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-17,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-9-stride-1000,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000037,
+RDTSC Runtime [s],0.424025,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,35566
-CPU_CLK_UNHALTED_CORE,FIXC1,108536
-CPU_CLK_UNHALTED_REF,FIXC2,112892
-CAS_COUNT_RD,MBOX0C0,10
-CAS_COUNT_WR,MBOX0C1,1
-CAS_COUNT_RD,MBOX1C0,20
-CAS_COUNT_WR,MBOX1C1,18
+INSTR_RETIRED_ANY,FIXC0,1998426000
+CPU_CLK_UNHALTED_CORE,FIXC1,1395408000
+CPU_CLK_UNHALTED_REF,FIXC2,1100181000
+CAS_COUNT_RD,MBOX0C0,23751
+CAS_COUNT_WR,MBOX0C1,26593
+CAS_COUNT_RD,MBOX1C0,12897
+CAS_COUNT_WR,MBOX1C1,15882
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,0
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,13
-CAS_COUNT_WR,MBOX5C1,13
+CAS_COUNT_RD,MBOX4C0,11514
+CAS_COUNT_WR,MBOX4C1,10858
+CAS_COUNT_RD,MBOX5C0,752
+CAS_COUNT_WR,MBOX5C1,76
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-17,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-9-stride-1000,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],3.677404e-05,
-Runtime unhalted [s],4.174491e-05,
-Clock [MHz],2499.6598,
-CPI,3.0517,
-Memory read bandwidth [MBytes/s],74.8354,
-Memory read data volume [GBytes],2.752000e-06,
-Memory write bandwidth [MBytes/s],55.6915,
-Memory write data volume [GBytes],2.048000e-06,
-Memory bandwidth [MBytes/s],130.5269,
-Memory data volume [GBytes],4.800000e-06,
+Runtime (RDTSC) [s],0.4240,
+Runtime unhalted [s],0.5367,
+Clock [MHz],3297.4938,
+CPI,0.6983,
+Memory read bandwidth [MBytes/s],7.3828,
+Memory read data volume [GBytes],0.0031,
+Memory write bandwidth [MBytes/s],8.0613,
+Memory write data volume [GBytes],0.0034,
+Memory bandwidth [MBytes/s],15.4441,
+Memory data volume [GBytes],0.0065,
 STRUCT,Info,3
 CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
 CPU type:,Intel Xeon Haswell EN/EP/EX processor,
-CPU clock:,2.599981523 GHz,
-TABLE,Region 1D-MATVEC_Kernel-Degree-18,Group 1 Raw,MEM,19
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-10-stride-0,Group 1 Raw,MEM,19
 Region Info,Core 1,
-RDTSC Runtime [s],0.000044,
+RDTSC Runtime [s],6.305375,
 call count,1,
 Event,Counter,Core 1
-INSTR_RETIRED_ANY,FIXC0,120637
-CPU_CLK_UNHALTED_CORE,FIXC1,127095
-CPU_CLK_UNHALTED_REF,FIXC2,132132
-CAS_COUNT_RD,MBOX0C0,20
-CAS_COUNT_WR,MBOX0C1,71
-CAS_COUNT_RD,MBOX1C0,36
-CAS_COUNT_WR,MBOX1C1,81
+INSTR_RETIRED_ANY,FIXC0,2326473000
+CPU_CLK_UNHALTED_CORE,FIXC1,20715280000
+CPU_CLK_UNHALTED_REF,FIXC2,16348730000
+CAS_COUNT_RD,MBOX0C0,196982
+CAS_COUNT_WR,MBOX0C1,198785
+CAS_COUNT_RD,MBOX1C0,36254
+CAS_COUNT_WR,MBOX1C1,38321
 CAS_COUNT_RD,MBOX2C0,-
 CAS_COUNT_WR,MBOX2C1,-
 CAS_COUNT_RD,MBOX3C0,-
 CAS_COUNT_WR,MBOX3C1,-
-CAS_COUNT_RD,MBOX4C0,0
-CAS_COUNT_WR,MBOX4C1,0
-CAS_COUNT_RD,MBOX5C0,13
-CAS_COUNT_WR,MBOX5C1,13
+CAS_COUNT_RD,MBOX4C0,164434
+CAS_COUNT_WR,MBOX4C1,161763
+CAS_COUNT_RD,MBOX5C0,4207
+CAS_COUNT_WR,MBOX5C1,1467
 CAS_COUNT_RD,MBOX6C0,-
 CAS_COUNT_WR,MBOX6C1,-
 CAS_COUNT_RD,MBOX7C0,-
 CAS_COUNT_WR,MBOX7C1,-
-TABLE,Region 1D-MATVEC_Kernel-Degree-18,Group 1 Metric,MEM,10
+TABLE,Region 1D-MATVEC_Kernel-Degree-10-stride-0,Group 1 Metric,MEM,10
 Metric,Core 1,
-Runtime (RDTSC) [s],4.366638e-05,
-Runtime unhalted [s],4.888304e-05,
-Clock [MHz],2500.8677,
-CPI,1.0535,
-Memory read bandwidth [MBytes/s],101.1304,
-Memory read data volume [GBytes],4.416000e-06,
-Memory write bandwidth [MBytes/s],241.8336,
-Memory write data volume [GBytes],1.056000e-05,
-Memory bandwidth [MBytes/s],342.9641,
-Memory data volume [GBytes],1.497600e-05,
+Runtime (RDTSC) [s],6.3054,
+Runtime unhalted [s],7.9679,
+Clock [MHz],3294.2284,
+CPI,8.9042,
+Memory read bandwidth [MBytes/s],4.0791,
+Memory read data volume [GBytes],0.0257,
+Memory write bandwidth [MBytes/s],4.0634,
+Memory write data volume [GBytes],0.0256,
+Memory bandwidth [MBytes/s],8.1425,
+Memory data volume [GBytes],0.0513,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-10-stride-1000,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],0.418020,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,2367814000
+CPU_CLK_UNHALTED_CORE,FIXC1,1369954000
+CPU_CLK_UNHALTED_REF,FIXC2,1083313000
+CAS_COUNT_RD,MBOX0C0,30384
+CAS_COUNT_WR,MBOX0C1,35340
+CAS_COUNT_RD,MBOX1C0,19341
+CAS_COUNT_WR,MBOX1C1,24438
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,12366
+CAS_COUNT_WR,MBOX4C1,11246
+CAS_COUNT_RD,MBOX5C0,1692
+CAS_COUNT_WR,MBOX5C1,540
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-10-stride-1000,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],0.4180,
+Runtime unhalted [s],0.5269,
+Clock [MHz],3287.7513,
+CPI,0.5786,
+Memory read bandwidth [MBytes/s],9.7654,
+Memory read data volume [GBytes],0.0041,
+Memory write bandwidth [MBytes/s],10.9566,
+Memory write data volume [GBytes],0.0046,
+Memory bandwidth [MBytes/s],20.7220,
+Memory data volume [GBytes],0.0087,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-11-stride-0,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],2.188504,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,2642272000
+CPU_CLK_UNHALTED_CORE,FIXC1,7185073000
+CPU_CLK_UNHALTED_REF,FIXC2,5672981000
+CAS_COUNT_RD,MBOX0C0,77758
+CAS_COUNT_WR,MBOX0C1,80771
+CAS_COUNT_RD,MBOX1C0,21890
+CAS_COUNT_WR,MBOX1C1,24774
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,57467
+CAS_COUNT_WR,MBOX4C1,56173
+CAS_COUNT_RD,MBOX5C0,1860
+CAS_COUNT_WR,MBOX5C1,520
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-11-stride-0,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],2.1885,
+Runtime unhalted [s],2.7637,
+Clock [MHz],3292.8108,
+CPI,2.7193,
+Memory read bandwidth [MBytes/s],4.6490,
+Memory read data volume [GBytes],0.0102,
+Memory write bandwidth [MBytes/s],4.7444,
+Memory write data volume [GBytes],0.0104,
+Memory bandwidth [MBytes/s],9.3935,
+Memory data volume [GBytes],0.0206,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-11-stride-1000,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],0.514161,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,2737613000
+CPU_CLK_UNHALTED_CORE,FIXC1,1689900000
+CPU_CLK_UNHALTED_REF,FIXC2,1333099000
+CAS_COUNT_RD,MBOX0C0,31325
+CAS_COUNT_WR,MBOX0C1,35535
+CAS_COUNT_RD,MBOX1C0,18213
+CAS_COUNT_WR,MBOX1C1,22637
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,14082
+CAS_COUNT_WR,MBOX4C1,13240
+CAS_COUNT_RD,MBOX5C0,1009
+CAS_COUNT_WR,MBOX5C1,151
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-11-stride-1000,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],0.5142,
+Runtime unhalted [s],0.6500,
+Clock [MHz],3295.6837,
+CPI,0.6173,
+Memory read bandwidth [MBytes/s],8.0447,
+Memory read data volume [GBytes],0.0041,
+Memory write bandwidth [MBytes/s],8.9078,
+Memory write data volume [GBytes],0.0046,
+Memory bandwidth [MBytes/s],16.9524,
+Memory data volume [GBytes],0.0087,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-12-stride-0,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],1.354605,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,3001576000
+CPU_CLK_UNHALTED_CORE,FIXC1,4444601000
+CPU_CLK_UNHALTED_REF,FIXC2,3510335000
+CAS_COUNT_RD,MBOX0C0,59506
+CAS_COUNT_WR,MBOX0C1,62730
+CAS_COUNT_RD,MBOX1C0,24667
+CAS_COUNT_WR,MBOX1C1,28402
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,36606
+CAS_COUNT_WR,MBOX4C1,35077
+CAS_COUNT_RD,MBOX5C0,2154
+CAS_COUNT_WR,MBOX5C1,630
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-12-stride-0,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],1.3546,
+Runtime unhalted [s],1.7096,
+Clock [MHz],3291.7825,
+CPI,1.4808,
+Memory read bandwidth [MBytes/s],5.8081,
+Memory read data volume [GBytes],0.0079,
+Memory write bandwidth [MBytes/s],5.9927,
+Memory write data volume [GBytes],0.0081,
+Memory bandwidth [MBytes/s],11.8008,
+Memory data volume [GBytes],0.0160,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-12-stride-1000,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],0.491091,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,3057489000
+CPU_CLK_UNHALTED_CORE,FIXC1,1605704000
+CPU_CLK_UNHALTED_REF,FIXC2,1270074000
+CAS_COUNT_RD,MBOX0C0,39308
+CAS_COUNT_WR,MBOX0C1,44677
+CAS_COUNT_RD,MBOX1C0,26646
+CAS_COUNT_WR,MBOX1C1,32384
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,13293
+CAS_COUNT_WR,MBOX4C1,12554
+CAS_COUNT_RD,MBOX5C0,776
+CAS_COUNT_WR,MBOX5C1,56
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-12-stride-1000,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],0.4911,
+Runtime unhalted [s],0.6176,
+Clock [MHz],3286.8765,
+CPI,0.5252,
+Memory read bandwidth [MBytes/s],10.4288,
+Memory read data volume [GBytes],0.0051,
+Memory write bandwidth [MBytes/s],11.6861,
+Memory write data volume [GBytes],0.0057,
+Memory bandwidth [MBytes/s],22.1149,
+Memory data volume [GBytes],0.0109,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-13-stride-0,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],2.348611,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,3362283000
+CPU_CLK_UNHALTED_CORE,FIXC1,7680962000
+CPU_CLK_UNHALTED_REF,FIXC2,6079882000
+CAS_COUNT_RD,MBOX0C0,93928
+CAS_COUNT_WR,MBOX0C1,99087
+CAS_COUNT_RD,MBOX1C0,33759
+CAS_COUNT_WR,MBOX1C1,39733
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,61826
+CAS_COUNT_WR,MBOX4C1,60252
+CAS_COUNT_RD,MBOX5C0,2117
+CAS_COUNT_WR,MBOX5C1,515
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-13-stride-0,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],2.3486,
+Runtime unhalted [s],2.9544,
+Clock [MHz],3284.4858,
+CPI,2.2844,
+Memory read bandwidth [MBytes/s],5.2219,
+Memory read data volume [GBytes],0.0123,
+Memory write bandwidth [MBytes/s],5.4388,
+Memory write data volume [GBytes],0.0128,
+Memory bandwidth [MBytes/s],10.6607,
+Memory data volume [GBytes],0.0250,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-13-stride-1000,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],0.614862,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,3467241000
+CPU_CLK_UNHALTED_CORE,FIXC1,2020840000
+CPU_CLK_UNHALTED_REF,FIXC2,1594137000
+CAS_COUNT_RD,MBOX0C0,40781
+CAS_COUNT_WR,MBOX0C1,45628
+CAS_COUNT_RD,MBOX1C0,25113
+CAS_COUNT_WR,MBOX1C1,29968
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,16780
+CAS_COUNT_WR,MBOX4C1,15876
+CAS_COUNT_RD,MBOX5C0,1136
+CAS_COUNT_WR,MBOX5C1,224
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-13-stride-1000,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],0.6149,
+Runtime unhalted [s],0.7773,
+Clock [MHz],3295.7420,
+CPI,0.5828,
+Memory read bandwidth [MBytes/s],8.7237,
+Memory read data volume [GBytes],0.0054,
+Memory write bandwidth [MBytes/s],9.5445,
+Memory write data volume [GBytes],0.0059,
+Memory bandwidth [MBytes/s],18.2681,
+Memory data volume [GBytes],0.0112,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-14-stride-0,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],2.422001,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,3762280000
+CPU_CLK_UNHALTED_CORE,FIXC1,7927310000
+CPU_CLK_UNHALTED_REF,FIXC2,6270582000
+CAS_COUNT_RD,MBOX0C0,138856
+CAS_COUNT_WR,MBOX0C1,169488
+CAS_COUNT_RD,MBOX1C0,76755
+CAS_COUNT_WR,MBOX1C1,107964
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,69298
+CAS_COUNT_WR,MBOX4C1,63296
+CAS_COUNT_RD,MBOX5C0,7664
+CAS_COUNT_WR,MBOX5C1,1728
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-14-stride-0,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],2.4220,
+Runtime unhalted [s],3.0492,
+Clock [MHz],3286.7367,
+CPI,2.1070,
+Memory read bandwidth [MBytes/s],7.7311,
+Memory read data volume [GBytes],0.0187,
+Memory write bandwidth [MBytes/s],9.0497,
+Memory write data volume [GBytes],0.0219,
+Memory bandwidth [MBytes/s],16.7808,
+Memory data volume [GBytes],0.0406,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-14-stride-1000,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],0.611970,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,3821045000
+CPU_CLK_UNHALTED_CORE,FIXC1,2006955000
+CPU_CLK_UNHALTED_REF,FIXC2,1585899000
+CAS_COUNT_RD,MBOX0C0,46760
+CAS_COUNT_WR,MBOX0C1,54135
+CAS_COUNT_RD,MBOX1C0,31176
+CAS_COUNT_WR,MBOX1C1,38676
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,17026
+CAS_COUNT_WR,MBOX4C1,15895
+CAS_COUNT_RD,MBOX5C0,1443
+CAS_COUNT_WR,MBOX5C1,325
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-14-stride-1000,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],0.6120,
+Runtime unhalted [s],0.7720,
+Clock [MHz],3290.0995,
+CPI,0.5252,
+Memory read bandwidth [MBytes/s],10.0821,
+Memory read data volume [GBytes],0.0062,
+Memory write bandwidth [MBytes/s],11.4025,
+Memory write data volume [GBytes],0.0070,
+Memory bandwidth [MBytes/s],21.4846,
+Memory data volume [GBytes],0.0131,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-15-stride-0,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],1.953798,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,4160523000
+CPU_CLK_UNHALTED_CORE,FIXC1,6404125000
+CPU_CLK_UNHALTED_REF,FIXC2,5064221000
+CAS_COUNT_RD,MBOX0C0,74914
+CAS_COUNT_WR,MBOX0C1,76096
+CAS_COUNT_RD,MBOX1C0,25001
+CAS_COUNT_WR,MBOX1C1,26483
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,51681
+CAS_COUNT_WR,MBOX4C1,50253
+CAS_COUNT_RD,MBOX5C0,2030
+CAS_COUNT_WR,MBOX5C1,545
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-15-stride-0,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],1.9538,
+Runtime unhalted [s],2.4633,
+Clock [MHz],3287.7143,
+CPI,1.5393,
+Memory read bandwidth [MBytes/s],5.0323,
+Memory read data volume [GBytes],0.0098,
+Memory write bandwidth [MBytes/s],5.0241,
+Memory write data volume [GBytes],0.0098,
+Memory bandwidth [MBytes/s],10.0564,
+Memory data volume [GBytes],0.0196,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-15-stride-1000,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],0.727012,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,4265579000
+CPU_CLK_UNHALTED_CORE,FIXC1,2380489000
+CPU_CLK_UNHALTED_REF,FIXC2,1881789000
+CAS_COUNT_RD,MBOX0C0,39667
+CAS_COUNT_WR,MBOX0C1,42355
+CAS_COUNT_RD,MBOX1C0,20931
+CAS_COUNT_WR,MBOX1C1,23702
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,19633
+CAS_COUNT_WR,MBOX4C1,18869
+CAS_COUNT_RD,MBOX5C0,1249
+CAS_COUNT_WR,MBOX5C1,433
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-15-stride-1000,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],0.7270,
+Runtime unhalted [s],0.9156,
+Clock [MHz],3288.8357,
+CPI,0.5581,
+Memory read bandwidth [MBytes/s],7.1728,
+Memory read data volume [GBytes],0.0052,
+Memory write bandwidth [MBytes/s],7.5143,
+Memory write data volume [GBytes],0.0055,
+Memory bandwidth [MBytes/s],14.6871,
+Memory data volume [GBytes],0.0107,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-16-stride-0,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],2.064496,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,4460523000
+CPU_CLK_UNHALTED_CORE,FIXC1,6754968000
+CPU_CLK_UNHALTED_REF,FIXC2,5347197000
+CAS_COUNT_RD,MBOX0C0,85322
+CAS_COUNT_WR,MBOX0C1,89382
+CAS_COUNT_RD,MBOX1C0,32634
+CAS_COUNT_WR,MBOX1C1,36638
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,53994
+CAS_COUNT_WR,MBOX4C1,52927
+CAS_COUNT_RD,MBOX5C0,1549
+CAS_COUNT_WR,MBOX5C1,379
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-16-stride-0,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],2.0645,
+Runtime unhalted [s],2.5982,
+Clock [MHz],3284.3092,
+CPI,1.5144,
+Memory read bandwidth [MBytes/s],5.3785,
+Memory read data volume [GBytes],0.0111,
+Memory write bandwidth [MBytes/s],5.5592,
+Memory write data volume [GBytes],0.0115,
+Memory bandwidth [MBytes/s],10.9377,
+Memory data volume [GBytes],0.0226,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-16-stride-1000,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],0.723606,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,4505564000
+CPU_CLK_UNHALTED_CORE,FIXC1,2379132000
+CPU_CLK_UNHALTED_REF,FIXC2,1878028000
+CAS_COUNT_RD,MBOX0C0,45257
+CAS_COUNT_WR,MBOX0C1,50121
+CAS_COUNT_RD,MBOX1C0,26670
+CAS_COUNT_WR,MBOX1C1,31865
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,19045
+CAS_COUNT_WR,MBOX4C1,18531
+CAS_COUNT_RD,MBOX5C0,643
+CAS_COUNT_WR,MBOX5C1,130
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-16-stride-1000,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],0.7236,
+Runtime unhalted [s],0.9151,
+Clock [MHz],3293.5435,
+CPI,0.5280,
+Memory read bandwidth [MBytes/s],8.1030,
+Memory read data volume [GBytes],0.0059,
+Memory write bandwidth [MBytes/s],8.9018,
+Memory write data volume [GBytes],0.0064,
+Memory bandwidth [MBytes/s],17.0048,
+Memory data volume [GBytes],0.0123,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-17-stride-0,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],3.187255,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,4900783000
+CPU_CLK_UNHALTED_CORE,FIXC1,10426910000
+CPU_CLK_UNHALTED_REF,FIXC2,8253214000
+CAS_COUNT_RD,MBOX0C0,120050
+CAS_COUNT_WR,MBOX0C1,130970
+CAS_COUNT_RD,MBOX1C0,38692
+CAS_COUNT_WR,MBOX1C1,49898
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,83770
+CAS_COUNT_WR,MBOX4C1,81857
+CAS_COUNT_RD,MBOX5C0,2737
+CAS_COUNT_WR,MBOX5C1,812
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-17-stride-0,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],3.1873,
+Runtime unhalted [s],4.0106,
+Clock [MHz],3284.5770,
+CPI,2.1276,
+Memory read bandwidth [MBytes/s],4.9246,
+Memory read data volume [GBytes],0.0157,
+Memory write bandwidth [MBytes/s],5.2918,
+Memory write data volume [GBytes],0.0169,
+Memory bandwidth [MBytes/s],10.2164,
+Memory data volume [GBytes],0.0326,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-17-stride-1000,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],0.863410,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,4985086000
+CPU_CLK_UNHALTED_CORE,FIXC1,2827128000
+CPU_CLK_UNHALTED_REF,FIXC2,2235805000
+CAS_COUNT_RD,MBOX0C0,52407
+CAS_COUNT_WR,MBOX0C1,58047
+CAS_COUNT_RD,MBOX1C0,30392
+CAS_COUNT_WR,MBOX1C1,36146
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,23081
+CAS_COUNT_WR,MBOX4C1,22239
+CAS_COUNT_RD,MBOX5C0,1121
+CAS_COUNT_WR,MBOX5C1,286
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-17-stride-1000,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],0.8634,
+Runtime unhalted [s],1.0874,
+Clock [MHz],3287.4448,
+CPI,0.5671,
+Memory read bandwidth [MBytes/s],7.9314,
+Memory read data volume [GBytes],0.0068,
+Memory write bandwidth [MBytes/s],8.6517,
+Memory write data volume [GBytes],0.0075,
+Memory bandwidth [MBytes/s],16.5831,
+Memory data volume [GBytes],0.0143,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-18-stride-0,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],2.556125,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,18621310000
+CPU_CLK_UNHALTED_CORE,FIXC1,8364520000
+CPU_CLK_UNHALTED_REF,FIXC2,6618278000
+CAS_COUNT_RD,MBOX0C0,100522
+CAS_COUNT_WR,MBOX0C1,106212
+CAS_COUNT_RD,MBOX1C0,35591
+CAS_COUNT_WR,MBOX1C1,41013
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,68128
+CAS_COUNT_WR,MBOX4C1,65985
+CAS_COUNT_RD,MBOX5C0,3132
+CAS_COUNT_WR,MBOX5C1,1021
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-18-stride-0,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],2.5561,
+Runtime unhalted [s],3.2173,
+Clock [MHz],3285.8137,
+CPI,0.4492,
+Memory read bandwidth [MBytes/s],5.1922,
+Memory read data volume [GBytes],0.0133,
+Memory write bandwidth [MBytes/s],5.3639,
+Memory write data volume [GBytes],0.0137,
+Memory bandwidth [MBytes/s],10.5561,
+Memory data volume [GBytes],0.0270,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599841806 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-18-stride-1000,Group 1 Raw,MEM,19
+Region Info,Core 1,
+RDTSC Runtime [s],1.742701,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,18601410000
+CPU_CLK_UNHALTED_CORE,FIXC1,5711170000
+CPU_CLK_UNHALTED_REF,FIXC2,4512864000
+CAS_COUNT_RD,MBOX0C0,83526
+CAS_COUNT_WR,MBOX0C1,89432
+CAS_COUNT_RD,MBOX1C0,38805
+CAS_COUNT_WR,MBOX1C1,45198
+CAS_COUNT_RD,MBOX2C0,-
+CAS_COUNT_WR,MBOX2C1,-
+CAS_COUNT_RD,MBOX3C0,-
+CAS_COUNT_WR,MBOX3C1,-
+CAS_COUNT_RD,MBOX4C0,46512
+CAS_COUNT_WR,MBOX4C1,44911
+CAS_COUNT_RD,MBOX5C0,2159
+CAS_COUNT_WR,MBOX5C1,548
+CAS_COUNT_RD,MBOX6C0,-
+CAS_COUNT_WR,MBOX6C1,-
+CAS_COUNT_RD,MBOX7C0,-
+CAS_COUNT_WR,MBOX7C1,-
+TABLE,Region 1D-MATVEC_Kernel-Degree-18-stride-1000,Group 1 Metric,MEM,10
+Metric,Core 1,
+Runtime (RDTSC) [s],1.7427,
+Runtime unhalted [s],2.1967,
+Clock [MHz],3290.1808,
+CPI,0.3070,
+Memory read bandwidth [MBytes/s],6.2800,
+Memory read data volume [GBytes],0.0109,
+Memory write bandwidth [MBytes/s],6.6137,
+Memory write data volume [GBytes],0.0115,
+Memory bandwidth [MBytes/s],12.8937,
+Memory data volume [GBytes],0.0225,

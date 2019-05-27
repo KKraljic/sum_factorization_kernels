@@ -26,6 +26,7 @@
 
 #include <x86intrin.h>
 #include <cstdlib>
+#include <iostream>
 
 #ifndef USE_VECTOR_ARITHMETICS
 #define USE_VECTOR_ARITHMETICS 1
@@ -43,6 +44,44 @@ unsigned long long int division_ctr = 0;
 
 unsigned long long int assign_ctr = 0;
 
+void reset_flop_ctr(){
+   addition_assign_ctr = 0;
+   subtraction_assign_ctr = 0;
+   multiplication_assign_ctr = 0;
+   division_assign_ctr = 0;
+   addition_ctr = 0;
+   subtraction_ctr = 0;
+   multiplication_ctr = 0;
+   division_ctr = 0;
+   assign_ctr = 0;
+}
+
+void print_flop_details(){
+    std::cout << "addition_assign_ctr," << addition_assign_ctr << std::endl;
+    std::cout << "subtraction_assign_ctr," << subtraction_assign_ctr << std::endl;
+    std::cout << "multiplication_assign_ctr," << multiplication_assign_ctr << std::endl;
+    std::cout << "division_assign_ctr," << division_assign_ctr << std::endl;
+    std::cout << "addition_ctr," << addition_ctr << std::endl;
+    std::cout << "subtraction_ctr," << subtraction_ctr << std::endl;
+    std::cout << "multiplication_ctr," << multiplication_ctr << std::endl;
+    std::cout << "division_ctr," << division_ctr << std::endl;
+    std::cout << "assign_ctr," << assign_ctr << std::endl;
+}
+
+void print_flop_summary(){
+    unsigned long long int flops = addition_assign_ctr + subtraction_assign_ctr + multiplication_assign_ctr + division_assign_ctr + addition_ctr + subtraction_ctr + multiplication_ctr + division_ctr;
+    unsigned long long int stores = addition_assign_ctr + subtraction_assign_ctr + multiplication_assign_ctr + division_assign_ctr + assign_ctr;
+    std::cout << flops << ",";
+    std::cout << stores << ",";
+}
+
+void print_gflop_per_second(double duration){
+    unsigned long long int flops = addition_assign_ctr + subtraction_assign_ctr + multiplication_assign_ctr + division_assign_ctr + addition_ctr + subtraction_ctr + multiplication_ctr + division_ctr;
+    unsigned long long int stores = addition_assign_ctr + subtraction_assign_ctr + multiplication_assign_ctr + division_assign_ctr + assign_ctr;
+    std::cout << flops/duration / 1000000000 << ",";
+    std::cout << stores/duration / 1000000000 << ",";
+}
+
 template <typename Number>
 class VectorizedArray
 {
@@ -51,6 +90,7 @@ public:
    * This gives the number of vectors collected in this class.
    */
   static const unsigned int n_array_elements = 1;
+
 
 
     /**
@@ -89,7 +129,7 @@ public:
   operator += (const VectorizedArray<Number> &vec)
   {
     data+=vec.data;
-    ++addition_assign_ctr;
+    //++addition_assign_ctr;
     return *this;
   }
 
@@ -1559,8 +1599,8 @@ VectorizedArray<Number>
 operator + (const VectorizedArray<Number> &u,
             const VectorizedArray<Number> &v)
 {
-    ++addition_ctr;
   VectorizedArray<Number> tmp = u;
+  ++assign_ctr;
   return tmp+=v;
 }
 
@@ -1569,8 +1609,8 @@ VectorizedArray<Number>
 operator - (const VectorizedArray<Number> &u,
             const VectorizedArray<Number> &v)
 {
-    ++subtraction_ctr;
   VectorizedArray<Number> tmp = u;
+  ++assign_ctr;
   return tmp-=v;
 }
 
@@ -1579,8 +1619,8 @@ VectorizedArray<Number>
 operator * (const VectorizedArray<Number> &u,
             const VectorizedArray<Number> &v)
 {
-    ++multiplication_ctr;
   VectorizedArray<Number> tmp = u;
+  ++assign_ctr;
   return tmp*=v;
 }
 
@@ -1589,8 +1629,8 @@ VectorizedArray<Number>
 operator / (const VectorizedArray<Number> &u,
             const VectorizedArray<Number> &v)
 {
-    ++division_ctr;
   VectorizedArray<Number> tmp = u;
+  ++assign_ctr;
   return tmp/=v;
 }
 
@@ -1599,7 +1639,6 @@ VectorizedArray<Number>
 operator + (const Number                  &u,
             const VectorizedArray<Number> &v)
 {
-    ++addition_ctr;
   VectorizedArray<Number> tmp;
   tmp = u;
   return tmp+=v;
@@ -1609,7 +1648,6 @@ VectorizedArray<float>
 operator + (const double                 &u,
             const VectorizedArray<float> &v)
 {
-    ++addition_ctr;
   VectorizedArray<float> tmp;
   tmp = u;
   return tmp+=v;
@@ -1620,6 +1658,7 @@ VectorizedArray<Number>
 operator + (const VectorizedArray<Number> &v,
             const Number                  &u)
 {
+   ++addition_ctr;
   return u + v;
 }
 
@@ -1636,7 +1675,6 @@ VectorizedArray<Number>
 operator - (const Number                  &u,
             const VectorizedArray<Number> &v)
 {
-    ++subtraction_ctr;
   VectorizedArray<Number> tmp;
   tmp = u;
   return tmp-=v;
@@ -1646,7 +1684,6 @@ VectorizedArray<float>
 operator - (const double                 &u,
             const VectorizedArray<float> &v)
 {
-    ++subtraction_ctr;
   VectorizedArray<float> tmp;
   tmp = float(u);
   return tmp-=v;
@@ -1678,7 +1715,6 @@ VectorizedArray<Number>
 operator * (const Number                  &u,
             const VectorizedArray<Number> &v)
 {
-    ++multiplication_ctr;
   VectorizedArray<Number> tmp;
   tmp = u;
   return tmp*=v;
@@ -1688,7 +1724,6 @@ VectorizedArray<float>
 operator * (const double                 &u,
             const VectorizedArray<float> &v)
 {
-    ++multiplication_ctr;
   VectorizedArray<float> tmp;
   tmp = float(u);
   return tmp*=v;
@@ -1716,7 +1751,6 @@ VectorizedArray<Number>
 operator / (const Number                  &u,
             const VectorizedArray<Number> &v)
 {
-    ++division_ctr;
   VectorizedArray<Number> tmp;
   tmp = u;
   return tmp/=v;
@@ -1726,7 +1760,6 @@ VectorizedArray<float>
 operator / (const double                 &u,
             const VectorizedArray<float> &v)
 {
-    ++multiplication_ctr;
   VectorizedArray<float> tmp;
   tmp = float(u);
   return tmp/=v;
@@ -1737,7 +1770,7 @@ VectorizedArray<Number>
 operator / (const VectorizedArray<Number> &v,
             const Number                  &u)
 {
-    ++multiplication_ctr;
+    ++division_ctr;
   VectorizedArray<Number> tmp;
   tmp = u;
   return v/tmp;
@@ -1747,7 +1780,7 @@ VectorizedArray<float>
 operator / (const VectorizedArray<float> &v,
             const double                 &u)
 {
-    ++multiplication_ctr;
+    ++division_ctr;
   VectorizedArray<float> tmp;
   tmp = float(u);
   return v/tmp;

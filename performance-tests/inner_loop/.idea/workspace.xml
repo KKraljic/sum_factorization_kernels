@@ -12,33 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbe2aefc-8fae-4f58-81f2-6402c358170d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake/modules/FindLikwid.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake/modules/FindLikwid.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compile_all.sh" beforeDir="false" afterPath="$PROJECT_DIR$/compile_all.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/evaluation_dg_laplacian.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/evaluation_dg_laplacian.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/matrix_vector_kernel.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/matrix_vector_kernel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_verifier.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/.idea/blank.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/cmake/modules/FindLikwid.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/compile_all.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/include/aligned_vector.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/include/evaluation_dg_laplacian.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/include/gauss_formula.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/include/lagrange_polynomials.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/include/matrix_vector_kernel.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/include/utilities.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/include/vectorization.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/run.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inner_loop_mocked/src/main.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matvec-kernel/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../matvec-kernel/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matvec-kernel/include/vectorization.h" beforeDir="false" afterPath="$PROJECT_DIR$/../matvec-kernel/include/vectorization.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matvec-kernel/src/main.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../matvec-kernel/src/main.cc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="345">
+              <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -80,13 +56,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="108" column="56" lean-forward="true" selection-start-line="108" selection-start-column="56" selection-end-line="108" selection-end-column="56" />
+            <state relative-caret-position="1620">
+              <caret line="108" column="56" selection-start-line="108" selection-start-column="56" selection-end-line="108" selection-end-column="56" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/evaluation_dg_laplacian.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="80" column="51" lean-forward="true" selection-start-line="80" selection-start-column="51" selection-end-line="80" selection-end-column="51" />
+              <folding>
+                <element signature="e#536#562#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,7 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,18 +165,24 @@
             <path>
               <item name="evaluator" type="b2602c69:ProjectViewProjectNode" />
               <item name="inner_loop" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="evaluator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inner_loop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../matvec-kernel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
@@ -239,11 +232,13 @@
       <workItem from="1557092415435" duration="493000" />
       <workItem from="1557141342973" duration="3159000" />
       <workItem from="1557145857571" duration="81000" />
+      <workItem from="1557147407835" duration="76000" />
+      <workItem from="1557398368229" duration="157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40263000" />
+    <option name="totallyTimeSpent" value="40496000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -256,8 +251,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="44" y="31" width="1876" height="1017" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19213974" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19650654" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -322,16 +318,6 @@
     <entry file="file://$PROJECT_DIR$/results/inner-loop-caches-measurement.out" />
     <entry file="file://$PROJECT_DIR$/results/inner-loop-false-sharing-measurement.out" />
     <entry file="file://$PROJECT_DIR$/results/inner-loop-flops-measurement.out" />
-    <entry file="file://$PROJECT_DIR$/include/evaluation_dg_laplacian.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="94" column="20" lean-forward="true" selection-start-line="94" selection-start-column="20" selection-end-line="94" selection-end-column="20" />
-          <folding>
-            <element signature="e#536#562#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/aligned_vector.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
@@ -367,17 +353,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="108" column="56" selection-start-line="108" selection-start-column="56" selection-end-line="108" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -388,13 +377,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cc">
+    <entry file="file://$PROJECT_DIR$/include/evaluation_dg_laplacian.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="108" column="56" lean-forward="true" selection-start-line="108" selection-start-column="56" selection-end-line="108" selection-end-column="56" />
+        <state relative-caret-position="435">
+          <caret line="80" column="51" lean-forward="true" selection-start-line="80" selection-start-column="51" selection-end-line="80" selection-end-column="51" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#536#562#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
         </state>
       </provider>
     </entry>
