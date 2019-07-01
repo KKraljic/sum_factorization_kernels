@@ -1,0 +1,891 @@
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz
+CPU type:	Intel Xeon Haswell EN/EP/EX processor
+CPU clock:	2.60 GHz
+--------------------------------------------------------------------------------
+vector_size,striding_factor,amount_flops,amount_stores,GFLOP/s,GSTORE/s,duration_[s],throughput_[e/s],throughput_[GB/s]
+2,0,59999994,59999994,4.24088,4.24088,0.014148
+2,1000,59934006,59934006,1.96145,1.96145,0.030556
+3,0,109999989,109999989,7.776,7.776,0.0141461
+3,1000,109879011,109879011,1.73016,1.73016,0.063508
+4,0,199999980,199999980,6.65066,6.65066,0.0300722
+4,1000,199780020,199780020,1.72841,1.72841,0.115586
+5,0,289999971,289999971,6.65078,6.65078,0.0436039
+5,1000,289681029,289681029,1.74187,1.74187,0.166305
+6,0,419999958,419999958,6.86329,6.86329,0.0611951
+6,1000,419538042,419538042,2.28404,2.28404,0.183682
+7,0,549999945,549999945,6.92965,6.92965,0.0793691
+7,1000,549395055,549395055,2.46273,2.46273,0.223084
+8,0,719999928,719999928,6.49738,6.49738,0.110814
+8,1000,719208072,719208072,2.7074,2.7074,0.265645
+9,0,889999911,889999911,7.02763,7.02763,0.126643
+9,1000,889021089,889021089,2.94163,2.94163,0.30222
+10,0,1099999890,1099999890,1.8764,1.8764,0.58623
+10,1000,1098790110,1098790110,1.91223,1.91223,0.574612
+11,0,1309999869,1309999869,2.002,2.002,0.654345
+11,1000,1308559131,1308559131,1.99865,1.99865,0.654722
+12,0,1559999844,1559999844,1.80645,1.80645,0.86357
+12,1000,1558284156,1558284156,1.83629,1.83629,0.848606
+13,0,1809999819,1809999819,1.92419,1.92419,0.940656
+13,1000,1808009181,1808009181,1.89617,1.89617,0.953505
+14,0,2099999790,2099999790,1.75514,1.75514,1.19649
+14,1000,2097690210,2097690210,1.77217,1.77217,1.18368
+15,0,2389999761,2389999761,1.83486,1.83486,1.30255
+15,1000,2387371239,2387371239,1.83276,1.83276,1.30261
+16,0,2719999728,2719999728,1.73721,1.73721,1.56573
+16,1000,2717008272,2717008272,1.73436,1.73436,1.56657
+17,0,3049999695,3049999695,1.80766,1.80766,1.68726
+17,1000,3046645305,3046645305,1.79366,1.79366,1.69856
+18,0,3419999658,3419999658,1.67854,1.67854,2.03748
+18,1000,3416238342,3416238342,1.71008,1.71008,1.9977
+--------------------------------------------------------------------------------
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-2-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.013854,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,140005200
+CPU_CLK_UNHALTED_CORE,FIXC1,37170720
+CPU_CLK_UNHALTED_REF,FIXC2,35873550
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,40001160
+TABLE,Region 1D-MATVEC_Kernel-Degree-2-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0139,
+Runtime unhalted [s],0.0143,
+Clock [MHz],2693.9409,
+CPI,0.2655,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-2-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.030260,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,179996400
+CPU_CLK_UNHALTED_CORE,FIXC1,99060970
+CPU_CLK_UNHALTED_REF,FIXC2,78256260
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,20673760
+TABLE,Region 1D-MATVEC_Kernel-Degree-2-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0303,
+Runtime unhalted [s],0.0381,
+Clock [MHz],3291.1293,
+CPI,0.5503,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-3-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.013878,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,140004400
+CPU_CLK_UNHALTED_CORE,FIXC1,45618590
+CPU_CLK_UNHALTED_REF,FIXC2,35982490
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,50001010
+TABLE,Region 1D-MATVEC_Kernel-Degree-3-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0139,
+Runtime unhalted [s],0.0175,
+Clock [MHz],3296.1889,
+CPI,0.3258,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-3-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.063224,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,239970400
+CPU_CLK_UNHALTED_CORE,FIXC1,208262500
+CPU_CLK_UNHALTED_REF,FIXC2,164083600
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,43208250
+TABLE,Region 1D-MATVEC_Kernel-Degree-3-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0632,
+Runtime unhalted [s],0.0801,
+Clock [MHz],3299.9500,
+CPI,0.8679,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-4-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.029807,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,300004500
+CPU_CLK_UNHALTED_CORE,FIXC1,98209180
+CPU_CLK_UNHALTED_REF,FIXC2,77415390
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,120001000
+TABLE,Region 1D-MATVEC_Kernel-Degree-4-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0298,
+Runtime unhalted [s],0.0378,
+Clock [MHz],3298.2702,
+CPI,0.3274,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-4-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.115308,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,309763600
+CPU_CLK_UNHALTED_CORE,FIXC1,379213200
+CPU_CLK_UNHALTED_REF,FIXC2,299136700
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,64822180
+TABLE,Region 1D-MATVEC_Kernel-Degree-4-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.1153,
+Runtime unhalted [s],0.1459,
+Clock [MHz],3295.9089,
+CPI,1.2242,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-5-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.043339,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,370004500
+CPU_CLK_UNHALTED_CORE,FIXC1,142970000
+CPU_CLK_UNHALTED_REF,FIXC2,112643000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,180001000
+TABLE,Region 1D-MATVEC_Kernel-Degree-5-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0433,
+Runtime unhalted [s],0.0550,
+Clock [MHz],3299.9105,
+CPI,0.3864,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-5-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.166026,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,379686500
+CPU_CLK_UNHALTED_CORE,FIXC1,544015100
+CPU_CLK_UNHALTED_REF,FIXC2,430887600
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,144779600
+TABLE,Region 1D-MATVEC_Kernel-Degree-5-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.1660,
+Runtime unhalted [s],0.2092,
+Clock [MHz],3282.5278,
+CPI,1.4328,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-6-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.060924,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,490004300
+CPU_CLK_UNHALTED_CORE,FIXC1,199921500
+CPU_CLK_UNHALTED_REF,FIXC2,157881400
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,240001200
+TABLE,Region 1D-MATVEC_Kernel-Degree-6-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0609,
+Runtime unhalted [s],0.0769,
+Clock [MHz],3292.2286,
+CPI,0.4080,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-6-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.183404,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,489565700
+CPU_CLK_UNHALTED_CORE,FIXC1,601650900
+CPU_CLK_UNHALTED_REF,FIXC2,475937500
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,185979000
+TABLE,Region 1D-MATVEC_Kernel-Degree-6-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.1834,
+Runtime unhalted [s],0.2314,
+Clock [MHz],3286.6700,
+CPI,1.2289,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-7-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.079116,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,570004500
+CPU_CLK_UNHALTED_CORE,FIXC1,260014200
+CPU_CLK_UNHALTED_REF,FIXC2,205182500
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,320001200
+TABLE,Region 1D-MATVEC_Kernel-Degree-7-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0791,
+Runtime unhalted [s],0.1000,
+Clock [MHz],3294.7176,
+CPI,0.4562,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-7-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.222807,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,579466600
+CPU_CLK_UNHALTED_CORE,FIXC1,731991900
+CPU_CLK_UNHALTED_REF,FIXC2,577704500
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,274897600
+TABLE,Region 1D-MATVEC_Kernel-Degree-7-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.2228,
+Runtime unhalted [s],0.2815,
+Clock [MHz],3294.2911,
+CPI,1.2632,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-8-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.110559,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,710004500
+CPU_CLK_UNHALTED_CORE,FIXC1,364233200
+CPU_CLK_UNHALTED_REF,FIXC2,287131100
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,400001100
+TABLE,Region 1D-MATVEC_Kernel-Degree-8-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.1106,
+Runtime unhalted [s],0.1401,
+Clock [MHz],3298.0767,
+CPI,0.5130,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-8-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.265371,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,719312700
+CPU_CLK_UNHALTED_CORE,FIXC1,865710500
+CPU_CLK_UNHALTED_REF,FIXC2,686875400
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,341890800
+TABLE,Region 1D-MATVEC_Kernel-Degree-8-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.2654,
+Runtime unhalted [s],0.3330,
+Clock [MHz],3276.8471,
+CPI,1.2035,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-9-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.126382,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,810004500
+CPU_CLK_UNHALTED_CORE,FIXC1,413555600
+CPU_CLK_UNHALTED_REF,FIXC2,326976500
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,500001800
+TABLE,Region 1D-MATVEC_Kernel-Degree-9-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.1264,
+Runtime unhalted [s],0.1591,
+Clock [MHz],3288.3559,
+CPI,0.5106,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-9-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.301944,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,829191600
+CPU_CLK_UNHALTED_CORE,FIXC1,990970300
+CPU_CLK_UNHALTED_REF,FIXC2,783281000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,445888800
+TABLE,Region 1D-MATVEC_Kernel-Degree-9-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.3019,
+Runtime unhalted [s],0.3812,
+Clock [MHz],3289.3077,
+CPI,1.1951,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-10-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.585981,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,3870004000
+CPU_CLK_UNHALTED_CORE,FIXC1,1924422000
+CPU_CLK_UNHALTED_REF,FIXC2,1520223000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,3
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,1100003000
+TABLE,Region 1D-MATVEC_Kernel-Degree-10-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.5860,
+Runtime unhalted [s],0.7402,
+Clock [MHz],3291.2015,
+CPI,0.4973,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0.0002,
+Remote LLC false sharing rate,2.727265e-09,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-10-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.574352,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,3915843000
+CPU_CLK_UNHALTED_CORE,FIXC1,1887727000
+CPU_CLK_UNHALTED_REF,FIXC2,1489537000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,1097288000
+TABLE,Region 1D-MATVEC_Kernel-Degree-10-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.5744,
+Runtime unhalted [s],0.7261,
+Clock [MHz],3294.9539,
+CPI,0.4821,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-11-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.654093,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,4270004000
+CPU_CLK_UNHALTED_CORE,FIXC1,2147824000
+CPU_CLK_UNHALTED_REF,FIXC2,1695707000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,27
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,1270003000
+TABLE,Region 1D-MATVEC_Kernel-Degree-11-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.6541,
+Runtime unhalted [s],0.8261,
+Clock [MHz],3293.1335,
+CPI,0.5030,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0.0017,
+Remote LLC false sharing rate,2.125979e-08,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-11-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.654456,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,4315403000
+CPU_CLK_UNHALTED_CORE,FIXC1,2154247000
+CPU_CLK_UNHALTED_REF,FIXC2,1698708000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,1263327000
+TABLE,Region 1D-MATVEC_Kernel-Degree-11-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.6545,
+Runtime unhalted [s],0.8286,
+Clock [MHz],3297.1463,
+CPI,0.4992,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-12-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.863294,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,5350004000
+CPU_CLK_UNHALTED_CORE,FIXC1,2822326000
+CPU_CLK_UNHALTED_REF,FIXC2,2233709000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,314
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,12
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,1560006000
+TABLE,Region 1D-MATVEC_Kernel-Degree-12-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.8633,
+Runtime unhalted [s],1.0855,
+Clock [MHz],3285.0504,
+CPI,0.5275,
+Local LLC hit with false sharing [MByte],0.0201,
+Local LLC hit with false sharing rate,2.012813e-07,
+Remote LLC false sharing [MByte],0.0008,
+Remote LLC false sharing rate,7.692278e-09,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-12-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.848354,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,5394215000
+CPU_CLK_UNHALTED_CORE,FIXC1,2789777000
+CPU_CLK_UNHALTED_REF,FIXC2,2200778000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,1559394000
+TABLE,Region 1D-MATVEC_Kernel-Degree-12-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.8484,
+Runtime unhalted [s],1.0730,
+Clock [MHz],3295.7534,
+CPI,0.5172,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-13-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.940387,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,5820004000
+CPU_CLK_UNHALTED_CORE,FIXC1,3092688000
+CPU_CLK_UNHALTED_REF,FIXC2,2440234000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,12
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,1760003000
+TABLE,Region 1D-MATVEC_Kernel-Degree-13-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.9404,
+Runtime unhalted [s],1.1895,
+Clock [MHz],3295.0809,
+CPI,0.5314,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0.0008,
+Remote LLC false sharing rate,6.818170e-09,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-13-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],0.953249,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,5864225000
+CPU_CLK_UNHALTED_CORE,FIXC1,3118447000
+CPU_CLK_UNHALTED_REF,FIXC2,2468382000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,1752098000
+TABLE,Region 1D-MATVEC_Kernel-Degree-13-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],0.9532,
+Runtime unhalted [s],1.1994,
+Clock [MHz],3284.6375,
+CPI,0.5318,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-14-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],1.196250,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,7070886000
+CPU_CLK_UNHALTED_CORE,FIXC1,3907133000
+CPU_CLK_UNHALTED_REF,FIXC2,3094714000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,787
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,30
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,2100173000
+TABLE,Region 1D-MATVEC_Kernel-Degree-14-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],1.1963,
+Runtime unhalted [s],1.5028,
+Clock [MHz],3282.4576,
+CPI,0.5526,
+Local LLC hit with false sharing [MByte],0.0504,
+Local LLC hit with false sharing rate,3.747310e-07,
+Remote LLC false sharing [MByte],0.0019,
+Remote LLC false sharing rate,1.428454e-08,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-14-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],1.183440,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,7113204000
+CPU_CLK_UNHALTED_CORE,FIXC1,3890755000
+CPU_CLK_UNHALTED_REF,FIXC2,3069223000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,2084704000
+TABLE,Region 1D-MATVEC_Kernel-Degree-14-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],1.1834,
+Runtime unhalted [s],1.4965,
+Clock [MHz],3295.8459,
+CPI,0.5470,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-15-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],1.302315,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,7610875000
+CPU_CLK_UNHALTED_CORE,FIXC1,4250825000
+CPU_CLK_UNHALTED_REF,FIXC2,3366521000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,36
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,18
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,2330173000
+TABLE,Region 1D-MATVEC_Kernel-Degree-15-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],1.3023,
+Runtime unhalted [s],1.6350,
+Clock [MHz],3282.8675,
+CPI,0.5585,
+Local LLC hit with false sharing [MByte],0.0023,
+Local LLC hit with false sharing rate,1.544950e-08,
+Remote LLC false sharing [MByte],0.0012,
+Remote LLC false sharing rate,7.724748e-09,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-15-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],1.302380,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,7652640000
+CPU_CLK_UNHALTED_CORE,FIXC1,4274445000
+CPU_CLK_UNHALTED_REF,FIXC2,3376422000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,2314983000
+TABLE,Region 1D-MATVEC_Kernel-Degree-15-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],1.3024,
+Runtime unhalted [s],1.6441,
+Clock [MHz],3291.4288,
+CPI,0.5586,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-16-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],1.565506,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,9031060000
+CPU_CLK_UNHALTED_CORE,FIXC1,5145173000
+CPU_CLK_UNHALTED_REF,FIXC2,4061218000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,21
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,34
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,2720202000
+TABLE,Region 1D-MATVEC_Kernel-Degree-16-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],1.5655,
+Runtime unhalted [s],1.9790,
+Clock [MHz],3293.8600,
+CPI,0.5697,
+Local LLC hit with false sharing [MByte],0.0013,
+Local LLC hit with false sharing rate,7.720015e-09,
+Remote LLC false sharing [MByte],0.0022,
+Remote LLC false sharing rate,1.249907e-08,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-16-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],1.566345,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,9071224000
+CPU_CLK_UNHALTED_CORE,FIXC1,5142500000
+CPU_CLK_UNHALTED_REF,FIXC2,4060984000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,2704097000
+TABLE,Region 1D-MATVEC_Kernel-Degree-16-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],1.5663,
+Runtime unhalted [s],1.9779,
+Clock [MHz],3292.3385,
+CPI,0.5669,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-17-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],1.687046,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,9741058000
+CPU_CLK_UNHALTED_CORE,FIXC1,5542269000
+CPU_CLK_UNHALTED_REF,FIXC2,4373790000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,45
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,3060203000
+TABLE,Region 1D-MATVEC_Kernel-Degree-17-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],1.6870,
+Runtime unhalted [s],2.1317,
+Clock [MHz],3294.5122,
+CPI,0.5690,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0.0029,
+Remote LLC false sharing rate,1.470491e-08,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-17-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],1.698340,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,9780608000
+CPU_CLK_UNHALTED_CORE,FIXC1,5580686000
+CPU_CLK_UNHALTED_REF,FIXC2,4403432000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,0
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,3040459000
+TABLE,Region 1D-MATVEC_Kernel-Degree-17-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],1.6983,
+Runtime unhalted [s],2.1465,
+Clock [MHz],3295.0177,
+CPI,0.5706,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0,
+Remote LLC false sharing rate,0,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-18-stride-0,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],2.037267,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,11230470000
+CPU_CLK_UNHALTED_CORE,FIXC1,6540757000
+CPU_CLK_UNHALTED_REF,FIXC2,5239204000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,169
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,491
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,3420116000
+TABLE,Region 1D-MATVEC_Kernel-Degree-18-stride-0,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],2.0373,
+Runtime unhalted [s],2.5157,
+Clock [MHz],3245.8180,
+CPI,0.5824,
+Local LLC hit with false sharing [MByte],0.0108,
+Local LLC hit with false sharing rate,4.941353e-08,
+Remote LLC false sharing [MByte],0.0314,
+Remote LLC false sharing rate,1.435624e-07,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.599928787 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-18-stride-1000,Group 1 Raw,FALSE_SHARE,6
+Region Info,Core 1,
+RDTSC Runtime [s],1.997496,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,11267750000
+CPU_CLK_UNHALTED_CORE,FIXC1,6560761000
+CPU_CLK_UNHALTED_REF,FIXC2,5178974000
+MEM_LOAD_UOPS_L3_HIT_RETIRED_XSNP_HITM,PMC0,0
+MEM_LOAD_UOPS_L3_MISS_RETIRED_REMOTE_HITM,PMC1,1
+MEM_LOAD_UOPS_RETIRED_ALL_ALL,PMC2,3403193000
+TABLE,Region 1D-MATVEC_Kernel-Degree-18-stride-1000,Group 1 Metric,FALSE_SHARE,8
+Metric,Core 1,
+Runtime (RDTSC) [s],1.9975,
+Runtime unhalted [s],2.5234,
+Clock [MHz],3293.6082,
+CPI,0.5823,
+Local LLC hit with false sharing [MByte],0,
+Local LLC hit with false sharing rate,0,
+Remote LLC false sharing [MByte],0.0001,
+Remote LLC false sharing rate,2.938417e-10,

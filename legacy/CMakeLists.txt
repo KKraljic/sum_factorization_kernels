@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 project(evaluator CXX)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules")
-set(CMAKE_BUILD_TYPE "Release")
+set(CMAKE_BUILD_TYPE "Debug")
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "Intel")
   message("Using Intel compiler flags")
@@ -28,21 +28,27 @@ message("${MPI_LIBRARIES}")
 
 add_executable(test_program src/test_program.cc)
 target_link_libraries(test_program ${MPI_LIBRARIES})
+#target_compile_options(test_program PRIVATE -Werror -Wall -Wextra)
 
 add_executable(benchmark_loops src/benchmark_loops.cc)
 target_link_libraries(benchmark_loops ${MPI_LIBRARIES})
+#target_compile_options(benchmark_loops PRIVATE -Werror -Wall -Wextra)
 
 add_executable(test_dg_precomputed src/test_dg_precomputed.cc)
 target_link_libraries(test_dg_precomputed ${MPI_LIBRARIES})
+#target_compile_options(test_dg_precomputed PRIVATE -Werror -Wall -Wextra)
 
 add_executable(test_dg_integrate src/test_dg_integrate.cc)
 target_link_libraries(test_dg_integrate ${MPI_LIBRARIES})
+#target_compile_options(test_dg_integrate PRIVATE -Werror -Wall -Wextra)
 
 add_executable(test_dg_advect src/test_dg_advect.cc)
 target_link_libraries(test_dg_advect ${MPI_LIBRARIES})
+#target_compile_options(test_dg_advect PRIVATE -Werror -Wall -Wextra)
 
 add_executable(test_program_vect src/test_program_vect.cc)
 target_link_libraries(test_program_vect ${MPI_LIBRARIES})
+#target_compile_options(test_program_vect PRIVATE -Werror -Wall -Wextra)
 
 add_executable(test_gauss src/test_gauss.cc)
 add_executable(test_polynomial src/test_polynomial.cc)
@@ -59,29 +65,33 @@ if (LIKWID_FOUND)
   target_link_libraries(test_program_likwid ${LIKWID_LIBRARIES})
   target_compile_definitions(test_program_likwid PRIVATE LIKWID_PERFMON)
 
-
   add_executable(benchmark_loops_likwid src/benchmark_loops.cc)
   target_link_libraries(benchmark_loops_likwid ${MPI_LIBRARIES})
   target_link_libraries(benchmark_loops_likwid ${LIKWID_LIBRARIES})
   target_compile_definitions(benchmark_loops_likwid PRIVATE LIKWID_PERFMON)
+  #target_compile_options(benchmark_loops_likwid PRIVATE -Werror -Wall -Wextra)
 
   add_executable(test_dg_precomputed_likwid src/test_dg_precomputed.cc)
   target_link_libraries(test_dg_precomputed_likwid ${MPI_LIBRARIES})
   target_link_libraries(test_dg_precomputed_likwid ${LIKWID_LIBRARIES})
   target_compile_definitions(test_dg_precomputed_likwid PRIVATE LIKWID_PERFMON)
+  #target_compile_options(test_dg_precomputed_likwid PRIVATE -Werror -Wall -Wextra)
 
   add_executable(test_dg_integrate_likwid src/test_dg_integrate.cc)
   target_link_libraries(test_dg_integrate_likwid ${MPI_LIBRARIES})
   target_link_libraries(test_dg_integrate_likwid ${LIKWID_LIBRARIES})
   target_compile_definitions(test_dg_integrate_likwid PRIVATE LIKWID_PERFMON)
+  #target_compile_options(test_dg_integrate_likwid PRIVATE -Werror -Wall -Wextra)
 
   add_executable(test_dg_advect_likwid src/test_dg_advect.cc)
   target_link_libraries(test_dg_advect_likwid ${MPI_LIBRARIES})
   target_link_libraries(test_dg_advect_likwid ${LIKWID_LIBRARIES})
   target_compile_definitions(test_dg_advect_likwid PRIVATE LIKWID_PERFMON)
+  #target_compile_options(test_dg_advect_likwid PRIVATE -Werror -Wall -Wextra)
 
   add_executable(test_program_vect_likwid src/test_program_vect.cc)
   target_link_libraries(test_program_vect_likwid ${MPI_LIBRARIES})
   target_link_libraries(test_program_vect_likwid ${LIKWID_LIBRARIES})
   target_compile_definitions(test_program_vect_likwid PRIVATE LIKWID_PERFMON)
+  #target_compile_options(test_program_vect_likwid PRIVATE -Werror -Wall -Wextra)
 endif()

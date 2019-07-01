@@ -1,0 +1,1027 @@
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz
+CPU type:	Intel Xeon Haswell EN/EP/EX processor
+CPU clock:	2.60 GHz
+--------------------------------------------------------------------------------
+vector_size,striding_factor,amount_flops,amount_stores,GFLOP/s,GSTORE/s,duration_[s],throughput_[e/s],throughput_[GB/s]
+2,0,59999994,59999994,5.09894,5.09894,0.0117671
+2,1000,59934006,59934006,1.63745,1.63745,0.036602
+3,0,109999989,109999989,7.67842,7.67842,0.0143259
+3,1000,109879011,109879011,1.69894,1.69894,0.0646751
+4,0,199999980,199999980,6.58524,6.58524,0.030371
+4,1000,199780020,199780020,1.61427,1.61427,0.123759
+5,0,289999971,289999971,6.6216,6.6216,0.0437961
+5,1000,289681029,289681029,1.68582,1.68582,0.171834
+6,0,419999958,419999958,6.84899,6.84899,0.0613229
+6,1000,419538042,419538042,2.24789,2.24789,0.186636
+7,0,549999945,549999945,6.92345,6.92345,0.0794401
+7,1000,549395055,549395055,2.44343,2.44343,0.224846
+8,0,719999928,719999928,6.90853,6.90853,0.104219
+8,1000,719208072,719208072,2.71582,2.71582,0.264822
+9,0,889999911,889999911,7.14951,7.14951,0.124484
+9,1000,889021089,889021089,2.90688,2.90688,0.305833
+10,0,1099999890,1099999890,1.87594,1.87594,0.586374
+10,1000,1098790110,1098790110,1.91078,1.91078,0.575047
+11,0,1309999869,1309999869,2.00032,2.00032,0.654894
+11,1000,1308559131,1308559131,1.98712,1.98712,0.658521
+12,0,1559999844,1559999844,1.81074,1.81074,0.861528
+12,1000,1558284156,1558284156,1.83033,1.83033,0.851368
+13,0,1809999819,1809999819,1.92472,1.92472,0.940396
+13,1000,1808009181,1808009181,1.89681,1.89681,0.953186
+14,0,2099999790,2099999790,1.76387,1.76387,1.19056
+14,1000,2097690210,2097690210,1.76519,1.76519,1.18836
+15,0,2389999761,2389999761,1.84458,1.84458,1.29569
+15,1000,2387371239,2387371239,1.83385,1.83385,1.30184
+16,0,2719999728,2719999728,1.73818,1.73818,1.56486
+16,1000,2717008272,2717008272,1.73518,1.73518,1.56583
+17,0,3049999695,3049999695,1.80489,1.80489,1.68985
+17,1000,3046645305,3046645305,1.79377,1.79377,1.69846
+18,0,3419999658,3419999658,1.71701,1.71701,1.99184
+18,1000,3416238342,3416238342,1.70838,1.70838,1.99969
+--------------------------------------------------------------------------------
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-2-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.011485,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,140005900
+CPU_CLK_UNHALTED_CORE,FIXC1,37214890
+CPU_CLK_UNHALTED_REF,FIXC2,29529840
+TEMP_CORE,TMP0,59
+PWR_PKG_ENERGY,PWR0,0.3787
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.0434
+TABLE,Region 1D-MATVEC_Kernel-Degree-2-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0115,
+Runtime unhalted [s],0.0143,
+Clock [MHz],3276.6557,
+CPI,0.2658,
+Temperature [C],59,
+Energy [J],0.3787,
+Power [W],32.9747,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.0434,
+Power DRAM [W],3.7780,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-2-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.036253,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,179996600
+CPU_CLK_UNHALTED_CORE,FIXC1,116124800
+CPU_CLK_UNHALTED_REF,FIXC2,93848120
+TEMP_CORE,TMP0,59
+PWR_PKG_ENERGY,PWR0,1.3392
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.1304
+TABLE,Region 1D-MATVEC_Kernel-Degree-2-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0363,
+Runtime unhalted [s],0.0447,
+Clock [MHz],3217.1741,
+CPI,0.6451,
+Temperature [C],59,
+Energy [J],1.3392,
+Power [W],36.9392,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.1304,
+Power DRAM [W],3.5974,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-3-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.014028,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,140004600
+CPU_CLK_UNHALTED_CORE,FIXC1,45736060
+CPU_CLK_UNHALTED_REF,FIXC2,36226420
+TEMP_CORE,TMP0,62
+PWR_PKG_ENERGY,PWR0,0.5242
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.0508
+TABLE,Region 1D-MATVEC_Kernel-Degree-3-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0140,
+Runtime unhalted [s],0.0176,
+Clock [MHz],3282.5284,
+CPI,0.3267,
+Temperature [C],62,
+Energy [J],0.5242,
+Power [W],37.3693,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.0508,
+Power DRAM [W],3.6231,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-3-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.064345,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,239970600
+CPU_CLK_UNHALTED_CORE,FIXC1,208722300
+CPU_CLK_UNHALTED_REF,FIXC2,166055000
+TEMP_CORE,TMP0,59
+PWR_PKG_ENERGY,PWR0,2.9792
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.2340
+TABLE,Region 1D-MATVEC_Kernel-Degree-3-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0643,
+Runtime unhalted [s],0.0803,
+Clock [MHz],3268.0753,
+CPI,0.8698,
+Temperature [C],59,
+Energy [J],2.9792,
+Power [W],46.3009,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.2340,
+Power DRAM [W],3.6371,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-4-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.030076,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,300004700
+CPU_CLK_UNHALTED_CORE,FIXC1,98243410
+CPU_CLK_UNHALTED_REF,FIXC2,77753600
+TEMP_CORE,TMP0,64
+PWR_PKG_ENERGY,PWR0,1.4170
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.1098
+TABLE,Region 1D-MATVEC_Kernel-Degree-4-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0301,
+Runtime unhalted [s],0.0378,
+Clock [MHz],3285.1718,
+CPI,0.3275,
+Temperature [C],64,
+Energy [J],1.4170,
+Power [W],47.1138,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.1098,
+Power DRAM [W],3.6515,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-4-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.123452,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,309939200
+CPU_CLK_UNHALTED_CORE,FIXC1,402159200
+CPU_CLK_UNHALTED_REF,FIXC2,318442600
+TEMP_CORE,TMP0,59
+PWR_PKG_ENERGY,PWR0,5.8048
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.4467
+TABLE,Region 1D-MATVEC_Kernel-Degree-4-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.1235,
+Runtime unhalted [s],0.1547,
+Clock [MHz],3283.5377,
+CPI,1.2975,
+Temperature [C],59,
+Energy [J],5.8048,
+Power [W],47.0209,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.4467,
+Power DRAM [W],3.6182,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-5-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.043501,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,370004700
+CPU_CLK_UNHALTED_CORE,FIXC1,142993400
+CPU_CLK_UNHALTED_REF,FIXC2,112824000
+TEMP_CORE,TMP0,65
+PWR_PKG_ENERGY,PWR0,2.0428
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.1576
+TABLE,Region 1D-MATVEC_Kernel-Degree-5-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0435,
+Runtime unhalted [s],0.0550,
+Clock [MHz],3295.2598,
+CPI,0.3865,
+Temperature [C],65,
+Energy [J],2.0428,
+Power [W],46.9611,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.1576,
+Power DRAM [W],3.6220,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-5-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.171527,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,379860900
+CPU_CLK_UNHALTED_CORE,FIXC1,558314900
+CPU_CLK_UNHALTED_REF,FIXC2,442250000
+TEMP_CORE,TMP0,60
+PWR_PKG_ENERGY,PWR0,8.0427
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.6312
+TABLE,Region 1D-MATVEC_Kernel-Degree-5-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.1715,
+Runtime unhalted [s],0.2147,
+Clock [MHz],3282.3625,
+CPI,1.4698,
+Temperature [C],60,
+Energy [J],8.0427,
+Power [W],46.8886,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.6312,
+Power DRAM [W],3.6798,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-6-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.061026,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,490004500
+CPU_CLK_UNHALTED_CORE,FIXC1,199922800
+CPU_CLK_UNHALTED_REF,FIXC2,158002900
+TEMP_CORE,TMP0,64
+PWR_PKG_ENERGY,PWR0,2.8538
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.2237
+TABLE,Region 1D-MATVEC_Kernel-Degree-6-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0610,
+Runtime unhalted [s],0.0769,
+Clock [MHz],3289.8222,
+CPI,0.4080,
+Temperature [C],64,
+Energy [J],2.8538,
+Power [W],46.7642,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.2237,
+Power DRAM [W],3.6649,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-6-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.186312,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,489565800
+CPU_CLK_UNHALTED_CORE,FIXC1,612676400
+CPU_CLK_UNHALTED_REF,FIXC2,483368200
+TEMP_CORE,TMP0,60
+PWR_PKG_ENERGY,PWR0,8.7708
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.6954
+TABLE,Region 1D-MATVEC_Kernel-Degree-6-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.1863,
+Runtime unhalted [s],0.2356,
+Clock [MHz],3295.5526,
+CPI,1.2515,
+Temperature [C],60,
+Energy [J],8.7708,
+Power [W],47.0755,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.6954,
+Power DRAM [W],3.7322,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-7-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.079157,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,570181100
+CPU_CLK_UNHALTED_CORE,FIXC1,259453900
+CPU_CLK_UNHALTED_REF,FIXC2,204814400
+TEMP_CORE,TMP0,64
+PWR_PKG_ENERGY,PWR0,3.8174
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.3003
+TABLE,Region 1D-MATVEC_Kernel-Degree-7-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.0792,
+Runtime unhalted [s],0.0998,
+Clock [MHz],3293.6305,
+CPI,0.4550,
+Temperature [C],64,
+Energy [J],3.8174,
+Power [W],48.2255,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.3003,
+Power DRAM [W],3.7942,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-7-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.224508,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,579643200
+CPU_CLK_UNHALTED_CORE,FIXC1,730438600
+CPU_CLK_UNHALTED_REF,FIXC2,579683600
+TEMP_CORE,TMP0,60
+PWR_PKG_ENERGY,PWR0,10.7640
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.8437
+TABLE,Region 1D-MATVEC_Kernel-Degree-7-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.2245,
+Runtime unhalted [s],0.2809,
+Clock [MHz],3276.1808,
+CPI,1.2602,
+Temperature [C],60,
+Energy [J],10.7640,
+Power [W],47.9447,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.8437,
+Power DRAM [W],3.7580,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-8-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.103901,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,710004600
+CPU_CLK_UNHALTED_CORE,FIXC1,340795300
+CPU_CLK_UNHALTED_REF,FIXC2,269190700
+TEMP_CORE,TMP0,64
+PWR_PKG_ENERGY,PWR0,4.8673
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.3742
+TABLE,Region 1D-MATVEC_Kernel-Degree-8-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.1039,
+Runtime unhalted [s],0.1311,
+Clock [MHz],3291.6126,
+CPI,0.4800,
+Temperature [C],64,
+Energy [J],4.8673,
+Power [W],46.8456,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.3742,
+Power DRAM [W],3.6016,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-8-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.264521,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,719488300
+CPU_CLK_UNHALTED_CORE,FIXC1,867332600
+CPU_CLK_UNHALTED_REF,FIXC2,684967900
+TEMP_CORE,TMP0,61
+PWR_PKG_ENERGY,PWR0,12.6000
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.9739
+TABLE,Region 1D-MATVEC_Kernel-Degree-8-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.2645,
+Runtime unhalted [s],0.3336,
+Clock [MHz],3292.2334,
+CPI,1.2055,
+Temperature [C],61,
+Energy [J],12.6000,
+Power [W],47.6331,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.9739,
+Power DRAM [W],3.6819,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-9-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.124194,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,810181600
+CPU_CLK_UNHALTED_CORE,FIXC1,408390600
+CPU_CLK_UNHALTED_REF,FIXC2,322024900
+TEMP_CORE,TMP0,64
+PWR_PKG_ENERGY,PWR0,5.7784
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,0.4544
+TABLE,Region 1D-MATVEC_Kernel-Degree-9-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.1242,
+Runtime unhalted [s],0.1571,
+Clock [MHz],3297.3227,
+CPI,0.5041,
+Temperature [C],64,
+Energy [J],5.7784,
+Power [W],46.5275,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],0.4544,
+Power DRAM [W],3.6589,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-9-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.305525,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,829367400
+CPU_CLK_UNHALTED_CORE,FIXC1,992044400
+CPU_CLK_UNHALTED_REF,FIXC2,789644400
+TEMP_CORE,TMP0,62
+PWR_PKG_ENERGY,PWR0,14.9336
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,1.1372
+TABLE,Region 1D-MATVEC_Kernel-Degree-9-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.3055,
+Runtime unhalted [s],0.3816,
+Clock [MHz],3266.4402,
+CPI,1.1961,
+Temperature [C],62,
+Energy [J],14.9336,
+Power [W],48.8784,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],1.1372,
+Power DRAM [W],3.7223,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-10-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.586074,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,3870356000
+CPU_CLK_UNHALTED_CORE,FIXC1,1924757000
+CPU_CLK_UNHALTED_REF,FIXC2,1519186000
+TEMP_CORE,TMP0,64
+PWR_PKG_ENERGY,PWR0,26.5756
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,2.1626
+TABLE,Region 1D-MATVEC_Kernel-Degree-10-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.5861,
+Runtime unhalted [s],0.7403,
+Clock [MHz],3294.1254,
+CPI,0.4973,
+Temperature [C],64,
+Energy [J],26.5756,
+Power [W],45.3452,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],2.1626,
+Power DRAM [W],3.6900,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-10-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.574754,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,3916194000
+CPU_CLK_UNHALTED_CORE,FIXC1,1887609000
+CPU_CLK_UNHALTED_REF,FIXC2,1489721000
+TEMP_CORE,TMP0,63
+PWR_PKG_ENERGY,PWR0,27.1508
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,2.1157
+TABLE,Region 1D-MATVEC_Kernel-Degree-10-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.5748,
+Runtime unhalted [s],0.7260,
+Clock [MHz],3294.4450,
+CPI,0.4820,
+Temperature [C],63,
+Energy [J],27.1508,
+Power [W],47.2389,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],2.1157,
+Power DRAM [W],3.6811,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-11-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.654611,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,4270531000
+CPU_CLK_UNHALTED_CORE,FIXC1,2144625000
+CPU_CLK_UNHALTED_REF,FIXC2,1696216000
+TEMP_CORE,TMP0,63
+PWR_PKG_ENERGY,PWR0,29.8171
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,2.3832
+TABLE,Region 1D-MATVEC_Kernel-Degree-11-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.6546,
+Runtime unhalted [s],0.8249,
+Clock [MHz],3287.3457,
+CPI,0.5022,
+Temperature [C],63,
+Energy [J],29.8171,
+Power [W],45.5494,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],2.3832,
+Power DRAM [W],3.6407,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-11-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.658198,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,4315923000
+CPU_CLK_UNHALTED_CORE,FIXC1,2155011000
+CPU_CLK_UNHALTED_REF,FIXC2,1703702000
+TEMP_CORE,TMP0,63
+PWR_PKG_ENERGY,PWR0,31.0306
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,2.4179
+TABLE,Region 1D-MATVEC_Kernel-Degree-11-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.6582,
+Runtime unhalted [s],0.8288,
+Clock [MHz],3288.7512,
+CPI,0.4993,
+Temperature [C],63,
+Energy [J],31.0306,
+Power [W],47.1448,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],2.4179,
+Power DRAM [W],3.6735,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-12-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.861251,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,5350532000
+CPU_CLK_UNHALTED_CORE,FIXC1,2821915000
+CPU_CLK_UNHALTED_REF,FIXC2,2231306000
+TEMP_CORE,TMP0,62
+PWR_PKG_ENERGY,PWR0,39.3107
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,3.1551
+TABLE,Region 1D-MATVEC_Kernel-Degree-12-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.8613,
+Runtime unhalted [s],1.0853,
+Clock [MHz],3288.2131,
+CPI,0.5274,
+Temperature [C],62,
+Energy [J],39.3107,
+Power [W],45.6437,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],3.1551,
+Power DRAM [W],3.6634,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-12-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.851092,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,5394745000
+CPU_CLK_UNHALTED_CORE,FIXC1,2790414000
+CPU_CLK_UNHALTED_REF,FIXC2,2203975000
+TEMP_CORE,TMP0,63
+PWR_PKG_ENERGY,PWR0,39.7397
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,3.1449
+TABLE,Region 1D-MATVEC_Kernel-Degree-12-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.8511,
+Runtime unhalted [s],1.0732,
+Clock [MHz],3291.8281,
+CPI,0.5172,
+Temperature [C],63,
+Energy [J],39.7397,
+Power [W],46.6926,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],3.1449,
+Power DRAM [W],3.6952,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-13-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.940127,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,5820532000
+CPU_CLK_UNHALTED_CORE,FIXC1,3091243000
+CPU_CLK_UNHALTED_REF,FIXC2,2438645000
+TEMP_CORE,TMP0,63
+PWR_PKG_ENERGY,PWR0,42.6113
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,3.4193
+TABLE,Region 1D-MATVEC_Kernel-Degree-13-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.9401,
+Runtime unhalted [s],1.1889,
+Clock [MHz],3295.7915,
+CPI,0.5311,
+Temperature [C],63,
+Energy [J],42.6113,
+Power [W],45.3250,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],3.4193,
+Power DRAM [W],3.6370,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-13-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],0.952901,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,5864399000
+CPU_CLK_UNHALTED_CORE,FIXC1,3117567000
+CPU_CLK_UNHALTED_REF,FIXC2,2466988000
+TEMP_CORE,TMP0,63
+PWR_PKG_ENERGY,PWR0,44.6774
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,3.5103
+TABLE,Region 1D-MATVEC_Kernel-Degree-13-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],0.9529,
+Runtime unhalted [s],1.1991,
+Clock [MHz],3285.6699,
+CPI,0.5316,
+Temperature [C],63,
+Energy [J],44.6774,
+Power [W],46.8857,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],3.5103,
+Power DRAM [W],3.6838,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-14-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],1.190299,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,7070874000
+CPU_CLK_UNHALTED_CORE,FIXC1,3903870000
+CPU_CLK_UNHALTED_REF,FIXC2,3083752000
+TEMP_CORE,TMP0,63
+PWR_PKG_ENERGY,PWR0,54.0405
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,4.4059
+TABLE,Region 1D-MATVEC_Kernel-Degree-14-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],1.1903,
+Runtime unhalted [s],1.5015,
+Clock [MHz],3291.4788,
+CPI,0.5521,
+Temperature [C],63,
+Energy [J],54.0405,
+Power [W],45.4008,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],4.4059,
+Power DRAM [W],3.7015,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-14-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],1.188099,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,7113203000
+CPU_CLK_UNHALTED_CORE,FIXC1,3889003000
+CPU_CLK_UNHALTED_REF,FIXC2,3077123000
+TEMP_CORE,TMP0,63
+PWR_PKG_ENERGY,PWR0,55.5862
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,4.3788
+TABLE,Region 1D-MATVEC_Kernel-Degree-14-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],1.1881,
+Runtime unhalted [s],1.4958,
+Clock [MHz],3286.0078,
+CPI,0.5467,
+Temperature [C],63,
+Energy [J],55.5862,
+Power [W],46.7858,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],4.3788,
+Power DRAM [W],3.6855,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-15-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],1.295430,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,7610880000
+CPU_CLK_UNHALTED_CORE,FIXC1,4242670000
+CPU_CLK_UNHALTED_REF,FIXC2,3356739000
+TEMP_CORE,TMP0,63
+PWR_PKG_ENERGY,PWR0,59.2081
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,4.7260
+TABLE,Region 1D-MATVEC_Kernel-Degree-15-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],1.2954,
+Runtime unhalted [s],1.6318,
+Clock [MHz],3286.2216,
+CPI,0.5574,
+Temperature [C],63,
+Energy [J],59.2081,
+Power [W],45.7054,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],4.7260,
+Power DRAM [W],3.6482,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-15-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],1.301572,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,7652781000
+CPU_CLK_UNHALTED_CORE,FIXC1,4272949000
+CPU_CLK_UNHALTED_REF,FIXC2,3373746000
+TEMP_CORE,TMP0,62
+PWR_PKG_ENERGY,PWR0,60.4799
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,4.7327
+TABLE,Region 1D-MATVEC_Kernel-Degree-15-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],1.3016,
+Runtime unhalted [s],1.6434,
+Clock [MHz],3292.9906,
+CPI,0.5584,
+Temperature [C],62,
+Energy [J],60.4799,
+Power [W],46.4668,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],4.7327,
+Power DRAM [W],3.6362,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-16-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],1.564608,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,9031057000
+CPU_CLK_UNHALTED_CORE,FIXC1,5138196000
+CPU_CLK_UNHALTED_REF,FIXC2,4057611000
+TEMP_CORE,TMP0,61
+PWR_PKG_ENERGY,PWR0,70.7428
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,5.7220
+TABLE,Region 1D-MATVEC_Kernel-Degree-16-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],1.5646,
+Runtime unhalted [s],1.9762,
+Clock [MHz],3292.4215,
+CPI,0.5689,
+Temperature [C],61,
+Energy [J],70.7428,
+Power [W],45.2144,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],5.7220,
+Power DRAM [W],3.6571,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-16-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],1.565579,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,9071397000
+CPU_CLK_UNHALTED_CORE,FIXC1,5136716000
+CPU_CLK_UNHALTED_REF,FIXC2,4055694000
+TEMP_CORE,TMP0,62
+PWR_PKG_ENERGY,PWR0,71.8344
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,5.7219
+TABLE,Region 1D-MATVEC_Kernel-Degree-16-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],1.5656,
+Runtime unhalted [s],1.9757,
+Clock [MHz],3293.0289,
+CPI,0.5663,
+Temperature [C],62,
+Energy [J],71.8344,
+Power [W],45.8836,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],5.7219,
+Power DRAM [W],3.6548,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-17-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],1.689605,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,9741060000
+CPU_CLK_UNHALTED_CORE,FIXC1,5540915000
+CPU_CLK_UNHALTED_REF,FIXC2,4378589000
+TEMP_CORE,TMP0,62
+PWR_PKG_ENERGY,PWR0,76.5750
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,6.2004
+TABLE,Region 1D-MATVEC_Kernel-Degree-17-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],1.6896,
+Runtime unhalted [s],2.1311,
+Clock [MHz],3290.2013,
+CPI,0.5688,
+Temperature [C],62,
+Energy [J],76.5750,
+Power [W],45.3212,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],6.2004,
+Power DRAM [W],3.6698,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-17-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],1.698208,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,9780470000
+CPU_CLK_UNHALTED_CORE,FIXC1,5578922000
+CPU_CLK_UNHALTED_REF,FIXC2,4403577000
+TEMP_CORE,TMP0,63
+PWR_PKG_ENERGY,PWR0,78.1989
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,6.1561
+TABLE,Region 1D-MATVEC_Kernel-Degree-17-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],1.6982,
+Runtime unhalted [s],2.1457,
+Clock [MHz],3293.9717,
+CPI,0.5704,
+Temperature [C],63,
+Energy [J],78.1989,
+Power [W],46.0479,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],6.1561,
+Power DRAM [W],3.6251,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-18-stride-0,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],1.991593,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,11231410000
+CPU_CLK_UNHALTED_CORE,FIXC1,6536495000
+CPU_CLK_UNHALTED_REF,FIXC2,5162365000
+TEMP_CORE,TMP0,62
+PWR_PKG_ENERGY,PWR0,90.0147
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,7.3181
+TABLE,Region 1D-MATVEC_Kernel-Degree-18-stride-0,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],1.9916,
+Runtime unhalted [s],2.5140,
+Clock [MHz],3292.0877,
+CPI,0.5820,
+Temperature [C],62,
+Energy [J],90.0147,
+Power [W],45.1973,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],7.3181,
+Power DRAM [W],3.6745,
+STRUCT,Info,3
+CPU name:,Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz,
+CPU type:,Intel Xeon Haswell EN/EP/EX processor,
+CPU clock:,2.600010881 GHz,
+TABLE,Region 1D-MATVEC_Kernel-Degree-18-stride-1000,Group 1 Raw,ENERGY,7
+Region Info,Core 1,
+RDTSC Runtime [s],1.999460,
+call count,1,
+Event,Counter,Core 1
+INSTR_RETIRED_ANY,FIXC0,11269150000
+CPU_CLK_UNHALTED_CORE,FIXC1,6559596000
+CPU_CLK_UNHALTED_REF,FIXC2,5181482000
+TEMP_CORE,TMP0,62
+PWR_PKG_ENERGY,PWR0,91.1975
+PWR_PP0_ENERGY,PWR1,0
+PWR_DRAM_ENERGY,PWR3,7.3388
+TABLE,Region 1D-MATVEC_Kernel-Degree-18-stride-1000,Group 1 Metric,ENERGY,11
+Metric,Core 1,
+Runtime (RDTSC) [s],1.9995,
+Runtime unhalted [s],2.5229,
+Clock [MHz],3291.5334,
+CPI,0.5821,
+Temperature [C],62,
+Energy [J],91.1975,
+Power [W],45.6111,
+Energy PP0 [J],0,
+Power PP0 [W],0,
+Energy DRAM [J],7.3388,
+Power DRAM [W],3.6704,
