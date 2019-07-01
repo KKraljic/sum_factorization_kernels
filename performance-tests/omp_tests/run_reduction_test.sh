@@ -1,2 +1,0 @@
-export OMP_NUM_THREADS=20
-build/omp_reduction_test
