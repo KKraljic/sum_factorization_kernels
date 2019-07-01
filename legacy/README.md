@@ -1,3 +1,16 @@
+# Compile
+
+    build.sh
+
+# Run without Slurm
+
+    run-locally.sh
+
+# Run using Slurm
+
+    sbatch run.sh
+
+
 # Sum factorization kernels for high-order finite element methods
 
 This small project collects basic sum factorization kernels for high
